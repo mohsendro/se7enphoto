@@ -1,0 +1,8 @@
+2023-01-28T19:14:34+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-includes\blocks.php روی خط 324
+
+2023-01-28T19:14:52+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\admin\class-wc-admin-assets.php روی خط 11
+
+2023-01-28T19:18:48+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\src\Admin\Notes\DeprecatedNotes.php روی خط 9
+
+2023-01-28T19:19:15+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\src\Admin\Features\OnboardingTasks\Tasks\Tax.php روی خط 167
+

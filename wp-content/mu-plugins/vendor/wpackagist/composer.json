@@ -1,0 +1,40 @@
+{
+    "name": "wpplus/wpackagist",
+    "description": "include wp packages inside wordpress",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org",
+            "only": [
+                "wpackagist-plugin/*",
+                "wpackagist-theme/*"
+            ]
+        }
+    ],
+    "require": {
+        "aws/aws-sdk-php": "*",
+        "wpackagist-plugin/query-monitor": "*",
+        "wpackagist-plugin/multiple-roles": "*",
+        "wpackagist-plugin/another-show-hooks":"*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Acme\\": "src/"
+        }
+    },
+    "extra": {
+        "installer-paths": {
+            "vendor/plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ],
+            "vendor/themes/{$name}/": [
+                "type:wordpress-theme"
+            ]
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    }
+}

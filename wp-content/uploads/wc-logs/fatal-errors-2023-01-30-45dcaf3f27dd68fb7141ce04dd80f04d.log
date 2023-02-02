@@ -1,0 +1,29 @@
+2023-01-30T08:07:02+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\vendor\typerocket\core\src\Extensions\PostMessages.php روی خط 91
+
+2023-01-30T08:07:02+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\vendor\typerocket\core\src\Extensions\PostMessages.php روی خط 91
+
+2023-01-30T10:52:41+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\vendor\symfony\polyfill-intl-normalizer\Normalizer.php روی خط 50
+
+2023-01-30T10:54:48+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-admin\includes\post.php روی خط 2518
+
+2023-01-30T13:00:17+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-includes\functions.php روی خط 1191
+
+ser\Package.php روی خط 12
+
+2023-01-30T13:00:20+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\src\Internal\Admin\ProductReviews\Reviews.php روی خط 16
+
+2023-01-30T13:00:34+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\packages\woocommerce-blocks\build\product-best-sellers.asset.php روی خط 1
+
+2023-01-30T13:00:51+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-admin\includes\image.php روی خط 1160
+
+2023-01-30T13:11:26+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-includes\functions.php روی خط 4541
+
+2023-01-30T20:15:29+00:00 CRITICAL Uncaught Error: Unsupported operand types in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-submenu.php:96
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(308): wpdocs_my_custom_submenu_page_callback('')
+#1 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 C:\xampp\htdocs\se7enphoto\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\se7enphoto\wp-admin\admin.php(259): do_action('%d9%88%d9%88%da...')
+#4 {main}
+  thrown در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-submenu.php روی خط 96
+

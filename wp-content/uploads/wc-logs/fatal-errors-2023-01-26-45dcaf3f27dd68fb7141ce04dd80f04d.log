@@ -1,0 +1,20 @@
+2023-01-26T11:40:52+00:00 CRITICAL Uncaught Error: Call to a member function get_items() on null in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-order-line-items.php:57
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(308): wp_kama_woocommerce_admin_order_totals_after_total_action(95)
+#1 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 C:\xampp\htdocs\se7enphoto\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\admin\meta-boxes\views\html-order-items.php(281): do_action('woocommerce_adm...', 95)
+#4 C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\admin\meta-boxes\class-wc-meta-box-order-items.php(40): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\se7enphoto\wp-admin\includes\template.php(1409): WC_Meta_Box_Order_Items::output(Object(WP_Post), Array)
+#6 C:\xampp\htdocs\se7enphoto\wp-admin\edit-form-advanced.php(688): do_meta_boxes( در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-order-line-items.php روی خط 57
+
+2023-01-26T20:40:04+00:00 CRITICAL Uncaught Error: Unsupported operand types in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-order-line-items.php:56
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(308): wp_kama_woocommerce_admin_order_totals_after_total_action(95)
+#1 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 C:\xampp\htdocs\se7enphoto\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\admin\meta-boxes\views\html-order-items.php(281): do_action('woocommerce_adm...', 95)
+#4 C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\admin\meta-boxes\class-wc-meta-box-order-items.php(40): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\se7enphoto\wp-admin\includes\template.php(1409): WC_Meta_Box_Order_Items::output(Object(WP_Post), Array)
+#6 C:\xampp\htdocs\se7enphoto\wp-admin\edit-form-advanced.php(688): do_meta_boxes(Object(WP_Screen), ' در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-order-line-items.php روی خط 56
+

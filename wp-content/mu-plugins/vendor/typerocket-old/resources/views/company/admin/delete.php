@@ -1,0 +1,19 @@
+<?php
+
+$EditCompanyForm   = tr_form('company', 'destroy', $company->id);  
+$EditCompanyButton = 'حذف شرکت';  
+
+echo $EditCompanyForm->open();
+?>
+
+    <!-- <input type="text" name="company_edit_id" value="<?php //echo $company[0]['id']; ?>" readonly>
+    <input type="text" name="company_edit_title" value="<?php //echo $company[0]['title']; ?>">
+    <input type="textarea" name="company_edit_content" value="<?php //echo $company[0]['content']; ?>"> -->
+
+    <input type="number" name="company_edit_id" value="<?php echo $company->id; ?>" readonly>
+    <input type="text" name="company_edit_title" value="<?php echo $company->title; ?>" readonly>
+    <input type="textarea" name="company_edit_content" value="<?php echo $company->content; ?>" readonly>
+    
+
+<?php
+echo $EditCompanyForm->close($EditCompanyButton);

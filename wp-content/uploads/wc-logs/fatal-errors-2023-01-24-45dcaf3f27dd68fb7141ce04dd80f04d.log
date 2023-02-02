@@ -1,0 +1,63 @@
+2023-01-24T17:45:45+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-admin\includes\image.php روی خط 1160
+
+2023-01-24T17:45:49+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-admin\includes\media.php روی خط 3846
+
+2023-01-24T18:04:44+00:00 CRITICAL Uncaught Error: Call to undefined method Automattic\WooCommerce\Admin\Overrides\Order::get_product_id() in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-order-line-items.php:55
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(308): wp_kama_woocommerce_admin_order_totals_after_total_action(57)
+#1 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 C:\xampp\htdocs\se7enphoto\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\admin\meta-boxes\views\html-order-items.php(281): do_action('woocommerce_adm...', 57)
+#4 C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\admin\meta-boxes\class-wc-meta-box-order-items.php(40): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\se7enphoto\wp-admin\includes\template.php(1409): WC_Meta_Box_Order_Items::output(Object(WP_Post), Array)
+#6 C:\xampp\htdocs\se7enphoto\wp-admin\e در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-order-line-items.php روی خط 55
+
+2023-01-24T18:06:48+00:00 CRITICAL Uncaught Error: Call to undefined method Automattic\WooCommerce\Admin\Overrides\Order::get_product() in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-order-line-items.php:55
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(308): wp_kama_woocommerce_admin_order_totals_after_total_action(57)
+#1 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 C:\xampp\htdocs\se7enphoto\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\admin\meta-boxes\views\html-order-items.php(281): do_action('woocommerce_adm...', 57)
+#4 C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\admin\meta-boxes\class-wc-meta-box-order-items.php(40): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\se7enphoto\wp-admin\includes\template.php(1409): WC_Meta_Box_Order_Items::output(Object(WP_Post), Array)
+#6 C:\xampp\htdocs\se7enphoto\wp-admin\edit در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-order-line-items.php روی خط 55
+
+2023-01-24T20:29:14+00:00 CRITICAL Uncaught Exception: اقلام سفارش نامعتبر. in C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\data-stores\abstract-wc-order-item-type-data-store.php:135
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\data-stores\class-wc-order-item-product-data-store.php(34): Abstract_WC_Order_Item_Type_Data_Store->read(Object(WC_Order_Item_Product))
+#1 C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\class-wc-data-store.php(159): WC_Order_Item_Product_Data_Store->read(Object(WC_Order_Item_Product))
+#2 C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\class-wc-order-item.php(74): WC_Data_Store->read(Object(WC_Order_Item_Product))
+#3 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-order-line-items.php(84): WC_Order_Item->__construct(95)
+#4 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(308): wp_kama_woocommerce_admin_order_totals_after_total_action(95)
+#5 C:\xampp\htdocs\se در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\data-stores\abstract-wc-order-item-type-data-store.php روی خط 135
+
+2023-01-24T20:39:44+00:00 CRITICAL Uncaught Error: Call to a member function get_product_id() on int in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-order-line-items.php:53
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(308): wp_kama_woocommerce_admin_order_totals_after_total_action(95)
+#1 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 C:\xampp\htdocs\se7enphoto\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\admin\meta-boxes\views\html-order-items.php(281): do_action('woocommerce_adm...', 95)
+#4 C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\admin\meta-boxes\class-wc-meta-box-order-items.php(40): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\se7enphoto\wp-admin\includes\template.php(1409): WC_Meta_Box_Order_Items::output(Object(WP_Post), Array)
+#6 C:\xampp\htdocs\se7enphoto\wp-admin\edit-form-advanced.php(688): do_meta_bo در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-order-line-items.php روی خط 53
+
+2023-01-24T20:40:52+00:00 CRITICAL Uncaught Error: Call to a member function get_items() on int in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-order-line-items.php:57
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(308): wp_kama_woocommerce_admin_order_totals_after_total_action(95)
+#1 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 C:\xampp\htdocs\se7enphoto\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\admin\meta-boxes\views\html-order-items.php(281): do_action('woocommerce_adm...', 95)
+#4 C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\admin\meta-boxes\class-wc-meta-box-order-items.php(40): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\se7enphoto\wp-admin\includes\template.php(1409): WC_Meta_Box_Order_Items::output(Object(WP_Post), Array)
+#6 C:\xampp\htdocs\se7enphoto\wp-admin\edit-form-advanced.php(688): do_meta_boxes(O در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-order-line-items.php روی خط 57
+
+2023-01-24T20:42:37+00:00 CRITICAL Uncaught Error: Call to a member function get_items() on null in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-order-line-items.php:59
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(308): wp_kama_woocommerce_admin_order_totals_after_total_action(95)
+#1 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 C:\xampp\htdocs\se7enphoto\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\admin\meta-boxes\views\html-order-items.php(281): do_action('woocommerce_adm...', 95)
+#4 C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\admin\meta-boxes\class-wc-meta-box-order-items.php(40): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\se7enphoto\wp-admin\includes\template.php(1409): WC_Meta_Box_Order_Items::output(Object(WP_Post), Array)
+#6 C:\xampp\htdocs\se7enphoto\wp-admin\edit-form-advanced.php(688): do_meta_boxes( در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-order-line-items.php روی خط 59
+
