@@ -2,64 +2,35 @@
 
 if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
 
-
-
-
-// Adding menu
-function my_add_menu_items()
-{
-      $hook = add_menu_page('Employees List Table', 'Employees List Table', 'activate_plugins', 'employees_list_table', 'employees_list_init');
-
-      // screen option
-      add_action("load-$hook", 'my_tbl_add_options');
-
-      function my_tbl_add_options()
-      {
-            $option = 'per_page';
-
-            $args = array(
-                  'label' => 'Employees',
-                  'default' => 2,
-                  'option' => 'employees_per_page'
-            );
-            add_screen_option($option, $args);
-
-            $empTable = new Employees_List_Table();
-      }
-}
-// add_action('admin_menu', 'my_add_menu_items');
-
 // get saved screen meta value
-add_filter('set-screen-option', 'my_table_set_option', 10, 3);
+add_filter('set-screen-option', 'shareholder_table_set_option', 10, 3);
 
-function my_table_set_option($status, $option, $value)
-{
+function shareholder_table_set_option($status, $option, $value) {
+
       return $value;
+
 }
 
 // Plugin menu callback function
-function employees_list_init()
-{
+function shareholder_employees_list_init() {
+
       // Creating an instance
       $empTable = new Employees_List_Table();
 
-      echo '<style>#the-list .row-actions{left:0;}</style><div class="wrap"><h2>Employees List Table</h2>';
-      // Prepare table
-      $empTable->prepare_items();
-?>
-<form method="get">
-    <input type="hidden" name="page" value="employees_list_table" />
-    <?php
-            $empTable->search_box('جستجو', 'search_id');
+      echo "<div class='wrap'>";
+            echo "<h1>سهامداران</h1>";
+            // Prepare table
+            $empTable->prepare_items();
 
-            // Display table
-            $empTable->display();
-            ?>
-</form>
-<?php
-      echo '</div>';
+            echo "<form method='get'>";
+                  echo "<input type='hidden' name='page' value='employees_list_table' />";
+                  $empTable->search_box('جستجو', 'search_id');
+                  // Display table
+                  $empTable->display();
+            echo "</form>";
+      echo "</div>";
+
 }
-
 
 
 
@@ -70,17 +41,19 @@ function employees_list_init()
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Loading table class
-if (!class_exists('WP_List_Table')) {
+if( !class_exists('WP_List_Table') ) {
+
       require_once(ABSPATH . 'wp-admin/includes/class-wp-list-table.php');
+
 }
 
 // Extending class
-class Employees_List_Table extends WP_List_Table
-{
+class Employees_List_Table extends WP_List_Table {
+
       private $users_data;
 
-      private function get_users_data($search = "")
-      {
+      private function get_users_data($search = "") {
+
             global $wpdb;
 
             if (!empty($search)) {
@@ -94,24 +67,28 @@ class Employees_List_Table extends WP_List_Table
                         ARRAY_A
                   );
             }
+
       }
 
       // Define table columns
-      function get_columns()
-      {
+      function get_columns() {
+
             $columns = array(
                   'cb'            => '<input type="checkbox" />',
-                  'ID' => 'ID',
-                  'user_login' => 'Username',
-                  'display_name'    => 'Name',
-                  'user_email'      => 'Email'
+                  'ID'          => 'شناسه',
+                  'product'     => 'محصول',
+                  'customer'    => 'خریدار',
+                  'sharehoder'  => 'سهم',
+                  'order'       => 'سفارش',
+                  'order_date'  => 'تاریخ سفارش',
             );
             return $columns;
+
       }
 
       // Bind table with columns, data and all
-      function prepare_items()
-      {
+      function prepare_items() {
+
             if (isset($_GET['page']) && isset($_GET['s'])) {
                   $this->users_data = $this->get_users_data($_GET['s']);
             } else {
@@ -124,7 +101,7 @@ class Employees_List_Table extends WP_List_Table
             $this->_column_headers = array($columns, $hidden, $sortable);
 
             /* pagination */
-            $per_page = $this->get_items_per_page('employees_per_page', 2);
+            $per_page = $this->get_items_per_page('employees_per_page', 20);
             $current_page = $this->get_pagenum();
             $total_items = count($this->users_data);
 
@@ -192,14 +169,18 @@ class Employees_List_Table extends WP_List_Table
       }
 
       // Add sorting to columns
-      protected function get_sortable_columns()
-      {
+      protected function get_sortable_columns() {
+
             $sortable_columns = array(
-                  'user_login'  => array('user_login', false),
-                  'display_name' => array('display_name', false),
-                  'user_email'   => array('user_email', true)
+                  'ID'           => array('ID', false),
+                  'product'      => array('product', false),
+                  'customer'     => array('customer', true),
+                  'sharehoder'   => array('sharehoder', true),
+                  'order'        => array('order', true),
+                  'order_date'   => array('order_date', true),
             );
             return $sortable_columns;
+
       }
 
       // Sorting function
@@ -236,4 +217,5 @@ class Employees_List_Table extends WP_List_Table
             );
             return $actions;
       }
+
 }

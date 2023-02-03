@@ -1,0 +1,12 @@
+2023-02-03T11:35:42+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-includes\functions.php روی خط 4527
+
+2023-02-03T11:35:49+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-includes\functions.php روی خط 6620
+
+2023-02-03T11:38:36+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\wpackagist\vendor\plugins\query-monitor\collectors\languages.php روی خط 200
+
+2023-02-03T11:38:36+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-includes\l10n.php روی خط 1222
+
+2023-02-03T17:47:50+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\BlockTypes\ProductTagList.php روی خط 56
+
+2023-02-03T17:47:54+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-includes\class-wpdb.php روی خط 2187
+
