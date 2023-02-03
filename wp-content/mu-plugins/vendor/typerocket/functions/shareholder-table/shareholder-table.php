@@ -50,7 +50,8 @@ if( !class_exists('WP_List_Table') ) {
 // Extending class
 class Employees_List_Table extends WP_List_Table {
 
-      private $users_data;
+      // private $users_data;
+      private $table_data;
 
       private function get_users_data($search = "") {
 
@@ -89,7 +90,7 @@ class Employees_List_Table extends WP_List_Table {
       // Bind table with columns, data and all
       function prepare_items() {
 
-            if (isset($_GET['page']) && isset($_GET['s'])) {
+            if ( isset($_GET['page'] ) && isset( $_GET['s']) ) {
                   $this->users_data = $this->get_users_data($_GET['s']);
             } else {
                   $this->users_data = $this->get_users_data();
@@ -141,31 +142,89 @@ class Employees_List_Table extends WP_List_Table {
 
             usort($this->users_data, array(&$this, 'usort_reorder'));
 
-            $this->items = $this->users_data;
+            // $this->items = $this->users_data;
+
+
+            $line_items = tr_query()->table('se7en_wc_order_product_lookup');
+            $this->table_data = $line_items->findAll()->orderBy('order_item_id', 'DESC')->groupBy(['variation_id','product_id','order_id'])->get();
+            $this->items = $this->table_data;
+
       }
 
       // bind data with column
-      function column_default($item, $column_name)
-      {
+      function column_default($item, $column_name) {
             switch ($column_name) {
+
                   case 'ID':
-                  case 'user_login':
-                  case 'user_email':
-                        return $item[$column_name];
-                  case 'display_name':
-                        return ucwords($item[$column_name]);
+                        return $item->order_item_id;
+                  case 'product':
+                        if( $item->variation_id == 0 ) {
+                              $product = tr_query()->table('se7en_posts')->findById($item->product_id)->select('ID', 'post_title')->get();
+                              return $product['post_title'] . "<br>" . 'محصول ساده' . ' | ' . 'شناسه محصول: ' . $item->product_id . ' | ' . $item->variation_id;
+                        } else {
+                              $product = tr_query()->table('se7en_posts')->findById($item->variation_id)->select('ID', 'post_title')->get();
+                              return $product['post_title'] . "<br>" . 'محصول متغیر' . ' | ' . 'شناسه محصول: ' . $item->product_id . ' | ' . 'شناسه متغیر: '  . $item->variation_id;
+                        }
+                  case 'customer':
+                        // $customer = tr_query()->table('se7en_users')->findById($item->customer_id)->select('display_name')->get();
+                        return $item->customer_id;
+                  case 'sharehoder':
+                        $user = wp_get_current_user();
+                        switch ( $user->roles[0] ) {
+                              case 'administrator':
+                                    $user_amount = 'product_shareholder_admin_amount';
+                                    break;
+                                    
+                              case 'photographer':
+                                    $user_amount = 'product_shareholder_photographer_amount';
+                                    break;
+
+                              case 'graphicer':
+                                    $user_amount = 'product_shareholder_graphicer_amount';
+                                    break;
+
+                              default:
+                                    $user_amount = '';
+                                    break;
+                        }
+                        $where = [
+                              [
+                                    'column' => 'meta_key',
+                                    'operator' => '=',
+                                    'value' => $user_amount
+                              ],
+                              // 'AND',
+                              // [
+                              //       'column' => 'meta_value',
+                              //       'operator' => '=',
+                              //       'value' => get_current_user_id()
+                              // ]
+                        ];
+                        $shareholder = tr_query()->table('se7en_postmeta')->setIdColumn('post_id')->findByID($item->product_id)->where($where)->select('meta_value')->get();
+                        if( $shareholder['meta_value'] ) {
+                              $user_shareholder = ($item->product_gross_revenue * $shareholder['meta_value']) / 100;
+                              $pct = $shareholder['meta_value'];
+                              return $user_shareholder . "<br>" . $pct . '% | ' . 'ذی نفع: ' . $user->display_name . ' | ' . $user->ID;
+                        }
+                  case 'order':
+                        return $item->order_id . ' | ' . 'مبلغ سفارش: ' . $item->product_gross_revenue; 
+                  case 'order_date':
+                        return $item->date_created;
                   default:
                         return print_r($item, true); //Show the whole array for troubleshooting purposes
+
             }
+
       }
 
       // To show checkbox with each row
-      function column_cb($item)
-      {
+      function column_cb($item) {
+
             return sprintf(
-                  '<input type="checkbox" name="user[]" value="%s" />',
-                  $item['ID']
+                  '<input type="checkbox" name="order[]" value="%s" />',
+                  $item->ID
             );
+
       }
 
       // Add sorting to columns
@@ -173,10 +232,10 @@ class Employees_List_Table extends WP_List_Table {
 
             $sortable_columns = array(
                   'ID'           => array('ID', false),
-                  'product'      => array('product', false),
-                  'customer'     => array('customer', true),
-                  'sharehoder'   => array('sharehoder', true),
-                  'order'        => array('order', true),
+                  'product'      => array('product_id', false),
+                  'customer'     => array('customer_id', true),
+                  'sharehoder'   => array('sharehoder_price', true),
+                  'order'        => array('order_price', true),
                   'order_date'   => array('order_date', true),
             );
             return $sortable_columns;

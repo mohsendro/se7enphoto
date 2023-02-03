@@ -10,3 +10,103 @@
 
 2023-02-03T17:47:54+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-includes\class-wpdb.php روی خط 2187
 
+2023-02-03T18:55:48+00:00 CRITICAL Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\shareholder-table.php:174
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1515): Employees_List_Table->column_cb(Object(stdClass))
+#1 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1472): WP_List_Table->single_row_columns(Object(stdClass))
+#2 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1459): WP_List_Table->single_row(Object(stdClass))
+#3 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1444): WP_List_Table->display_rows()
+#4 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1371): WP_List_Table->display_rows_or_placeholder()
+#5 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\shareholder-table.php(29): WP_List_Table->display()
+#6 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\ty در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\shareholder-table.php روی خط 174
+
+2023-02-03T20:03:52+00:00 CRITICAL Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\shareholder-table.php:183
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1515): Employees_List_Table->column_cb(Object(stdClass))
+#1 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1472): WP_List_Table->single_row_columns(Object(stdClass))
+#2 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1459): WP_List_Table->single_row(Object(stdClass))
+#3 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1444): WP_List_Table->display_rows()
+#4 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1371): WP_List_Table->display_rows_or_placeholder()
+#5 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\shareholder-table.php(29): WP_List_Table->display()
+#6 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\ty در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\shareholder-table.php روی خط 183
+
+2023-02-03T20:04:33+00:00 CRITICAL Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\shareholder-table.php:160
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1532): Employees_List_Table->column_default(Object(stdClass), 'ID')
+#1 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1472): WP_List_Table->single_row_columns(Object(stdClass))
+#2 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1459): WP_List_Table->single_row(Object(stdClass))
+#3 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1444): WP_List_Table->display_rows()
+#4 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1371): WP_List_Table->display_rows_or_placeholder()
+#5 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\shareholder-table.php(29): WP_List_Table->display()
+#6 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugin در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\shareholder-table.php روی خط 160
+
+2023-02-03T20:05:46+00:00 CRITICAL Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\shareholder-table.php:160
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1532): Employees_List_Table->column_default(Object(stdClass), 'ID')
+#1 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1472): WP_List_Table->single_row_columns(Object(stdClass))
+#2 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1459): WP_List_Table->single_row(Object(stdClass))
+#3 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1444): WP_List_Table->display_rows()
+#4 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1371): WP_List_Table->display_rows_or_placeholder()
+#5 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\shareholder-table.php(29): WP_List_Table->display()
+#6 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugin در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\shareholder-table.php روی خط 160
+
+2023-02-03T20:05:50+00:00 CRITICAL Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\shareholder-table.php:160
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1532): Employees_List_Table->column_default(Object(stdClass), 'ID')
+#1 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1472): WP_List_Table->single_row_columns(Object(stdClass))
+#2 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1459): WP_List_Table->single_row(Object(stdClass))
+#3 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1444): WP_List_Table->display_rows()
+#4 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1371): WP_List_Table->display_rows_or_placeholder()
+#5 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\shareholder-table.php(29): WP_List_Table->display()
+#6 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugin در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\shareholder-table.php روی خط 160
+
+2023-02-03T20:06:08+00:00 CRITICAL Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\shareholder-table.php:162
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1532): Employees_List_Table->column_default(Object(stdClass), 'ID')
+#1 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1472): WP_List_Table->single_row_columns(Object(stdClass))
+#2 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1459): WP_List_Table->single_row(Object(stdClass))
+#3 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1444): WP_List_Table->display_rows()
+#4 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1371): WP_List_Table->display_rows_or_placeholder()
+#5 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\shareholder-table.php(29): WP_List_Table->display()
+#6 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugin در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\shareholder-table.php روی خط 162
+
+2023-02-03T20:07:27+00:00 CRITICAL Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\shareholder-table.php:161
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1532): Employees_List_Table->column_default(Object(stdClass), 'ID')
+#1 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1472): WP_List_Table->single_row_columns(Object(stdClass))
+#2 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1459): WP_List_Table->single_row(Object(stdClass))
+#3 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1444): WP_List_Table->display_rows()
+#4 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1371): WP_List_Table->display_rows_or_placeholder()
+#5 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\shareholder-table.php(29): WP_List_Table->display()
+#6 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugin در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\shareholder-table.php روی خط 161
+
+2023-02-03T20:08:29+00:00 CRITICAL Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\shareholder-table.php:160
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1532): Employees_List_Table->column_default(Object(stdClass), 'ID')
+#1 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1472): WP_List_Table->single_row_columns(Object(stdClass))
+#2 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1459): WP_List_Table->single_row(Object(stdClass))
+#3 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1444): WP_List_Table->display_rows()
+#4 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1371): WP_List_Table->display_rows_or_placeholder()
+#5 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\shareholder-table.php(29): WP_List_Table->display()
+#6 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugin در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\shareholder-table.php روی خط 160
+
+2023-02-03T20:09:21+00:00 CRITICAL Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\shareholder-table.php:161
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1532): Employees_List_Table->column_default(Object(stdClass), 'product')
+#1 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1472): WP_List_Table->single_row_columns(Object(stdClass))
+#2 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1459): WP_List_Table->single_row(Object(stdClass))
+#3 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1444): WP_List_Table->display_rows()
+#4 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1371): WP_List_Table->display_rows_or_placeholder()
+#5 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\shareholder-table.php(29): WP_List_Table->display()
+#6 C:\xampp\htdocs\se7enphoto\wp-content\mu-p در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\shareholder-table.php روی خط 161
+
+2023-02-03T20:40:07+00:00 CRITICAL Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\shareholder-table.php:225
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1515): Employees_List_Table->column_cb(Object(stdClass))
+#1 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1472): WP_List_Table->single_row_columns(Object(stdClass))
+#2 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1459): WP_List_Table->single_row(Object(stdClass))
+#3 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1444): WP_List_Table->display_rows()
+#4 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1371): WP_List_Table->display_rows_or_placeholder()
+#5 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\shareholder-table.php(29): WP_List_Table->display()
+#6 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\ty در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\shareholder-table.php روی خط 225
+
