@@ -110,3 +110,5 @@ Stack trace:
 #5 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\shareholder-table.php(29): WP_List_Table->display()
 #6 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\ty در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\shareholder-table.php روی خط 225
 
+2023-02-03T20:53:35+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-includes\widgets\class-wp-widget-text.php روی خط 571
+
