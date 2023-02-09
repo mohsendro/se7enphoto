@@ -30,23 +30,17 @@ if( ! class_exists( 'WPPlus' ) ) {
                 'status'      => true
             ],
             [ 
-                'name'        => 'Typerocket',
-                'description' => 'فریمورک ساختار MVC وردپرس',
-                'direction'   => 'vendor/typerocket/typerocket.php',
-                'status'      => true
-            ],
-            [ 
                 'name'        => 'Codestar',
                 'description' => 'فریمورک پنل تنظیمات وردپرس',
                 'direction'   => 'vendor/codestar-framework/codestar-framework.php',
                 'status'      => true
-            ],       
+            ], 
             [ 
-                'name'        => 'Snippets',
-                'description' => 'اسکریپت های شخصی سازی شده (بهنه سازی کننده) مختص این پروژه',
-                'direction'   => 'vendor/snippets/snippets.php',
+                'name'        => 'Typerocket',
+                'description' => 'فریمورک ساختار MVC وردپرس',
+                'direction'   => 'vendor/typerocket/typerocket.php',
                 'status'      => true
-            ],  
+            ],       
         ];  
 
         public $wpplus_plugins_admin_list = [
@@ -101,6 +95,12 @@ if( ! class_exists( 'WPPlus' ) ) {
                 'direction'   => 'public/sign/sign.php',
                 'status'      => false
             ],
+            [ 
+                'name'        => 'Account',
+                'description' => 'حساب کاربری اختصاصی',
+                'direction'   => 'public/account/account.php',
+                'status'      => false
+            ], 
         ]; 
 
 

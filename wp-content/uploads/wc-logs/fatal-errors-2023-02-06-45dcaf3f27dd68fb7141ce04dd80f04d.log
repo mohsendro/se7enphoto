@@ -1,0 +1,50 @@
+2023-02-06T17:40:10+00:00 CRITICAL Uncaught Error: Call to undefined method TypeRocket\Database\Results::select() in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\date-table.php:15
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-submenu.php(44): include()
+#1 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(308): shareholder_table_submenu_page_callback('')
+#2 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#3 C:\xampp\htdocs\se7enphoto\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\se7enphoto\wp-admin\admin.php(259): do_action('%d9%88%d9%88%da...')
+#5 {main}
+  thrown در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\date-table.php روی خط 15
+
+2023-02-06T17:40:53+00:00 CRITICAL Uncaught Error: Call to undefined method TypeRocket\Database\Results::select() in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\date-table.php:15
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-submenu.php(44): include()
+#1 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(308): shareholder_table_submenu_page_callback('')
+#2 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#3 C:\xampp\htdocs\se7enphoto\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\se7enphoto\wp-admin\admin.php(259): do_action('%d9%88%d9%88%da...')
+#5 {main}
+  thrown در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\date-table.php روی خط 15
+
+2023-02-06T18:44:21+00:00 CRITICAL Uncaught Error: Call to undefined function sum() in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\date-table.php:47
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-submenu.php(44): include()
+#1 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(308): shareholder_table_submenu_page_callback('')
+#2 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#3 C:\xampp\htdocs\se7enphoto\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\se7enphoto\wp-admin\admin.php(259): do_action('%d9%88%d9%88%da...')
+#5 {main}
+  thrown در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\date-table.php روی خط 47
+
+2023-02-06T19:29:49+00:00 CRITICAL Uncaught Error: Call to a member function get() on null in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\date-table.php:97
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-submenu.php(44): include()
+#1 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(308): shareholder_table_submenu_page_callback('')
+#2 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#3 C:\xampp\htdocs\se7enphoto\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\se7enphoto\wp-admin\admin.php(259): do_action('%d9%88%d9%88%da...')
+#5 {main}
+  thrown در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\date-table.php روی خط 97
+
+2023-02-06T19:30:25+00:00 CRITICAL Uncaught Error: Call to a member function get() on string in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\date-table.php:97
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-submenu.php(44): include()
+#1 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(308): shareholder_table_submenu_page_callback('')
+#2 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#3 C:\xampp\htdocs\se7enphoto\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\se7enphoto\wp-admin\admin.php(259): do_action('%d9%88%d9%88%da...')
+#5 {main}
+  thrown در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\date-table.php روی خط 97
+

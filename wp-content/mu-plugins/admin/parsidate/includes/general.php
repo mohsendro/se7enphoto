@@ -148,7 +148,7 @@ function fixarabic($content)
  */
 function wpp_login_headerurl()
 {
-    return 'http://wp-parsi.com';
+    // return 'http://wp-parsi.com';
 }
 
 /**

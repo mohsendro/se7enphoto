@@ -17,8 +17,8 @@
  * Domain Path: /languages
  *
  */
-require_once plugin_dir_path( __FILE__ ) .'classes/setup.class.php';
 
+require_once plugin_dir_path( __FILE__ ) .'classes/setup.class.php';
 
 /* CSF Framework Enqueue Styles && Scripts */
 function wpplus_enqueuing_csf_scripts() {
@@ -43,16 +43,3 @@ add_action('csf_enqueue', 'wpplus_enqueuing_csf_scripts');
 // include plugin_dir_path( __FILE__ ) . '/samples/shortcode-options.php';
 // include plugin_dir_path( __FILE__ ) . '/samples/taxonomy-options.php';
 // include plugin_dir_path( __FILE__ ) . '/samples/widget-options.php';
-
-// Panels
-include plugin_dir_path( __FILE__ ) . '/panels/user-profile.php';
-include plugin_dir_path( __FILE__ ) . '/panels/product-table.php';
-
-function product_table_enqueue_script() {
-	wp_enqueue_script( 'product_table_script_handle', plugin_dir_url(__FILE__) . '/product-table.js', array('jquery') );
-    wp_localize_script( 'product_table_script_handle', 'product_table_ajax_localize_obj', array(
-                      'ajax_url' => admin_url( 'admin-ajax.php' ),
-                      'the_nonce' => wp_create_nonce('product_table_form_nonce') 
-	));
-}
-// add_action( 'admin_enqueue_scripts', 'product_table_enqueue_script' );

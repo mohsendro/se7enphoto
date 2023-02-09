@@ -1,0 +1,22 @@
+2023-02-07T19:24:23+00:00 CRITICAL Uncaught Error: Call to undefined method TypeRocket\Database\Query::find() in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\wallet-table.php:18
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-submenu.php(44): include()
+#1 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(308): shareholder_table_submenu_page_callback('')
+#2 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#3 C:\xampp\htdocs\se7enphoto\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\se7enphoto\wp-admin\admin.php(259): do_action('%d9%88%d9%88%da...')
+#5 {main}
+  thrown در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\wallet-table.php روی خط 18
+
+2023-02-07T19:27:19+00:00 CRITICAL Uncaught Error: Call to a member function where() on array in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\wallet-table.php:18
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-submenu.php(44): include()
+#1 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(308): shareholder_table_submenu_page_callback('')
+#2 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#3 C:\xampp\htdocs\se7enphoto\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\se7enphoto\wp-admin\admin.php(259): do_action('%d9%88%d9%88%da...')
+#5 {main}
+  thrown در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\shareholder-table\wallet-table.php روی خط 18
+
+2023-02-07T19:40:20+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\BlockTypes\ProductQuery.php روی خط 459
+

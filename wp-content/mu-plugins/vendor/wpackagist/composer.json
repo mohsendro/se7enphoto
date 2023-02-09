@@ -13,6 +13,7 @@
     ],
     "require": {
         "aws/aws-sdk-php": "*",
+        "wpackagist-plugin/nirweb-support": "*",
         "wpackagist-plugin/query-monitor": "*",
         "wpackagist-plugin/multiple-roles": "*",
         "wpackagist-plugin/another-show-hooks":"*"
