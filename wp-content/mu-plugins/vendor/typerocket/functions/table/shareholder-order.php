@@ -11,7 +11,7 @@ function shareholder_list_table_init() {
       $ShareholderTable = new Shareholder_List_Table();
 
       echo "<div class='wrap'>";
-            echo "<h1 class='wp-heading-inline'>سهامداران</h1>";
+            echo "<h1 class='wp-heading-inline'>سفارشات</h1>";
             echo "<hr class='wp-header-end'>";
             // Prepare table
             $ShareholderTable->prepare_items();

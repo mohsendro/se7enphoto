@@ -12,7 +12,7 @@ function register_wc_shareholder_submenu_page() {
 		'سهامداران',
 		'manage_options',
 		'wc-shareholder',
-		'shareholder_table_submenu_page_callback',
+		'shareholder_submenu_page_callback',
             10
       );
       add_action("load-$hook", 'shareholder_table_add_options');
@@ -28,7 +28,6 @@ function shareholder_table_add_options() {
             'default' => 20,
             'option' => 'shareholder_per_page'
       );
-
       add_screen_option('per_page', $args_page);
 
 }
@@ -41,12 +40,22 @@ function shareholder_table_set_option($status, $option, $value) {
 }
 add_filter('set-screen-option', 'shareholder_table_set_option', 10, 3);
 
-function shareholder_table_submenu_page_callback() {
+function shareholder_submenu_page_callback() {
 
-      include plugin_dir_path(__FILE__) . 'shareholder/tab.php';
-      include plugin_dir_path(__FILE__) . 'shareholder/checkout.php';
-      include plugin_dir_path(__FILE__) . 'shareholder/log.php';
-      include TYPEROCKET_DIR_PATH . 'functions/table/shareholder.php';
+      if( $_GET['shareholder_id'] ) {
+
+            $users = tr_query()->table('se7en_users')->findById($_GET['shareholder_id'])->select('ID')->get();
+            if( $users ) {
+                  include plugin_dir_path(__FILE__) . 'shareholder/tab.php';
+            } else {
+                  echo 'لطفاً شناسه کاربر دارای سهام فروش مد نظر خود را به درستی انتخاب نمایید...';
+            }
+
+      } else {
+
+            include TYPEROCKET_DIR_PATH . 'functions/table/shareholder-user.php';
+
+      }
 
 }
 

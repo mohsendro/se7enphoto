@@ -2,14 +2,43 @@
 
 if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
 
-$tabs = tr_tabs();
+// Tab: shareholder - سهامداران
 
-$tabContentOne = "<p>Main content 1.</p>";
-$tabContentTwo = "<p>Main content 2.</p>";
-$tabContentThree = "<p>Main content 3.</p>";
+function shareholder_page_tabs( $current = 'order' ) {
 
-$tabs->tab('سفارشات', 'users', $tabContentOne);
-$tabs->tab('گزارشات', 'books', $tabContentTwo);
-$tabs->tab('پرداخت‌ها', 'projects', $tabContentThree);
+    $tabs = array(
+        'order'     => 'سفارشات', 
+        'log'       => 'گزارشات', 
+        'checkout'  => 'پرداخت‌ها', 
+    );
 
-echo $tabs;
+    $html = '<h2 class="nav-tab-wrapper">';
+    foreach( $tabs as $tab => $name ) {
+        $class = ( $tab == $current ) ? 'nav-tab-active' : '';
+        $query_args = [
+            'shareholder_id' => $_GET['shareholder_id'],
+            'tab'            => $tab
+        ];
+        $html .= '<a class="nav-tab ' . $class . '" href="' . add_query_arg($query_args) . '">' . $name . '</a>';
+    }
+    $html .= '</h2>';
+    echo $html;
+
+}
+shareholder_page_tabs( $tab );
+
+// Tabs
+$tab = ( ! empty( $_GET['tab'] ) ) ? esc_attr( $_GET['tab'] ) : 'order';
+if( $tab == 'log' ) {
+
+    include plugin_dir_path(__FILE__) . 'log.php';
+
+} elseif( $tab == 'checkout' ) {
+
+    include plugin_dir_path(__FILE__) . 'checkout.php';
+
+} else {
+
+    include TYPEROCKET_DIR_PATH . 'functions/table/shareholder-order.php';
+
+}

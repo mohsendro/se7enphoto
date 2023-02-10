@@ -2,6 +2,11 @@
 
 if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
 
+echo "<div class='wrap'>";
+    echo "<h1 class='wp-heading-inline'>گزارشات</h1>";
+    echo "<hr class='wp-header-end'>";
+echo "</div>";
+
 $order_date = tr_query()->table('se7en_wc_order_product_lookup');
 $order_date = $order_date->findAll()->orderBy('date_created', 'DESC');
 // $order_date = json_decode($order_date);

@@ -2,6 +2,11 @@
 
 if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
 
+echo "<div class='wrap'>";
+    echo "<h1 class='wp-heading-inline'>پرداخت‌ها</h1>";
+    echo "<hr class='wp-header-end'>";
+echo "</div>";
+
 $where2 = [
     [
         'column'   => 'user_id',
