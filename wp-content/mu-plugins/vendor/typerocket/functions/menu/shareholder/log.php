@@ -110,29 +110,53 @@ echo "<hr>";
 
 
 // Custom Date Income
+if( $_GET['date'] ) {
+
+    $order_custom_date = $order;
+    foreach( $order_custom_date as $item ) { 
+
+        if( $_GET['date'] == date('Y-m', strtotime($item->date_created)) ) {
+    
+            $shareholder3 = tr_query()->table('se7en_postmeta')->setIdColumn('post_id')->findByID($item->product_id)->where($where_amount)->select('meta_value')->get();
+            if( $shareholder3['meta_value'] ) {
+    
+                $user_shareholder_custom_date += ($item->product_gross_revenue * $shareholder3['meta_value']) / 100;
+    
+            }
+    
+        }
+        
+    }
+    echo 'درآمد در تاریخ ' . parsidate("m-Y", strtotime($_GET['date']), "per") . " : <strong>" . $user_shareholder_custom_date . "</strong>";
+    echo "<hr>";
+}
+
 $order_year = $order;
 foreach( $order_year as $date ) {
 
-    $order_date_year[parsidate("Y", $date->date_created, "per")] += parsidate("Y", $date->date_created, "per");
+    $order_date_year[$date->date_created] += $date->date_created;
+    // $order_date_year[parsidate("Y", $date->date_created, "per")] += parsidate("Y", $date->date_created, "per");
     
-} var_dump($order_date_year);
+}
 
 foreach( $order_date_year as $year => $value ) {
     
-    echo 'آمار سال ' . $year . "<br>";
-    // echo "<a href='" . add_query_arg('date', gregdate("Y", $year.'-1', "eng")) . "'> فروردین " . $year . "</a>";
-    // echo "<a href='" . add_query_arg('date', $year.'-2') . "'> اردیبهشت " . $year . "</a>";
-    // echo "<a href='" . add_query_arg('date', $year.'-3') . "'> خرداد " . $year . "</a>";
-    // echo "<a href='" . add_query_arg('date', $year.'-4') . "'> تیر " . $year . "</a>";
-    // echo "<a href='" . add_query_arg('date', $year.'-5') . "'> مرداد " . $year . "</a>";
-    // echo "<a href='" . add_query_arg('date', $year.'-6') . "'> شهریور " . $year . "</a>";
-    // echo "<a href='" . add_query_arg('date', $year.'-7') . "'> مهر " . $year . "</a>";
-    // echo "<a href='" . add_query_arg('date', $year.'-8') . "'> آبان " . $year . "</a>";
-    // echo "<a href='" . add_query_arg('date', $year.'-9') . "'> آذر " . $year . "</a>";
-    // echo "<a href='" . add_query_arg('date', $year.'-10') . "'> دی " . $year . "</a>";
-    // echo "<a href='" . add_query_arg('date', $year.'-11') . "'> بهمن " . $year . "</a>";
-    // echo "<a href='" . add_query_arg('date', $year.'-12') . "'> اسفند " . $year . "</a>";   
-    // echo "<hr>";
-    echo gregdate("Y", $year);
+    $year_per  = parsidate("Y", $year, "per");
+    $date_per = date("Y", strtotime($year));
+
+    echo 'آمار سال ' . $year_per . "<br>";
+    echo "<a href='" . add_query_arg('date', $date_per.'-01') . "'> فروردین " . $year_per . "</a>";
+    echo "<a href='" . add_query_arg('date', $date_per.'-02') . "'> اردیبهشت " . $year_per . "</a>";
+    echo "<a href='" . add_query_arg('date', $date_per.'-03') . "'> خرداد " . $year_per . "</a>";
+    echo "<a href='" . add_query_arg('date', $date_per.'-04') . "'> تیر " . $year_per . "</a>";
+    echo "<a href='" . add_query_arg('date', $date_per.'-05') . "'> مرداد " . $year_per . "</a>";
+    echo "<a href='" . add_query_arg('date', $date_per.'-06') . "'> شهریور " . $year_per . "</a>";
+    echo "<a href='" . add_query_arg('date', $date_per.'-07') . "'> مهر " . $year_per . "</a>";
+    echo "<a href='" . add_query_arg('date', $date_per.'-08') . "'> آبان " . $year_per . "</a>";
+    echo "<a href='" . add_query_arg('date', $date_per.'-09') . "'> آذر " . $year_per . "</a>";
+    echo "<a href='" . add_query_arg('date', $date_per.'-10') . "'> دی " . $year_per . "</a>";
+    echo "<a href='" . add_query_arg('date', $date_per.'-11') . "'> بهمن " . $year_per . "</a>";
+    echo "<a href='" . add_query_arg('date', $date_per.'-12') . "'> اسفند " . $year_per . "</a>";   
+    echo "<hr>";
 
 }

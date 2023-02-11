@@ -35,3 +35,15 @@ Stack trace:
 
 2023-02-11T16:56:46+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\src\Admin\ReportExporter.php روی خط 8
 
+2023-02-11T17:27:20+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-includes\widgets\class-wp-widget-recent-posts.php روی خط 185
+
+2023-02-11T17:37:32+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\src\Internal\Admin\RemoteFreeExtensions\Init.php روی خط 8
+
+2023-02-11T17:37:32+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\src\Internal\Admin\WCPayPromotion\Init.php روی خط 8
+
+2023-02-11T17:37:45+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\rest-api\Utilities\SingletonTrait.php روی خط 53
+
+2023-02-11T18:16:15+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-admin\includes\template.php روی خط 12
+
+2023-02-11T18:19:24+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-includes\class-wpdb.php روی خط 2187
+
