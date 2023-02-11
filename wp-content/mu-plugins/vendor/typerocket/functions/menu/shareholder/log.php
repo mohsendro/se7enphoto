@@ -2,110 +2,139 @@
 
 if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
 
-echo "<div class='wrap'>";
-    echo "<h1 class='wp-heading-inline'>گزارشات</h1>";
-    echo "<hr class='wp-header-end'>";
-echo "</div>";
+$user = get_userdata( $_GET['shareholder_id'] );
+switch ( $user->roles[0] ) {
+    case 'administrator':
+        $user_id = 'product_shareholder_admin_user';
+        break;
+        
+    case 'photographer':
+            $user_id = 'product_shareholder_photographer_user';
+            break;
 
-$order_date = tr_query()->table('se7en_wc_order_product_lookup');
-$order_date = $order_date->findAll()->orderBy('date_created', 'DESC');
-// $order_date = json_decode($order_date);
+    case 'graphicer':
+            $user_id = 'product_shareholder_graphicer_user';
+            break;
 
-
-
-$order_month = $order_date->select('product_id', 'variation_id', 'product_gross_revenue', 'date_created')->get();
-$user = wp_get_current_user();
+    default:
+            $user_id = '';
+            break;
+}
 switch ( $user->roles[0] ) {
     case 'administrator':
         $user_amount = 'product_shareholder_admin_amount';
         break;
         
     case 'photographer':
-        $user_amount = 'product_shareholder_photographer_amount';
-        break;
+            $user_amount = 'product_shareholder_photographer_amount';
+            break;
 
     case 'graphicer':
-        $user_amount = 'product_shareholder_graphicer_amount';
-        break;
+            $user_amount = 'product_shareholder_graphicer_amount';
+            break;
 
     default:
-        $user_amount = '';
-        break;
+            $user_amount = '';
+            break;
 }
-$where = [
+
+echo "<div class='wrap' style='margin-bottom: 35px;'>";
+    echo "<h1 class='wp-heading-inline'>گزارشات</h1>";
+    echo "<div><span>لیست گزارشات مربوط به کاربر " . $user->display_name . " </span></div>";
+    echo "<hr class='wp-header-end'>";
+echo "</div>";
+
+
+// Current Month Income
+$where_month_user = [ 
+        [
+            'column'   => 'se7en_postmeta.meta_key',
+            'operator' => '=',
+            'value'    => $user_id
+        ],
+        'AND',
+        [
+            'column'   => 'se7en_postmeta.meta_value',
+            'operator' => '=',
+            'value'    => $_GET['shareholder_id']
+        ]
+];
+$where_month_amount = [
     [
-        'column' => 'meta_key',
+        'column'   => 'meta_key',
         'operator' => '=',
-        'value' => $user_amount
+        'value'    => $user_amount
     ],
 ];
+
+$order_month = tr_query()->table('se7en_wc_order_product_lookup')->setIdColumn('product_id')->findAll()->orderBy('date_created', 'DESC');
+$order_month = $order_month->join('se7en_postmeta', 'se7en_postmeta.post_id', '=', 'se7en_wc_order_product_lookup.product_id', 'LEFT')->where($where_month_user);
+$order_month = $order_month->distinct()->get();
+
 foreach( $order_month as $item ) {
 
     if( date('Y-m') == date('Y-m', strtotime($item->date_created)) ) {
 
-        $shareholder = tr_query()->table('se7en_postmeta')->setIdColumn('post_id')->findByID($item->product_id)->where($where)->select('meta_value')->get();
+        $shareholder = tr_query()->table('se7en_postmeta')->setIdColumn('post_id')->findByID($item->product_id)->where($where_month_amount)->select('meta_value')->get();
         if( $shareholder['meta_value'] ) {
 
-            $user_shareholder += ($item->product_gross_revenue * $shareholder['meta_value']) / 100;
+            $user_shareholder_month += (($item->product_gross_revenue * $shareholder['meta_value']) / 100) / 2;
 
         }
 
     }
     
 }
-echo 'درآمد این ماه: ' . $user_shareholder;
-
-
-
+echo 'درآمد ماه جاری: ' . "<strong>" . $user_shareholder_month . "</strong>";
 echo "<hr>";
 
 
-
-$order_all = $order_date->select('product_id', 'variation_id', 'product_gross_revenue', 'date_created')->get();
-$user = wp_get_current_user();
-switch ( $user->roles[0] ) {
-    case 'administrator':
-        $user_amount = 'product_shareholder_admin_amount';
-        break;
-        
-    case 'photographer':
-        $user_amount = 'product_shareholder_photographer_amount';
-        break;
-
-    case 'graphicer':
-        $user_amount = 'product_shareholder_graphicer_amount';
-        break;
-
-    default:
-        $user_amount = '';
-        break;
-}
-$where = [
+// Total Income
+$where_total_user = [ 
     [
-        'column' => 'meta_key',
+        'column'   => 'se7en_postmeta.meta_key',
         'operator' => '=',
-        'value' => $user_amount
+        'value'    => $user_id
+    ],
+    'AND',
+    [
+        'column'   => 'se7en_postmeta.meta_value',
+        'operator' => '=',
+        'value'    => $_GET['shareholder_id']
+    ]
+];
+$where_total_amount = [
+    [
+        'column'   => 'meta_key',
+        'operator' => '=',
+        'value'    => $user_amount
     ],
 ];
-foreach( $order_all as $item2 ) {
 
-    $shareholder2 = tr_query()->table('se7en_postmeta')->setIdColumn('post_id')->findByID($item2->product_id)->where($where)->select('meta_value')->get();
+$order_total = tr_query()->table('se7en_wc_order_product_lookup')->setIdColumn('product_id')->findAll()->orderBy('date_created', 'DESC');
+$order_total = $order_total->join('se7en_postmeta', 'se7en_postmeta.post_id', '=', 'se7en_wc_order_product_lookup.product_id', 'LEFT')->where($where_total_user);
+$order_total = $order_total->distinct()->get();
+
+foreach( $order_total as $item2 ) {
+
+    $shareholder2 = tr_query()->table('se7en_postmeta')->setIdColumn('post_id')->findByID($item2->product_id)->where($where_total_amount)->select('meta_value')->get();
     if( $shareholder2['meta_value'] ) {
 
-        $user_shareholder2 += ($item2->product_gross_revenue * $shareholder2['meta_value']) / 100;
+        $user_shareholder_total += (($item2->product_gross_revenue * $shareholder2['meta_value']) / 100) / 2;
 
     }
     
 }
-echo 'درآمد کل: ' . $user_shareholder2;
-
-
-
+echo 'درآمد کل: ' . "<strong>" . $user_shareholder_total . "</strong>";
 echo "<hr>";
 
 
+// Custom Date Income
+// $order_date = tr_query()->table('se7en_wc_order_product_lookup');
+// $order_date = $order_date->findAll()->orderBy('date_created', 'DESC');
+// $order_date = json_decode($order_date);
 
-$order_year = $order_date->select('date_created')->get();
+$order_year = tr_query()->table('se7en_wc_order_product_lookup')->findAll()->orderBy('date_created', 'DESC');
 foreach( $order_year as $date ) {
 
     $order_date_year[parsidate("Y", $date->date_created, "per")] += parsidate("Y", $date->date_created, "per");

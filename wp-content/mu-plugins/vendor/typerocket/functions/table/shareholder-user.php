@@ -148,7 +148,7 @@ class Shareholder_User_List_Table extends WP_List_Table {
                         return 
                               "<a href='" . esc_url( add_query_arg('shareholder_id', $item->ID) ) . "'>جزئیات سهام</a>"
                               . ' | ' .
-                              "<a href='" . admin_url( 'user-edit.php?user_id=' ) . $item->ID . "'>جزئیات کاربر</a>";
+                              "<a href='" . admin_url( 'user-edit.php?user_id=' ) . $item->ID . "' target='_blank'>جزئیات کاربر</a>";
                   default:
                         return print_r($item, true); //Show the whole array for troubleshooting purposes
 
@@ -157,27 +157,27 @@ class Shareholder_User_List_Table extends WP_List_Table {
       }
 
       // To show checkbox with each row
-      function column_cb($item) {
+      // function column_cb($item) {
 
-            return sprintf(
-                  '<input type="checkbox" name="user[]" value="%s" />',
-                  $item->ID
-            );
+      //       return sprintf(
+      //             '<input type="checkbox" name="user[]" value="%s" />',
+      //             $item->ID
+      //       );
 
-      }
+      // }
 
       // Add sorting to columns
-      protected function get_sortable_columns() {
+      // protected function get_sortable_columns() {
 
-            // $sortable_columns = array(
-            //       'ID'        => array('ID', false),
-            //       'nicename'  => array('nicename', false),
-            //       'email'     => array('email', false),
-            //       'role'      => array('role', false),
-            // );
-            // return $sortable_columns;
+      //       // $sortable_columns = array(
+      //       //       'ID'        => array('ID', false),
+      //       //       'nicename'  => array('nicename', false),
+      //       //       'email'     => array('email', false),
+      //       //       'role'      => array('role', false),
+      //       // );
+      //       // return $sortable_columns;
 
-      }
+      // }
 
       // Adding action buttons to column
       // function column_ID($item) {

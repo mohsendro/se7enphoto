@@ -116,3 +116,7 @@ Stack trace:
 #4 {main}
   thrown در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\menu\shareholder.php روی خط 48
 
+2023-02-10T20:36:22+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\packages\woocommerce-blocks\build\checkout.asset.php روی خط 1
+
+2023-02-10T20:36:42+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-admin-bar.php روی خط 667
+
