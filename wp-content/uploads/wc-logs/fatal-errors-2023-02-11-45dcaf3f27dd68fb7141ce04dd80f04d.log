@@ -33,3 +33,5 @@ Stack trace:
 #6 {main}
   thrown در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\menu\shareholder\log.php روی خط 133
 
+2023-02-11T16:56:46+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\src\Admin\ReportExporter.php روی خط 8
+

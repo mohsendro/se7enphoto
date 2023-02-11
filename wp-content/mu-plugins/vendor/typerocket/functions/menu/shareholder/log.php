@@ -38,59 +38,7 @@ switch ( $user->roles[0] ) {
             break;
 }
 
-echo "<div class='wrap' style='margin-bottom: 35px;'>";
-    echo "<h1 class='wp-heading-inline'>گزارشات</h1>";
-    echo "<div><span>لیست گزارشات مربوط به کاربر " . $user->display_name . " </span></div>";
-    echo "<hr class='wp-header-end'>";
-echo "</div>";
-
-
-// Current Month Income
-$where_month_user = [ 
-        [
-            'column'   => 'se7en_postmeta.meta_key',
-            'operator' => '=',
-            'value'    => $user_id
-        ],
-        'AND',
-        [
-            'column'   => 'se7en_postmeta.meta_value',
-            'operator' => '=',
-            'value'    => $_GET['shareholder_id']
-        ]
-];
-$where_month_amount = [
-    [
-        'column'   => 'meta_key',
-        'operator' => '=',
-        'value'    => $user_amount
-    ],
-];
-
-$order_month = tr_query()->table('se7en_wc_order_product_lookup')->setIdColumn('product_id')->findAll()->orderBy('date_created', 'DESC');
-$order_month = $order_month->join('se7en_postmeta', 'se7en_postmeta.post_id', '=', 'se7en_wc_order_product_lookup.product_id', 'LEFT')->where($where_month_user);
-$order_month = $order_month->distinct()->get();
-
-foreach( $order_month as $item ) {
-
-    if( date('Y-m') == date('Y-m', strtotime($item->date_created)) ) {
-
-        $shareholder = tr_query()->table('se7en_postmeta')->setIdColumn('post_id')->findByID($item->product_id)->where($where_month_amount)->select('meta_value')->get();
-        if( $shareholder['meta_value'] ) {
-
-            $user_shareholder_month += (($item->product_gross_revenue * $shareholder['meta_value']) / 100) / 2;
-
-        }
-
-    }
-    
-}
-echo 'درآمد ماه جاری: ' . "<strong>" . $user_shareholder_month . "</strong>";
-echo "<hr>";
-
-
-// Total Income
-$where_total_user = [ 
+$where_user = [ 
     [
         'column'   => 'se7en_postmeta.meta_key',
         'operator' => '=',
@@ -103,7 +51,7 @@ $where_total_user = [
         'value'    => $_GET['shareholder_id']
     ]
 ];
-$where_total_amount = [
+$where_amount = [
     [
         'column'   => 'meta_key',
         'operator' => '=',
@@ -111,16 +59,48 @@ $where_total_amount = [
     ],
 ];
 
-$order_total = tr_query()->table('se7en_wc_order_product_lookup')->setIdColumn('product_id')->findAll()->orderBy('date_created', 'DESC');
-$order_total = $order_total->join('se7en_postmeta', 'se7en_postmeta.post_id', '=', 'se7en_wc_order_product_lookup.product_id', 'LEFT')->where($where_total_user);
-$order_total = $order_total->distinct()->get();
+$order = tr_query()->table('se7en_wc_order_product_lookup')->setIdColumn('product_id')->findAll()->orderBy('date_created', 'DESC');
+$order = $order->join('se7en_postmeta', 'se7en_postmeta.post_id', '=', 'se7en_wc_order_product_lookup.product_id', 'LEFT')->where($where_user);
+$order = $order->distinct()->get();
 
+
+echo "<div class='wrap' style='margin-bottom: 35px;'>";
+    echo "<h1 class='wp-heading-inline'>گزارشات</h1>";
+    echo "<div><span>لیست گزارشات مربوط به کاربر " . $user->display_name . " </span></div>";
+    echo "<hr class='wp-header-end'>";
+echo "</div>";
+
+
+// Current Month Income
+$order_month = $order;
+foreach( $order_month as $item ) {
+
+    if( date('Y-m') == date('Y-m', strtotime($item->date_created)) ) {
+
+        $shareholder = tr_query()->table('se7en_postmeta')->setIdColumn('post_id')->findByID($item->product_id)->where($where_amount)->select('meta_value')->get();
+        if( $shareholder['meta_value'] ) {
+
+            $user_shareholder_month += ($item->product_gross_revenue * $shareholder['meta_value']) / 100;
+            // $user_shareholder_month += (($item->product_gross_revenue * $shareholder['meta_value']) / 100) / 2;
+
+        }
+
+    }
+    
+}
+echo 'درآمد ماه جاری: ' . "<strong>" . $user_shareholder_month . "</strong>";
+echo "<hr>";
+
+
+// Total Income
+$order_total = $order;
 foreach( $order_total as $item2 ) {
 
-    $shareholder2 = tr_query()->table('se7en_postmeta')->setIdColumn('post_id')->findByID($item2->product_id)->where($where_total_amount)->select('meta_value')->get();
+    $shareholder2 = tr_query()->table('se7en_postmeta')->setIdColumn('post_id')->findByID($item2->product_id)->where($where_amount)->select('meta_value')->get();
     if( $shareholder2['meta_value'] ) {
 
-        $user_shareholder_total += (($item2->product_gross_revenue * $shareholder2['meta_value']) / 100) / 2;
+        $user_shareholder_total += ($item2->product_gross_revenue * $shareholder2['meta_value']) / 100;
+        // $user_shareholder_total += (($item2->product_gross_revenue * $shareholder2['meta_value']) / 100) / 2;
 
     }
     
@@ -130,32 +110,29 @@ echo "<hr>";
 
 
 // Custom Date Income
-// $order_date = tr_query()->table('se7en_wc_order_product_lookup');
-// $order_date = $order_date->findAll()->orderBy('date_created', 'DESC');
-// $order_date = json_decode($order_date);
-
-$order_year = tr_query()->table('se7en_wc_order_product_lookup')->findAll()->orderBy('date_created', 'DESC');
+$order_year = $order;
 foreach( $order_year as $date ) {
 
     $order_date_year[parsidate("Y", $date->date_created, "per")] += parsidate("Y", $date->date_created, "per");
     
-}
+} var_dump($order_date_year);
 
-foreach( $order_date_year as $year => $item ) {
+foreach( $order_date_year as $year => $value ) {
     
     echo 'آمار سال ' . $year . "<br>";
-    echo "<a href='#'> فروردین " . $year . "</a>";
-    echo "<a href='#'> اردیبهشت " . $year . "</a>";
-    echo "<a href='#'> خرداد " . $year . "</a>";
-    echo "<a href='#'> تیر " . $year . "</a>";
-    echo "<a href='#'> مرداد " . $year . "</a>";
-    echo "<a href='#'> شهریور " . $year . "</a>";
-    echo "<a href='#'> مهر " . $year . "</a>";
-    echo "<a href='#'> آبان " . $year . "</a>";
-    echo "<a href='#'> آذر " . $year . "</a>";
-    echo "<a href='#'> دی " . $year . "</a>";
-    echo "<a href='#'> بهمن " . $year . "</a>";
-    echo "<a href='#'> اسفند " . $year . "</a>";   
-    echo "<hr>";
+    // echo "<a href='" . add_query_arg('date', gregdate("Y", $year.'-1', "eng")) . "'> فروردین " . $year . "</a>";
+    // echo "<a href='" . add_query_arg('date', $year.'-2') . "'> اردیبهشت " . $year . "</a>";
+    // echo "<a href='" . add_query_arg('date', $year.'-3') . "'> خرداد " . $year . "</a>";
+    // echo "<a href='" . add_query_arg('date', $year.'-4') . "'> تیر " . $year . "</a>";
+    // echo "<a href='" . add_query_arg('date', $year.'-5') . "'> مرداد " . $year . "</a>";
+    // echo "<a href='" . add_query_arg('date', $year.'-6') . "'> شهریور " . $year . "</a>";
+    // echo "<a href='" . add_query_arg('date', $year.'-7') . "'> مهر " . $year . "</a>";
+    // echo "<a href='" . add_query_arg('date', $year.'-8') . "'> آبان " . $year . "</a>";
+    // echo "<a href='" . add_query_arg('date', $year.'-9') . "'> آذر " . $year . "</a>";
+    // echo "<a href='" . add_query_arg('date', $year.'-10') . "'> دی " . $year . "</a>";
+    // echo "<a href='" . add_query_arg('date', $year.'-11') . "'> بهمن " . $year . "</a>";
+    // echo "<a href='" . add_query_arg('date', $year.'-12') . "'> اسفند " . $year . "</a>";   
+    // echo "<hr>";
+    echo gregdate("Y", $year);
 
 }
