@@ -35,6 +35,7 @@ if( $tab == 'log' ) {
 
 } elseif( $tab == 'checkout' ) {
 
+    include TYPEROCKET_DIR_PATH . 'functions/table/shareholder-checkout.php';
     include plugin_dir_path(__FILE__) . 'checkout.php';
 
 } else {
