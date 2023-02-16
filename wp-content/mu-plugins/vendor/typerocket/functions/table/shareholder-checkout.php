@@ -5,10 +5,10 @@ if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
 // Table: shareholder - جدول سفارشات
 
 // Plugin menu callback function
-function shareholder_order_list_table_init() {
+function shareholder_checkout_list_table_init() {
 
       // Creating an instance
-      $ShareholderOrderTable = new Shareholder_Order_List_Table();
+      $ShareholderCheckoutTable = new Shareholder_Order_List_Table();
       $user = get_userdata( $_GET['shareholder_id'] );
       
       echo "<div class='wrap'>";
@@ -16,13 +16,13 @@ function shareholder_order_list_table_init() {
             echo "<div><span>لیست پرداخت‌های مربوط به کاربر " . $user->display_name . " </span></div>";
             echo "<hr class='wp-header-end'>";
             // Prepare table
-            $ShareholderOrderTable->prepare_items();
+            $ShareholderCheckoutTable->prepare_items();
             //echo "<form method='get'>";
                   //echo "<input type='hidden' name='page' value='wc-shareholder' />";
-                  //$ShareholderOrderTable->search_box('جستجو', 'search_id');
+                  //$ShareholderCheckoutTable->search_box('جستجو', 'search_id');
                   // Display table
                   // if( isset($_GET['shareholder_id']) ) {
-                        $ShareholderOrderTable->display();
+                        $ShareholderCheckoutTable->display();
                   // } else {
                   //       echo 'لطفاً کاربر دارای سهام فروش مد نظر خود را انتخاب نمایید...';
                   // }
@@ -30,7 +30,7 @@ function shareholder_order_list_table_init() {
       echo "</div>";
 
 }
-shareholder_order_list_table_init();
+shareholder_checkout_list_table_init();
 
 // Loading table class
 if( !class_exists('WP_List_Table') ) {
@@ -44,7 +44,7 @@ class Shareholder_Order_List_Table extends WP_List_Table {
 
       private $order_data;
 
-      private function get_shareholder_order_data($search = "") {
+      private function get_shareholder_checkout_data($search = "") {
 
             $user = get_userdata( $_GET['shareholder_id'] );
             switch ( $user->roles[0] ) {
@@ -97,11 +97,13 @@ class Shareholder_Order_List_Table extends WP_List_Table {
 
             $columns = array(
                   // 'cb'            => '<input type="checkbox" />',
-                  'ID'          => 'شناسه',
-                  'product'     => 'اطلاعات محصول',
-                  'customer'    => 'اطلاعات خریدار',
-                  'sharehoder'  => 'اطلاعات سهام',
-                  'order'       => 'اطلاعات سفارش',
+                  'ID'              => 'شناسه',
+                  'order_item_id'   => 'اطلاعات آخرین سفارش',
+                  'order_date'      => 'تاریخ آخرین سفارش',
+                  'user_id'         => 'اطلاعات سهامدار',
+                  'date_created'    => 'تاریخ تسویه',
+                  'wallet'          => 'کیف پول',
+                  'status'          => 'وضعیت',
             );
             return $columns;
 
@@ -111,9 +113,9 @@ class Shareholder_Order_List_Table extends WP_List_Table {
       function prepare_items() {
 
             if ( isset( $_GET['page'] ) && isset( $_GET['s'] ) ) {
-                  $this->order_data = $this->get_shareholder_order_data($_GET['s']);
+                  $this->order_data = $this->get_shareholder_checkout_data($_GET['s']);
             } else {
-                  $this->order_data = $this->get_shareholder_order_data();
+                  $this->order_data = $this->get_shareholder_checkout_data();
             }
 
             $columns = $this->get_columns();
@@ -160,7 +162,7 @@ class Shareholder_Order_List_Table extends WP_List_Table {
                   'per_page'    => $per_page // items to show on a page
             ));
 
-            // $this->order_data = $this->get_shareholder_order_data();
+            // $this->order_data = $this->get_shareholder_checkout_data();
             // $this->items = $this->order_data;
             $this->items = $this->order_data;
 
@@ -173,7 +175,7 @@ class Shareholder_Order_List_Table extends WP_List_Table {
 
                   case 'ID':
                         return $item->order_item_id;
-                  case 'product':
+                  case 'order_item_id':
                         if( $item->variation_id == 0 ) {
                               $product = tr_query()->table('se7en_posts')->findById($item->product_id)->select('ID', 'post_title')->get();
                               return 
@@ -196,13 +198,13 @@ class Shareholder_Order_List_Table extends WP_List_Table {
                                     . 'شناسه متغیر: '
                                     . $item->variation_id;
                         }
-                  case 'customer':
+                  case 'date_created':
                         $customer = tr_query()->table('se7en_users')->findById($item->customer_id)->select('ID', 'display_name', 'user_email')->get();
                         return 
                               "<a href='" . admin_url( 'user-edit.php?user_id=' ) . $customer['ID'] . "' target='_blank'>" . $customer['display_name'] . "</a>"
                               . "<br>"
                               . 'ایمیل: ' . $customer['user_email'];
-                  case 'sharehoder':
+                  case 'order_date':
                         $user = get_userdata( $_GET['shareholder_id'] );
                         switch ( $user->roles[0] ) {
                               case 'administrator':
@@ -239,7 +241,7 @@ class Shareholder_Order_List_Table extends WP_List_Table {
                                     . "<br>"
                                     . 'ذی نفع: ' . "<a href='" . admin_url( 'user-edit.php?user_id=' ) . $user->ID . "' target='_blank'>" . $user->display_name . "</a>";
                         }
-                  case 'order':
+                  case 'user_id':
                         return 
                               'شناسه سفارش: ' . "<a href='" . admin_url( '/post.php?post=' ) . $item->order_id . "&action=edit' target='_blank'>" . $item->order_id . "#</a>"
                               . ' | '
@@ -248,6 +250,8 @@ class Shareholder_Order_List_Table extends WP_List_Table {
                               .  'تاریخ شمسی سفارش: ' . parsidate("Y-m-d h:i:s", $item->date_created, "per")
                               . "<br>"
                               . 'تاریخ میلادی سفارش: ' . $item->date_created;
+                  case 'wallet':
+                  case 'status':
                   default:
                         return print_r($item, true); //Show the whole array for troubleshooting purposes
 
