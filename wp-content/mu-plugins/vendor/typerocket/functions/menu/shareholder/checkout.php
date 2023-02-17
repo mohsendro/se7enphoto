@@ -59,45 +59,59 @@ $where_amount = [
     ],
 ];
 
-$order = tr_query()->table('se7en_wc_order_product_lookup')->setIdColumn('product_id')->findAll()->orderBy('date_created', 'DESC');
-$order = $order->join('se7en_postmeta', 'se7en_postmeta.post_id', '=', 'se7en_wc_order_product_lookup.product_id', 'LEFT')->where($where_user);
-$order = $order->distinct()->get();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-$where2 = [
+$where_last_order = [
     [
-        'column'   => 'user_id',
-        'operator' => '=',
-        'value'    => get_current_user_id()
+        'column'    => 'user_id',
+        'operator'  => '=',
+        'value'     => $_GET['shareholder_id']
     ],
-    'AND',
-    [
-        'column'   => 'meta_key',
-        'operator' => '=',
-        'value'    => 'user_shareholder_wallet_amount'
-    ]
 ];
-$user_wallet = tr_query()->table('se7en_usermeta')->findAll()->where($where2)->select('meta_value')->get();
-echo 'موجودی کیف پول: ' . $user_wallet[0]->meta_value . "<br>" . 'موجودی کیف پول شما از آخرین تسویه در تاریخ ' . ' تا امروز' . "<hr>";
+$last_order =  tr_query()->table('se7en_shareholder_checkout')->findAll()->where($where_last_order)->orderBy('ID', 'DESC')->select('order_item_id', 'date_created')->get();
+
+
+if( $last_order[0] ) {
+
+    $order = tr_query()->table('se7en_wc_order_product_lookup')->findAll()->where('order_item_id', '>', $last_order[0]->order_item_id);
+    $order = $order->join('se7en_postmeta', 'se7en_postmeta.post_id', '=', 'se7en_wc_order_product_lookup.product_id', 'LEFT')->where($where_user);
+    $order = $order->setIdColumn('order_item_id')->distinct()->get();
+    $last_date = $last_order[0]->date_created;
+
+} else {
+
+    $order = tr_query()->table('se7en_wc_order_product_lookup')->findAll();
+    $order = $order->join('se7en_postmeta', 'se7en_postmeta.post_id', '=', 'se7en_wc_order_product_lookup.product_id', 'LEFT')->where($where_user);
+    $order = $order->setIdColumn('order_item_id')->distinct()->get();
+    $last_date = null;
+
+}
+
+
+foreach( $order as $item ) {
+
+    $shareholder = tr_query()->table('se7en_postmeta')->setIdColumn('post_id')->findByID($item->product_id)->where($where_amount)->select('meta_value')->get();
+    if( $shareholder['meta_value'] ) {
+        $wallet += ($item->product_gross_revenue * $shareholder['meta_value']) / 100;
+        // $user_shareholder_month += (($item->product_gross_revenue * $shareholder['meta_value']) / 100) / 2;
+    }
+        
+}
+
+if( ! $wallet ) {
+    $wallet = 0;
+}
+
+if( $last_date ) {
+    $last_date = 'موجودی کیف پول شما از آخرین تسویه در تاریخ ' . $last_date . ' | ' . parsidate("Y-m-d h:i:s", $last_date, "per");
+} else {
+    $last_date = 'موجودی کیف پول شما ';
+}
+
+echo 
+    'موجودی کیف پول: '
+    . $wallet
+    . "<br>"
+    . $last_date
+    . ' تا به امروز'
+    . "<hr>";

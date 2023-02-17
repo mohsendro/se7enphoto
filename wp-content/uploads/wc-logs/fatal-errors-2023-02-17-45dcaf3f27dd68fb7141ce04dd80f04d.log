@@ -1,2 +1,42 @@
 2023-02-17T14:46:37+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\src\Admin\ReportsSync.php روی خط 8
 
+2023-02-17T19:24:40+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\class-wc-order.php روی خط 2282
+
+2023-02-17T19:25:30+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-admin\includes\post.php روی خط 2518
+
+2023-02-17T19:40:12+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\wccom-site\rest-api\endpoints\class-wc-rest-wccom-site-installer-controller.php روی خط 184
+
+2023-02-17T19:45:30+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-admin\includes\media.php روی خط 3846
+
+2023-02-17T19:49:36+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\BlockTypes\CartOrderSummarySubtotalBlock.php روی خط 15
+
+2023-02-17T19:49:51+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-admin\includes\media.php روی خط 3846
+
+2023-02-17T20:00:56+00:00 CRITICAL Uncaught Error: Call to a member function get() on array in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\menu\shareholder\checkout.php:103
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\table\shareholder-checkout.php(18): include()
+#1 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\table\shareholder-checkout.php(34): shareholder_checkout_list_table_init()
+#2 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\menu\shareholder\tab.php(38): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\menu\shareholder.php(49): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(308): shareholder_submenu_page_callback('')
+#5 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#6 C:\xampp\htdocs\se7enphoto\wp-includes\plugin.php(517): WP_Hook->do_acti در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\menu\shareholder\checkout.php روی خط 103
+
+2023-02-17T20:02:53+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function TypeRocket\Database\Query::findFirstWhereOrDie(), 0 passed in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\menu\shareholder\checkout.php on line 103 and at least 2 expected in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\vendor\typerocket\core\src\Database\Query.php:539
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\menu\shareholder\checkout.php(103): TypeRocket\Database\Query->findFirstWhereOrDie()
+#1 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\table\shareholder-checkout.php(18): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\table\shareholder-checkout.php(34): shareholder_checkout_list_table_init()
+#3 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\menu\shareholder\tab.php(38): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdoc در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\vendor\typerocket\core\src\Database\Query.php روی خط 539
+
+2023-02-17T20:55:38+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\BlockTypes\CartOrderSummaryHeadingBlock.php روی خط 15
+
+2023-02-17T20:55:43+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-admin\includes\media.php روی خط 3846
+
+2023-02-17T20:55:48+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-admin\includes\template.php روی خط 12
+
+2023-02-17T20:55:49+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-privacy-requests-table.php روی خط 560
+
+2023-02-17T21:52:04+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\BlockTypes\AllReviews.php روی خط 44
+

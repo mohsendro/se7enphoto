@@ -160,6 +160,8 @@ class Shareholder_Order_List_Table extends WP_List_Table {
                               $product = tr_query()->table('se7en_posts')->findById($order_data[0]->product_id)->select('ID', 'post_title')->get();
                               return 
                                     'شناسه سفارش: ' . "<a href='" . admin_url( '/post.php?post=' ) . $order_data[0]->order_id . "&action=edit' target='_blank'>" . $order_data[0]->order_id . "#</a>"
+                                    . ' | '
+                                    . 'شناسه ردیف: ' . $order_data[0]->order_item_id
                                     . "<br>"
                                     . "<a href='" . admin_url( '/post.php?post=' ) . $order_data[0]->product_id . "&action=edit' target='_blank'>" . $product['post_title'] . "</a>"
                                     . "<br>"
@@ -171,6 +173,8 @@ class Shareholder_Order_List_Table extends WP_List_Table {
                               $product = tr_query()->table('se7en_posts')->findById($order_data[0]->variation_id)->select('ID', 'post_title')->get();
                               return 
                                     'شناسه سفارش: ' . "<a href='" . admin_url( '/post.php?post=' ) . $order_data[0]->order_id . "&action=edit' target='_blank'>" . $order_data[0]->order_id . "#</a>"
+                                    . ' | '
+                                    . 'شناسه ردیف: ' . $order_data[0]->order_item_id
                                     . "<br>"
                                     . "<a href='" . admin_url( '/post.php?post=' ) . $order_data[0]->product_id . "&action=edit' target='_blank'>" . $product['post_title'] . "</a>"
                                     . "<br>"
