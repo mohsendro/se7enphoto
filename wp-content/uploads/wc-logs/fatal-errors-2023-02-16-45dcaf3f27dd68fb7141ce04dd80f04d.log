@@ -1,2 +1,58 @@
 2023-02-16T18:02:02+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-site-icon.php روی خط 235
 
+2023-02-16T18:29:58+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\i18n\countries.php روی خط 17
+
+2023-02-16T18:30:00+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\admin\class-wc-admin-menus.php روی خط 16
+
+2023-02-16T18:58:08+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\packages\woocommerce-blocks\build\product-on-sale.asset.php روی خط 1
+
+2023-02-16T18:58:35+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-includes\class-wpdb.php روی خط 2187
+
+2023-02-16T19:14:08+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-includes\widgets\class-wp-widget-tag-cloud.php روی خط 221
+
+2023-02-16T19:14:22+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\wc-template-functions.php روی خط 77
+
+2023-02-16T19:14:35+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\BlockTypes\ProductsByAttribute.php روی خط 76
+
+2023-02-16T20:43:00+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-includes\Requests\Transport\cURL.php روی خط 15
+
+2023-02-16T21:27:28+00:00 CRITICAL Uncaught Error: Call to a member function where() on array in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\table\shareholder-checkout.php:156
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1532): Shareholder_Order_List_Table->column_default(Object(stdClass), 'order_item_id')
+#1 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1472): WP_List_Table->single_row_columns(Object(stdClass))
+#2 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1459): WP_List_Table->single_row(Object(stdClass))
+#3 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1444): WP_List_Table->display_rows()
+#4 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1371): WP_List_Table->display_rows_or_placeholder()
+#5 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\table\shareholder-checkout.php(26): WP_List_Table->display()
+#6 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugin در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\table\shareholder-checkout.php روی خط 156
+
+2023-02-16T21:28:35+00:00 CRITICAL Uncaught Error: Call to undefined method TypeRocket\Database\Query::find() in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\table\shareholder-checkout.php:156
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1532): Shareholder_Order_List_Table->column_default(Object(stdClass), 'order_item_id')
+#1 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1472): WP_List_Table->single_row_columns(Object(stdClass))
+#2 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1459): WP_List_Table->single_row(Object(stdClass))
+#3 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1444): WP_List_Table->display_rows()
+#4 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1371): WP_List_Table->display_rows_or_placeholder()
+#5 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\table\shareholder-checkout.php(26): WP_List_Table->display()
+#6 C:\xampp\htdocs\se7enphoto\wp-c در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\table\shareholder-checkout.php روی خط 156
+
+2023-02-16T21:29:04+00:00 CRITICAL Uncaught Error: Call to undefined method TypeRocket\Database\Query::find() in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\table\shareholder-checkout.php:149
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1532): Shareholder_Order_List_Table->column_default(Object(stdClass), 'order_item_id')
+#1 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1472): WP_List_Table->single_row_columns(Object(stdClass))
+#2 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1459): WP_List_Table->single_row(Object(stdClass))
+#3 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1444): WP_List_Table->display_rows()
+#4 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1371): WP_List_Table->display_rows_or_placeholder()
+#5 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\table\shareholder-checkout.php(26): WP_List_Table->display()
+#6 C:\xampp\htdocs\se7enphoto\wp-c در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\table\shareholder-checkout.php روی خط 149
+
+2023-02-16T21:35:05+00:00 CRITICAL Uncaught Error: Call to undefined method TypeRocket\Database\Query::find() in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\table\shareholder-checkout.php:149
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1532): Shareholder_Order_List_Table->column_default(Object(stdClass), 'order_item_id')
+#1 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1472): WP_List_Table->single_row_columns(Object(stdClass))
+#2 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1459): WP_List_Table->single_row(Object(stdClass))
+#3 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1444): WP_List_Table->display_rows()
+#4 C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table.php(1371): WP_List_Table->display_rows_or_placeholder()
+#5 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\table\shareholder-checkout.php(26): WP_List_Table->display()
+#6 C:\xampp\htdocs\se7enphoto\wp-c در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\table\shareholder-checkout.php روی خط 149
+

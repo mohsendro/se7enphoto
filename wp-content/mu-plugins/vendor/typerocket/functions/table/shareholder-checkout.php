@@ -15,6 +15,7 @@ function shareholder_checkout_list_table_init() {
             echo "<h1 class='wp-heading-inline'>پرداخت‌ها</h1>";
             echo "<div><span>لیست پرداخت‌های مربوط به کاربر " . $user->display_name . " </span></div>";
             echo "<hr class='wp-header-end'>";
+            include plugin_dir_path(__FILE__) . '../menu/shareholder/checkout.php';
             // Prepare table
             $ShareholderCheckoutTable->prepare_items();
             //echo "<form method='get'>";
@@ -42,53 +43,22 @@ if( !class_exists('WP_List_Table') ) {
 // Extending class
 class Shareholder_Order_List_Table extends WP_List_Table {
 
-      private $order_data;
+      private $shareholder_data;
 
       private function get_shareholder_checkout_data($search = "") {
 
-            $user = get_userdata( $_GET['shareholder_id'] );
-            switch ( $user->roles[0] ) {
-                  case 'administrator':
-                        $user_id = 'product_shareholder_admin_user';
-                        break;
-                        
-                  case 'photographer':
-                        $user_id = 'product_shareholder_photographer_user';
-                        break;
-            
-                  case 'graphicer':
-                        $user_id = 'product_shareholder_graphicer_user';
-                        break;
-            
-                  default:
-                        $user_id = '';
-                        break;
-            }
-            $where_join = [
+            $where = [
                   [
-                        'column' => 'se7en_postmeta.meta_key',
-                        'operator' => '=',
-                        'value' => $user_id
+                        'column'    => 'user_id',
+                        'operator'  => '=',
+                        'value'     => $_GET['shareholder_id']
                   ],
-                  'AND',
-                  [
-                        'column' => 'se7en_postmeta.meta_value',
-                        'operator' => '=',
-                        'value' => $_GET['shareholder_id']
-                  ]
             ];
 
-            $line_items = tr_query()->table('se7en_wc_order_product_lookup')->setIdColumn('product_id');
-            $line_items = $line_items->findAll()->orderBy('order_item_id', 'DESC')->groupBy(['variation_id','product_id','order_id']);
-            $line_items = $line_items->join('se7en_postmeta', 'se7en_postmeta.post_id', '=', 'se7en_wc_order_product_lookup.product_id', 'LEFT')->where($where_join);
-            $line_items = $line_items->distinct()->get();
-            $this->order_data = json_decode($line_items);
-            return $this->order_data;
-
-            // $line_items = tr_query()->table('se7en_wc_order_product_lookup');
-            // $this->order_data = $line_items->findAll()->orderBy('order_item_id', 'DESC')->groupBy(['variation_id','product_id','order_id'])->get();
-            // $this->order_data = json_decode($this->order_data);
-            // return $this->order_data;
+            $shareholder_data =  tr_query()->table('se7en_shareholder_checkout')->setIdColumn('ID');
+            $shareholder_data =  $shareholder_data->findAll()->where($where)->orderBy('ID', 'DESC')->distinct()->get();
+            $this->shareholder_data = json_decode($shareholder_data);
+            return $this->shareholder_data;
             
       }
 
@@ -100,7 +70,7 @@ class Shareholder_Order_List_Table extends WP_List_Table {
                   'ID'              => 'شناسه',
                   'order_item_id'   => 'اطلاعات آخرین سفارش',
                   'order_date'      => 'تاریخ آخرین سفارش',
-                  'user_id'         => 'اطلاعات سهامدار',
+                  // 'user_id'         => 'اطلاعات سهامدار',
                   'date_created'    => 'تاریخ تسویه',
                   'wallet'          => 'کیف پول',
                   'status'          => 'وضعیت',
@@ -113,9 +83,9 @@ class Shareholder_Order_List_Table extends WP_List_Table {
       function prepare_items() {
 
             if ( isset( $_GET['page'] ) && isset( $_GET['s'] ) ) {
-                  $this->order_data = $this->get_shareholder_checkout_data($_GET['s']);
+                  $this->shareholder_data = $this->get_shareholder_checkout_data($_GET['s']);
             } else {
-                  $this->order_data = $this->get_shareholder_checkout_data();
+                  $this->shareholder_data = $this->get_shareholder_checkout_data();
             }
 
             $columns = $this->get_columns();
@@ -126,7 +96,7 @@ class Shareholder_Order_List_Table extends WP_List_Table {
             /* pagination */
             $per_page = $this->get_items_per_page('shareholder_per_page', 20);
             $current_page = $this->get_pagenum();
-            $total_items = count($this->order_data);
+            $total_items = count($this->shareholder_data);
 
             // edit
             // if (isset($_GET['action']) && $_GET['page'] == "wc-shareholder" && $_GET['action'] == "edit") {
@@ -155,16 +125,16 @@ class Shareholder_Order_List_Table extends WP_List_Table {
             //       //... do operation
             // }
 
-            $this->order_data = array_slice($this->order_data, (($current_page - 1) * $per_page), $per_page);
+            $this->shareholder_data = array_slice($this->shareholder_data, (($current_page - 1) * $per_page), $per_page);
 
             $this->set_pagination_args(array(
                   'total_items' => $total_items, // total number of items
                   'per_page'    => $per_page // items to show on a page
             ));
 
-            // $this->order_data = $this->get_shareholder_checkout_data();
-            // $this->items = $this->order_data;
-            $this->items = $this->order_data;
+            // $this->shareholder_data = $this->get_shareholder_checkout_data();
+            // $this->items = $this->shareholder_data;
+            $this->items = $this->shareholder_data;
 
       }
 
@@ -174,84 +144,66 @@ class Shareholder_Order_List_Table extends WP_List_Table {
             switch ($column_name) {
 
                   case 'ID':
-                        return $item->order_item_id;
+                        return $item->ID;
                   case 'order_item_id':
-                        if( $item->variation_id == 0 ) {
-                              $product = tr_query()->table('se7en_posts')->findById($item->product_id)->select('ID', 'post_title')->get();
+                        $where = [
+                              [
+                                    'column'    => 'order_item_id',
+                                    'operator'  => '=',
+                                    'value'     => $item->order_item_id
+                              ],
+                        ];
+                        $order_data =  tr_query()->table('se7en_wc_order_product_lookup')->findAll()->where($where)->select('order_item_id','order_id','product_id','variation_id','date_created')->get();
+                        $order_data = json_decode($order_data);
+
+                        if( $order_data[0]->variation_id == 0 ) {
+                              $product = tr_query()->table('se7en_posts')->findById($order_data[0]->product_id)->select('ID', 'post_title')->get();
                               return 
-                                    "<a href='" . admin_url( '/post.php?post=' ) . $item->product_id . "&action=edit' target='_blank'>" . $product['post_title'] . "</a>"
+                                    'شناسه سفارش: ' . "<a href='" . admin_url( '/post.php?post=' ) . $order_data[0]->order_id . "&action=edit' target='_blank'>" . $order_data[0]->order_id . "#</a>"
+                                    . "<br>"
+                                    . "<a href='" . admin_url( '/post.php?post=' ) . $order_data[0]->product_id . "&action=edit' target='_blank'>" . $product['post_title'] . "</a>"
                                     . "<br>"
                                     . 'نوع محصول: ساده'
                                     . ' | '
                                     . 'شناسه محصول: '
-                                    . $item->product_id;
+                                    . $order_data[0]->product_id;
                         } else {
-                              $product = tr_query()->table('se7en_posts')->findById($item->variation_id)->select('ID', 'post_title')->get();
+                              $product = tr_query()->table('se7en_posts')->findById($order_data[0]->variation_id)->select('ID', 'post_title')->get();
                               return 
-                                    "<a href='" . admin_url( '/post.php?post=' ) . $item->product_id . "&action=edit' target='_blank'>" . $product['post_title'] . "</a>"
+                                    'شناسه سفارش: ' . "<a href='" . admin_url( '/post.php?post=' ) . $order_data[0]->order_id . "&action=edit' target='_blank'>" . $order_data[0]->order_id . "#</a>"
+                                    . "<br>"
+                                    . "<a href='" . admin_url( '/post.php?post=' ) . $order_data[0]->product_id . "&action=edit' target='_blank'>" . $product['post_title'] . "</a>"
                                     . "<br>"
                                     . 'نوع محصول: متغیر'
                                     . ' | '
                                     . 'شناسه محصول: '
-                                    . $item->product_id
+                                    . $order_data[0]->product_id
                                     . ' | '
                                     . 'شناسه متغیر: '
-                                    . $item->variation_id;
+                                    . $order_data[0]->variation_id;
                         }
                   case 'date_created':
-                        $customer = tr_query()->table('se7en_users')->findById($item->customer_id)->select('ID', 'display_name', 'user_email')->get();
-                        return 
-                              "<a href='" . admin_url( 'user-edit.php?user_id=' ) . $customer['ID'] . "' target='_blank'>" . $customer['display_name'] . "</a>"
+                        return
+                              'تاریخ شمسی: ' . parsidate("Y-m-d h:i:s", $item->date_created, "per")
                               . "<br>"
-                              . 'ایمیل: ' . $customer['user_email'];
+                              . 'تاریخ میلادی: ' . $item->date_created;
                   case 'order_date':
-                        $user = get_userdata( $_GET['shareholder_id'] );
-                        switch ( $user->roles[0] ) {
-                              case 'administrator':
-                                    $user_amount = 'product_shareholder_admin_amount';
-                                    break;
-                                    
-                              case 'photographer':
-                                    $user_amount = 'product_shareholder_photographer_amount';
-                                    break;
-                  
-                              case 'graphicer':
-                                    $user_amount = 'product_shareholder_graphicer_amount';
-                                    break;
-                  
-                              default:
-                                    $user_amount = '';
-                                    break;
-                        }
-                        $where = [
-                              [
-                                    'column' => 'meta_key',
-                                    'operator' => '=',
-                                    'value' => $user_amount
-                              ],
-                        ];
-                        $shareholder = tr_query()->table('se7en_postmeta')->setIdColumn('post_id')->findByID($item->product_id)->where($where)->select('meta_value')->get();
-                        if( $shareholder['meta_value'] ) {
-                              $user_shareholder = ($item->product_gross_revenue * $shareholder['meta_value']) / 100;
-                              $pct = $shareholder['meta_value'];
-                              return 
-                                    'مبلغ سود: ' . "<strong>" . $user_shareholder . "</strong>"
-                                    . ' | '
-                                    . 'درصد سود: ' . $pct . '%'
-                                    . "<br>"
-                                    . 'ذی نفع: ' . "<a href='" . admin_url( 'user-edit.php?user_id=' ) . $user->ID . "' target='_blank'>" . $user->display_name . "</a>";
-                        }
+                        return
+                              'تاریخ شمسی: ' . parsidate("Y-m-d h:i:s", $item->order_date, "per")
+                              . "<br>"
+                              . 'تاریخ میلادی: ' . $item->order_date;
                   case 'user_id':
-                        return 
-                              'شناسه سفارش: ' . "<a href='" . admin_url( '/post.php?post=' ) . $item->order_id . "&action=edit' target='_blank'>" . $item->order_id . "#</a>"
-                              . ' | '
-                              . 'مبلغ سفارش: ' . "<strong>" . $item->product_gross_revenue . "</strong>"
-                              . "<br>"
-                              .  'تاریخ شمسی سفارش: ' . parsidate("Y-m-d h:i:s", $item->date_created, "per")
-                              . "<br>"
-                              . 'تاریخ میلادی سفارش: ' . $item->date_created;
+                        $user = get_userdata( $item->user_id );
+                        return
+                              "<a href='" . admin_url( 'user-edit.php?user_id=' ) . $user->ID . "' target='_blank'>" . $user->display_name . "</a>";
                   case 'wallet':
+                        return $item->wallet_amount;
                   case 'status':
+                        if( $item->status ) {
+                              return "<div class='shareholder-status'>تسویه شده</div>";
+                        } else {
+                              return "<div class='shareholder-status'>تسویه نشده</div>";
+                        }
                   default:
                         return print_r($item, true); //Show the whole array for troubleshooting purposes
 
