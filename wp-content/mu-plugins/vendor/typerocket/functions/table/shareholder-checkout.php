@@ -16,6 +16,7 @@ function shareholder_checkout_list_table_init() {
             echo "<div><span>لیست پرداخت‌های مربوط به کاربر " . $user->display_name . " </span></div>";
             echo "<hr class='wp-header-end'>";
             include plugin_dir_path(__FILE__) . '../menu/shareholder/checkout.php';
+            // include plugin_dir_path(__FILE__) . '../menu/shareholder/action.php';
             // Prepare table
             $ShareholderCheckoutTable->prepare_items();
             //echo "<form method='get'>";

@@ -75,14 +75,14 @@ if( $last_order[0] ) {
 
     $order = tr_query()->table('se7en_wc_order_product_lookup')->findAll()->where('order_item_id', '>', $last_order[0]->order_item_id);
     $order = $order->join('se7en_postmeta', 'se7en_postmeta.post_id', '=', 'se7en_wc_order_product_lookup.product_id', 'LEFT')->where($where_user);
-    $order = $order->setIdColumn('order_item_id')->distinct()->get();
+    $order = $order->setIdColumn('order_item_id')->orderBy('order_item_id', 'DESC')->distinct()->get();
     $last_date = $last_order[0]->date_created;
 
 } else {
 
     $order = tr_query()->table('se7en_wc_order_product_lookup')->findAll();
     $order = $order->join('se7en_postmeta', 'se7en_postmeta.post_id', '=', 'se7en_wc_order_product_lookup.product_id', 'LEFT')->where($where_user);
-    $order = $order->setIdColumn('order_item_id')->distinct()->get();
+    $order = $order->setIdColumn('order_item_id')->orderBy('order_item_id', 'DESC')->distinct()->get();
     $last_date = null;
 
 }
@@ -114,4 +114,22 @@ echo
     . "<br>"
     . $last_date
     . ' تا به امروز'
-    . "<hr>";
+    . "<br>";
+
+
+if( $order[0] ) {
+    
+    include plugin_dir_path(__FILE__) . '/action.php';
+    echo 
+        "<form action='' method='post' style='margin-top: 20px;'>"
+        ."<input type='hidden' name='order_item_id' id='order_item_id' value='" . $order[0]->order_item_id . "' required>"
+        ."<input type='hidden' name='order_date' id='order_date' value='" . $order[0]->date_created . "' required>"
+        ."<input type='hidden' name='user_id' id='user_id' value='" . $_GET['shareholder_id'] . "' required>"
+        ."<input type='hidden' name='date_created' id='date_created' value='" . date('Y-m-d H:i:s') . "' required>"
+        ."<input type='hidden' name='wallet_amount' id='wallet_amount' value='" . $wallet . "' required>"
+        ."<input type='hidden' name='status' id='status' value='1' required>"
+        . "<input type='submit' value='تسویه' class='shareholder-submit button button-primary'>"
+        . "</form>"
+        . "<hr>";
+
+}
