@@ -44,7 +44,7 @@ function wpplus_custom_route() {
 	}
 
 }
-// wpplus_custom_route();
+wpplus_custom_route();
 
 function wpplus_hierarchy_template() {
 
@@ -103,42 +103,48 @@ function wpplus_enqueue_scripts() {
 	// wp_enqueue_script( 'general-script' );
 
 }
-// add_action('wp_enqueue_scripts', 'wpplus_enqueue_scripts');
+add_action('wp_enqueue_scripts', 'wpplus_enqueue_scripts');
 
 
 // Snippets
+require_once plugin_dir_path(__FILE__) . 'functions/snippets/wp-rewrite-rules.php';
 require_once plugin_dir_path(__FILE__) . 'functions/snippets/optimize.php';
-require_once plugin_dir_path(__FILE__) . 'functions/snippets/image-size.php';
 
 // Post Types
+require_once plugin_dir_path(__FILE__) . 'functions/posttype/page.php';
 require_once plugin_dir_path(__FILE__) . 'functions/posttype/post.php';
-require_once plugin_dir_path(__FILE__) . 'functions/posttype/gallery.php';
+require_once plugin_dir_path(__FILE__) . 'functions/posttype/advertising.php';
+require_once plugin_dir_path(__FILE__) . 'functions/posttype/project.php';
+require_once plugin_dir_path(__FILE__) . 'functions/posttype/consultant.php';
 
 // Taxonomies
-require_once plugin_dir_path(__FILE__) . 'functions/taxonomy/gallery_cat.php';
+require_once plugin_dir_path(__FILE__) . 'functions/taxonomy/category.php';
+require_once plugin_dir_path(__FILE__) . 'functions/taxonomy/tag.php';
+require_once plugin_dir_path(__FILE__) . 'functions/taxonomy/advertising_cat.php';
 
 // Meta Boxes
-include plugin_dir_path(__FILE__) . 'functions/metabox/user.php';
-include plugin_dir_path(__FILE__) . 'functions/metabox/product.php';
-include plugin_dir_path(__FILE__) . 'functions/metabox/gallery.php';
+require_once plugin_dir_path(__FILE__) . 'functions/metabox/user.php';
+require_once plugin_dir_path(__FILE__) . 'functions/metabox/page.php';
+require_once plugin_dir_path(__FILE__) . 'functions/metabox/post.php';
+require_once plugin_dir_path(__FILE__) . 'functions/metabox/advertising.php';
+require_once plugin_dir_path(__FILE__) . 'functions/metabox/project.php';
+require_once plugin_dir_path(__FILE__) . 'functions/metabox/consultant.php';
 
 // Resource
 // require_once plugin_dir_path(__FILE__) . 'functions/metabox/user.php';
 
 // Menu
-require_once plugin_dir_path(__FILE__) . 'functions/menu/shareholder.php';
+require_once plugin_dir_path(__FILE__) . 'functions/menu/forms.php';
+require_once plugin_dir_path(__FILE__) . 'functions/menu/expert.php';
+require_once plugin_dir_path(__FILE__) . 'functions/menu/request.php';
+require_once plugin_dir_path(__FILE__) . 'functions/menu/counseling.php';
 
 // Table
 // require_once plugin_dir_path(__FILE__) . 'functions/table/forms.php';
+// require_once plugin_dir_path(__FILE__) . 'functions/table/expert.php';
+// require_once plugin_dir_path(__FILE__) . 'functions/table/request.php';
+// require_once plugin_dir_path(__FILE__) . 'functions/table/counseling.php';
 
-// Columns
-require_once plugin_dir_path(__FILE__) . 'functions/column/product.php';
-require_once plugin_dir_path(__FILE__) . 'functions/column/order.php';
-require_once plugin_dir_path(__FILE__) . 'functions/column/line-item.php';
-
-// Roles
-require_once plugin_dir_path(__FILE__) . 'functions/role/graphicer.php';
-require_once plugin_dir_path(__FILE__) . 'functions/role/photographer.php';
 
 
 

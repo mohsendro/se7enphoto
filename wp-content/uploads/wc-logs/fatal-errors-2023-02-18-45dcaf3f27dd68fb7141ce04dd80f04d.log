@@ -228,3 +228,20 @@ Stack trace:
 #5 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
 #6 C:\xampp\htdocs\se7enphoto\wp-includes\plugin.php(517): WP_Hook->do_action(Arra در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\menu\shareholder\action.php روی خط 7
 
+2023-02-18T19:39:10+00:00 CRITICAL Uncaught Error: Call to a member function is_on_sale() on null in C:\xampp\htdocs\se7enphoto\wp-content\themes\wpplus\woocommerce\single-product\sale-flash.php:25
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1677): wc_get_template('single-product/...')
+#2 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(308): woocommerce_show_product_sale_flash('')
+#3 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#4 C:\xampp\htdocs\se7enphoto\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\xampp\htdocs\se7enphoto\wp-content\themes\wpplus\woocommerce\content-single-product.php(43): do_action('woocommerce_bef...')
+#6 C:\xampp\htdocs\se7enphoto\wp-includes\template.php(785): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\wc-core-functi در C:\xampp\htdocs\se7enphoto\wp-content\themes\wpplus\woocommerce\single-product\sale-flash.php روی خط 25
+
+2023-02-18T19:58:35+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-includes\widgets\class-wp-nav-menu-widget.php روی خط 207
+
+2023-02-18T20:19:23+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-includes\functions.php روی خط 6620
+
+2023-02-18T20:19:29+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-includes\functions.php روی خط 4541
+
