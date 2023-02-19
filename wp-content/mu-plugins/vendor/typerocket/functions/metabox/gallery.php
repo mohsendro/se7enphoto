@@ -27,7 +27,7 @@ if( class_exists( 'CSF' ) ) {
         'fields' => array(
 
             //
-            // A switcher field
+            // A select field
             array(
                 'id'          => 'gallery_products',
                 'type'        => 'select',
@@ -61,6 +61,16 @@ if( class_exists( 'CSF' ) ) {
                 'text_on'    => 'بله',
                 'text_off'   => 'خیر',
                 'default'    => true,
+                'text_width' => 70
+            ),
+
+            array(
+                'id'         => 'gallery_featured',
+                'type'       => 'switcher',
+                'title'      => 'گالری منتخب',
+                'text_on'    => 'بله',
+                'text_off'   => 'خیر',
+                'default'    => false,
                 'text_width' => 70
             ),
 

@@ -2,7 +2,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
 
-// Taxonomy: gallery_cat - دسته گالری
+// Taxonomy: gallery_cat - دسته‌بندی گالری
 
 // general
 $gallery_cat = tr_taxonomy('gallery_cat', 'gallery_cats');
@@ -13,10 +13,10 @@ $gallery->setModelClass(\App\Models\GalleryCat::class);
 $gallery->setHandler(\App\Controllers\GalleryCatController::class);
 
 // labels
-$upperPlural = 'دسته‌ها';
-$upperSingular = 'دسته';
-$lowerSingular = 'دسته';
-$lowerPlural = 'دسته‌ها';
+$upperPlural = 'دسته‌بندی‌ها';
+$upperSingular = 'دسته‌بندی';
+$lowerSingular = 'دسته‌بندی';
+$lowerPlural = 'دسته‌بندی‌ها';
 $labels = [
     'add_new_item'               => sprintf( _x( 'افزودن %s', 'taxonomy:gallery_cat', 'your-custom-domain' ), $upperSingular),
     'add_or_remove_items'        => sprintf( _x( 'افزودن یا حذف %s', 'taxonomy:gallery_cat', 'your-custom-domain' ), $lowerPlural),
