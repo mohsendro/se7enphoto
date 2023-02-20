@@ -36,13 +36,13 @@ if( class_exists( 'CSF' ) ) {
           'default'     => 30,
         ),
 
-        array(
-          'id'          => 'user_shareholder_wallet_amount',
-          'type'        => 'number',
-          'title'       => 'موجودی کیف پول',
-          'unit'        => 'تومان',
-          'default'     => 0,
-        ),
+        // array(
+        //   'id'          => 'user_shareholder_wallet_amount',
+        //   'type'        => 'number',
+        //   'title'       => 'موجودی کیف پول',
+        //   'unit'        => 'تومان',
+        //   'default'     => 0,
+        // ),
   
       )
     ) );
