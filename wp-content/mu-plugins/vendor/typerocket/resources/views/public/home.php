@@ -9,15 +9,13 @@ if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
 
 <h3>نوشته‌ها:</h3><br>
 <?php
-
-    if( $posts ) 
+    if( !$posts ) echo "محتوایی وجود ندارد"; 
     foreach ($posts as $post) {
         echo $post->ID . ' | ' ;
         echo "<a href='" . get_permalink($post->ID) . "'>" . $post->post_title . "</a>";
         echo "<br>";
     }
     echo "<hr>";
-
 ?>
 
 <?php

@@ -1,0 +1,8 @@
+2023-02-21T18:33:53+00:00 CRITICAL Uncaught ReflectionException: Class App\Models\Advertising does not exist in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\vendor\typerocket\core\src\Core\Resolver.php:24
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\vendor\typerocket\core\src\Core\Resolver.php(24): ReflectionClass->__construct('App\\Models\\Adve...')
+#1 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\vendor\typerocket\core\src\Core\Resolver.php(115): TypeRocket\Core\Resolver->resolve('App\\Models\\Adve...')
+#2 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\vendor\typerocket\core\src\Core\Resolver.php(71): TypeRocket\Core\Resolver->getDependencies(Array, Array)
+#3 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\vendor\typerocket\core\src\Http\ControllerContainer.php(46): TypeRocket\Core\Resolver->resolveCallable(Array, Array)
+#4 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\vendor\typerocket\core\src\Http\Mi در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\vendor\typerocket\core\src\Core\Resolver.php روی خط 24
+
