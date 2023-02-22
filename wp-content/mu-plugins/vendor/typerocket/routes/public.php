@@ -27,31 +27,13 @@ tr_route()->get()->match('/tag/([^\/]+)/page/([^\/]+)', ['tag_name', 'number'])-
 tr_route()->get()->match('/blog/([^\/]+)', ['slug'])->do('single@PostController'); // single
 
 // Advertising
-tr_route()->get()->match('/advertising')->do('home@AdvertisingController');
-// tr_route()->get()->match('/advertising/page')->do('page@AdvertisingController');
-tr_route()->get()->match('/advertising/page/([^\/]+)', ['number'])->do('archive@AdvertisingController');
-// tr_route()->get()->match('/advertising-cat')->do('page@AdcertisingCatController');
-tr_route()->get()->match('/advertising-cat/([^\/]+)', ['cat_name'])->do('category@AdcertisingCatController');
-tr_route()->get()->match('/advertising-cat/([^\/]+)/page/([^\/]+)', ['cat_name', 'number'])->do('archive@AdcertisingCatController');
-tr_route()->get()->match('/advertising/([^\/]+)', ['slug'])->do('single@AdvertisingController'); // single
-
-// Project
-tr_route()->get()->match('/project')->do('home@ProjectController');
-// tr_route()->get()->match('/project/page')->do('page@ProjectController');
-tr_route()->get()->match('/project/page/([^\/]+)', ['number'])->do('archive@ProjectController');
-// tr_route()->get()->match('/project-cat')->do('page@ProjectCatController');
-// tr_route()->get()->match('/project-cat/([^\/]+)', ['cat_name'])->do('category@ProjectCatController');
-// tr_route()->get()->match('/project-cat/([^\/]+)/page/([^\/]+)', ['cat_name', 'number'])->do('archive@ProjectCatController');
-tr_route()->get()->match('/project/([^\/]+)', ['slug'])->do('single@ProjectController'); // single
-
-// Consultant
-tr_route()->get()->match('/consultant')->do('home@ConsultantController');
-// tr_route()->get()->match('/consultant/page')->do('page@ConsultantController');
-tr_route()->get()->match('/consultant/page/([^\/]+)', ['number'])->do('archive@ConsultantController');
-// tr_route()->get()->match('/consultant-cat')->do('page@ConsultantCatController');
-// tr_route()->get()->match('/consultant-cat/([^\/]+)', ['cat_name'])->do('category@ConsultantCatController');
-// tr_route()->get()->match('/consultant-cat/([^\/]+)/page/([^\/]+)', ['cat_name', 'number'])->do('archive@ConsultantCatController');
-tr_route()->get()->match('/consultant/([^\/]+)', ['slug'])->do('single@ConsultantController'); // single
+// tr_route()->get()->match('/advertising')->do('home@AdvertisingController');
+// // tr_route()->get()->match('/advertising/page')->do('page@AdvertisingController');
+// tr_route()->get()->match('/advertising/page/([^\/]+)', ['number'])->do('archive@AdvertisingController');
+// // tr_route()->get()->match('/advertising-cat')->do('page@AdcertisingCatController');
+// tr_route()->get()->match('/advertising-cat/([^\/]+)', ['cat_name'])->do('category@AdcertisingCatController');
+// tr_route()->get()->match('/advertising-cat/([^\/]+)/page/([^\/]+)', ['cat_name', 'number'])->do('archive@AdcertisingCatController');
+// tr_route()->get()->match('/advertising/([^\/]+)', ['slug'])->do('single@AdvertisingController'); // single
 
 // Author
 tr_route()->get()->match('/author')->do('home@UserController');
