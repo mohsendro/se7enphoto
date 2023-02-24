@@ -7,3 +7,11 @@ Stack trace:
 #4 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\vendor\typerocket\core\src\Http\Router.php(156): TypeRocket\Http\Response->finish()
 #5 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\t در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\resources\views\public\search.php روی خط 24
 
+2023-02-24T18:50:45+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\BlockTypes\ProductSearch.php روی خط 161
+
+2023-02-24T18:50:45+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\BlockTypes\ProductSearch.php روی خط 161
+
+2023-02-24T18:57:45+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\admin\class-wc-admin-taxonomies.php روی خط 10
+
+2023-02-24T20:02:09+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-includes\functions.php روی خط 4541
+
