@@ -13,6 +13,7 @@
 
 // Index or Front-page
 tr_route()->get()->match('/')->do('index@FronPageController');
+// tr_route()->get()->match('/')->do('index@\App\Controllers\FronPageController');
 
 // Blog or Post
 tr_route()->get()->match('/blog')->do('home@PostController');

@@ -10,7 +10,7 @@ if( ! class_exists( 'Menus' ) ) {
 
 			add_filter('custom_menu_order', array($this, 'wpplus_menu_order') );
             add_filter('menu_order', array($this, 'wpplus_menu_order') );
-            add_action( 'admin_init', array($this, 'wpplus_remove_menus') );
+            // add_action( 'admin_init', array($this, 'wpplus_remove_menus') );
 
 		}
 
@@ -23,12 +23,17 @@ if( ! class_exists( 'Menus' ) ) {
              'separator1',
              'edit.php?post_type=page',
              'edit.php',
+             'edit.php?post_type=gallery',
+             'edit.php?post_type=product',
              'edit-comments.php',
              'upload.php',
+             'woocommerce',
+             'wc-admin&path=/analytics/overview',
+             'woocommerce-marketing',
              'separator2',
+             'users.php',
              'themes.php',
              'plugins.php',
-             'users.php',
              'tools.php',
              'options-general.php',
              'separator-last',

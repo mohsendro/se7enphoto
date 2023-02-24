@@ -14,7 +14,7 @@ class FronPageController extends Controller
      */
     public function index(Post $post)
     {
-        $posts        = $post->findAll()->where('post_status', '=', 'publish')->orderBy('id', 'DESC')->take(10)->get();
+        $posts = $post->findAll()->where('post_status', '=', 'publish')->orderBy('id', 'DESC')->take(10)->get();
         
         return tr_view('public.front-page', compact('posts') );
     }

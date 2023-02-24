@@ -157,3 +157,48 @@ function product_metabox_enqueue_script() {
     
 }
 // add_action( 'admin_enqueue_scripts', 'product_metabox_enqueue_script' );
+
+
+///////////////////////////////////////////////////////////////////////////////////// 
+// Control core classes for avoid errors
+if( class_exists( 'CSF' ) ) {
+
+    //
+    // Set a unique slug-like ID
+    $prefix = 'product';
+  
+    //
+    // Create a metabox
+    CSF::createMetabox( $prefix, array(
+        'title'              => 'اطلاعات گالری',
+        'post_type'          => 'product',
+        'data_type'          => 'serialize',
+        'context'            => 'side',
+    ) );
+  
+    //
+    // Create a section
+    CSF::createSection( $prefix, array(
+        // 'title'  => 'Tab Title 1',
+        'fields' => array(
+
+            //
+            // A select field
+            array(
+                'id'          => 'product_gallery',
+                'type'        => 'select',
+                'title'       => 'گالری مربوطه',
+                'placeholder' => 'نام گالری مورد نظر را وارد نمایید...',
+                'chosen'      => true,
+                'multiple'    => false,
+                'ajax'        => true,
+                'options'     => 'posts',
+                'query_args'  => array(
+                  'post_type' => 'gallery'
+                )
+            ),            
+            
+        )
+    ) );
+    
+}

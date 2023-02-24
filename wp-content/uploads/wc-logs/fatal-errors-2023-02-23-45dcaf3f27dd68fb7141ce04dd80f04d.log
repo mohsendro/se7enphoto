@@ -1,0 +1,34 @@
+2023-02-23T08:42:26+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\phpackagist\vendor\composer\ClassLoader.php روی خط 384
+
+2023-02-23T18:22:07+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\wpackagist\vendor\plugins\query-monitor\data\assets.php روی خط 74
+
+2023-02-23T20:47:27+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-includes\functions.php روی خط 4541
+
+2023-02-23T20:47:39+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\admin\wc-meta-box-functions.php روی خط 13
+
+2023-02-23T20:48:02+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-admin\includes\class-wp-list-table-compat.php روی خط 68
+
+2023-02-23T20:48:08+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\src\Admin\Notes\DataStore.php روی خط 8
+
+2023-02-23T20:49:38+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\src\Admin\Overrides\OrderTraits.php روی خط 10
+
+2023-02-23T20:49:45+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\vendor\typerocket\core\src\Http\RouteCollection.php روی خط 100
+
+2023-02-23T20:49:46+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\integrations\maxmind-geolocation\class-wc-integration-maxmind-geolocation.php روی خط 11
+
+2023-02-23T20:49:48+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\src\Admin\Features\OnboardingTasks\TaskLists.php روی خط 484
+
+2023-02-23T20:49:49+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\src\Admin\Features\OnboardingTasks\TaskList.php روی خط 15
+
+2023-02-23T20:50:04+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\packages\woocommerce-blocks\build\product-tag.asset.php روی خط 1
+
+2023-02-23T20:50:05+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\admin\class-wc-admin-assets.php روی خط 11
+
+2023-02-23T20:50:09+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\BlockTypes\ProductTagList.php روی خط 56
+
+2023-02-23T20:50:10+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\BlockTypes\ProductQuery.php روی خط 459
+
+2023-02-23T20:50:13+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-includes\functions.php روی خط 4541
+
+2023-02-23T20:50:13+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\BlockTypes\CheckoutTermsBlock.php روی خط 15
+
