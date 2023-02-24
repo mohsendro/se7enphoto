@@ -82,7 +82,6 @@ function pagination_post($count, $total_page = "", $range = 2, $current_page = 1
     }
 }
 
-
 function insertPagination($base_url, $current_page, $total_page, $prev_next = false) {
 
     $ends_count = 1;  //how many items at the ends (before and after [...])

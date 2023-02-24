@@ -107,6 +107,7 @@ function wpplus_enqueue_scripts() {
 
 
 // Snippets
+require_once plugin_dir_path(__FILE__) . 'functions/snippets/wp-rewrite-rules.php';
 require_once plugin_dir_path(__FILE__) . 'functions/snippets/optimize.php';
 require_once plugin_dir_path(__FILE__) . 'functions/snippets/image-size.php';
 

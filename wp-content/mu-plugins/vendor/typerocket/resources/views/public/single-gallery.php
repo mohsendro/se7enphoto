@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
 
 ?>
 
-<h1>صفحه سینگل آگهی <span>: <?php echo $post->post_title; ?></span></h1> 
+<h1>صفحه سینگل گالری <span>: <?php echo $post->post_title; ?></span></h1> 
 <hr>
 
 <?php

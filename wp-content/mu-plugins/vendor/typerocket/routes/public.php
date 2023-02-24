@@ -27,14 +27,14 @@ tr_route()->get()->match('/tag/([^\/]+)', ['tag_name'])->do('tag@TagController')
 tr_route()->get()->match('/tag/([^\/]+)/page/([^\/]+)', ['tag_name', 'number'])->do('archive@TagController');
 tr_route()->get()->match('/blog/([^\/]+)', ['slug'])->do('single@PostController'); // single
 
-// Advertising
-// tr_route()->get()->match('/advertising')->do('home@AdvertisingController');
-// // tr_route()->get()->match('/advertising/page')->do('page@AdvertisingController');
-// tr_route()->get()->match('/advertising/page/([^\/]+)', ['number'])->do('archive@AdvertisingController');
-// // tr_route()->get()->match('/advertising-cat')->do('page@AdcertisingCatController');
-// tr_route()->get()->match('/advertising-cat/([^\/]+)', ['cat_name'])->do('category@AdcertisingCatController');
-// tr_route()->get()->match('/advertising-cat/([^\/]+)/page/([^\/]+)', ['cat_name', 'number'])->do('archive@AdcertisingCatController');
-// tr_route()->get()->match('/advertising/([^\/]+)', ['slug'])->do('single@AdvertisingController'); // single
+// Gallery
+tr_route()->get()->match('/gallery')->do('home@GalleryController');
+// tr_route()->get()->match('/gallery/page')->do('page@GalleryController');
+tr_route()->get()->match('/gallery/page/([^\/]+)', ['number'])->do('archive@GalleryController');
+// tr_route()->get()->match('/gallery-cat')->do('page@GalleryCatController');
+tr_route()->get()->match('/gallery-cat/([^\/]+)', ['cat_name'])->do('category@GalleryCatController');
+tr_route()->get()->match('/gallery-cat/([^\/]+)/page/([^\/]+)', ['cat_name', 'number'])->do('archive@GalleryCatController');
+tr_route()->get()->match('/gallery/([^\/]+)', ['slug'])->do('single@GalleryController'); // single
 
 // Author
 tr_route()->get()->match('/author')->do('home@UserController');
@@ -46,5 +46,3 @@ tr_route()->get()->match('/author/([^\/]+)', ['slug'])->do('single@UserControlle
 
 // Search
 tr_route()->get()->match('/search/([^\/]+)', ['param'])->do('archive@SearchController');
-
-

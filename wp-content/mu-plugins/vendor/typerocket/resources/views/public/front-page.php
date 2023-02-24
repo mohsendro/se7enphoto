@@ -19,31 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
 ?>
 <hr>
 
-<h3>آگهی‌ها:</h3><br>
-<?php
-
-    if( $advertisings ) 
-    foreach ($advertisings as $advertising) {
-        echo $advertising->ID . ' | ' . $advertising->post_title;
-        echo "<br>";
-    }
-
-?>
-<hr>
-
-<h3>پروژه‌ها:</h3><br>
-<?php
-
-    if( $projects ) 
-    foreach ($projects as $project) {
-        echo $project->ID . ' | ' . $project->post_title;
-        echo "<br>";
-    }
-
-?>
-<hr>
-
-<h3>مشاوره‌ها:</h3><br>
+<h3>گالری‌ها:</h3><br>
 <?php
 
     if( $consultants ) 

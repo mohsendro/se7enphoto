@@ -4,10 +4,10 @@ if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
 
 ?>
 
-<h1>صفحه مشاوره‌ها <span>: <?php echo $count; ?> نتیجه</span></h1> 
+<h1>صفحه دسته بندی گالری <span>: <?php echo $category->name; ?> | نتیجه :  <?php echo $count; ?></span></h1> 
 <hr>
 
-<h3>مشاوره‌ها:</h3><br>
+<h3>گالری‌ها:</h3><br>
 <?php
     if( !$posts ) echo "محتوایی وجود ندارد"; 
     foreach ($posts as $post) {
@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
 <?php
     require TYPEROCKET_DIR_PATH . '/functions/snippets/pagination.php';
     // pagination_post($count, $total_page, 2, $current_page);
-    insertPagination(home_url('consultant/page'), $current_page, $total_page, true);
+    insertPagination(home_url('gallery-cat/' . $category->slug . '/page'), $current_page, $total_page, true);
 ?>
 
 

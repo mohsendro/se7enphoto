@@ -1,0 +1,9 @@
+2023-02-24T12:08:42+00:00 CRITICAL Uncaught Error: Call to undefined function insertSearchPagination() in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\resources\views\public\search.php:24
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\vendor\typerocket\core\src\Template\TemplateEngine.php(85): include()
+#1 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\vendor\typerocket\core\src\Template\View.php(225): TypeRocket\Template\TemplateEngine->load()
+#2 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\vendor\typerocket\core\src\Template\View.php(237): TypeRocket\Template\View->load('views')
+#3 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\vendor\typerocket\core\src\Http\Response.php(1045): TypeRocket\Template\View->render()
+#4 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\vendor\typerocket\core\src\Http\Router.php(156): TypeRocket\Http\Response->finish()
+#5 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\t در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\resources\views\public\search.php روی خط 24
+
