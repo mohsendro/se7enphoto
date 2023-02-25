@@ -11,7 +11,26 @@ if ( ! defined( 'TYPEROCKET_DIR_URL' ) ) define( 'TYPEROCKET_DIR_URL' , plugin_d
 
 
 // Register New Directory Active Theme
-register_theme_directory( dirname( __FILE__ ) . '/resources/themes/templates' );
+// register_theme_directory( dirname( __FILE__ ) . '/resources/themes/' );
+
+function wpplus_template_directory_uri($template_dir_uri) {
+    return str_replace('/wp-content/themes/wpplus', '/wp-content/mu-plugins/vendor/typerocket/resources/themes/', $template_dir_uri);
+}
+function wpplus_template_directory($template_dir) {
+    return str_replace('/wp-content/themes/wpplus', '/wp-content/mu-plugins/vendor/typerocket/resources/themes/', $template_dir);
+}
+function wpplus_stylesheet_directory_uri($stylesheet_dir_uri) {
+    return str_replace('/wp-content/themes/wpplus', '/wp-content/mu-plugins/vendor/typerocket/resources/themes/', $stylesheet_dir_uri);
+}
+function wpplus_stylesheet_directory($stylesheet_dir) {
+    return str_replace('/wp-content/themes/wpplus', '/wp-content/mu-plugins/vendor/typerocket/resources/themes/', $stylesheet_dir);
+}
+
+add_filter('template_directory_uri', 'wpplus_template_directory_uri');
+add_filter('template_directory', 'wpplus_template_directory');
+add_filter('stylesheet_directory_uri', 'wpplus_stylesheet_directory_uri');
+add_filter('stylesheet_directory', 'wpplus_stylesheet_directory');
+// var_dump( get_template_directory() );
 
 function wpplus_custom_route() {
 
@@ -151,21 +170,3 @@ require_once plugin_dir_path(__FILE__) . 'functions/role/photographer.php';
 
 
 
-// // Define the new theme directory path
-// define( 'WP_CUSTOM_THEME_DIR', ABSPATH . 'wp-content/mu-plugins/vendor/typerocket/resources/themes' );
-
-// // Filter the theme directory path
-// add_filter( 'template_directory', 'custom_theme_directory' );
-// add_filter( 'stylesheet_directory', 'custom_theme_directory' );
-// add_filter( 'template_directory_uri', 'custom_theme_directory_uri' );
-// add_filter( 'stylesheet_directory_uri', 'custom_theme_directory_uri' );
-
-// // Define the new theme directory URI
-// function custom_theme_directory_uri( $uri ) {
-//     return str_replace( get_template_directory(), WP_CONTENT_URL . '/mu-plugins/vendor/typerocket/resources/themes', $uri );
-// }
-
-// // Define the new theme directory path
-// function custom_theme_directory( $path ) {
-//     return str_replace( get_template_directory(), WP_CUSTOM_THEME_DIR, $path );
-// }
