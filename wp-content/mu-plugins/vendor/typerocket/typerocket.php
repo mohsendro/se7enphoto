@@ -147,3 +147,25 @@ require_once plugin_dir_path(__FILE__) . 'functions/role/photographer.php';
 // global $wp_query; 
 // $hierarchy = new Brain\Hierarchy\Hierarchy();
 // var_export($hierarchy->hierarchy($wp_query));
+
+
+
+
+// // Define the new theme directory path
+// define( 'WP_CUSTOM_THEME_DIR', ABSPATH . 'wp-content/mu-plugins/vendor/typerocket/resources/themes' );
+
+// // Filter the theme directory path
+// add_filter( 'template_directory', 'custom_theme_directory' );
+// add_filter( 'stylesheet_directory', 'custom_theme_directory' );
+// add_filter( 'template_directory_uri', 'custom_theme_directory_uri' );
+// add_filter( 'stylesheet_directory_uri', 'custom_theme_directory_uri' );
+
+// // Define the new theme directory URI
+// function custom_theme_directory_uri( $uri ) {
+//     return str_replace( get_template_directory(), WP_CONTENT_URL . '/mu-plugins/vendor/typerocket/resources/themes', $uri );
+// }
+
+// // Define the new theme directory path
+// function custom_theme_directory( $path ) {
+//     return str_replace( get_template_directory(), WP_CUSTOM_THEME_DIR, $path );
+// }
