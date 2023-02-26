@@ -10,7 +10,7 @@ if( ! class_exists( 'Menus' ) ) {
 
 			add_filter('custom_menu_order', array($this, 'wpplus_menu_order') );
             add_filter('menu_order', array($this, 'wpplus_menu_order') );
-            // add_action( 'admin_init', array($this, 'wpplus_remove_menus') );
+            add_action( 'admin_init', array($this, 'wpplus_remove_menus') );
 
 		}
 
