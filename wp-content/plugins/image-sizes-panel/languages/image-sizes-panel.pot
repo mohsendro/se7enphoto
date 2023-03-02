@@ -1,0 +1,65 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Image Sizes Panel\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/plugins/image-sizes-"
+"panel/\n"
+"POT-Creation-Date: 2016-06-23 07:03+0100\n"
+"PO-Revision-Date: 2015-06-11 07:43-0000\n"
+"Last-Translator: Ben Huson <ben@thewhiteroom.net>\n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-KeywordsList: __;_e;_ex;_x;esc_html__;esc_html_e;esc_attr__;"
+"esc_attr_e\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../admin/admin.php:40
+msgid "Image Sizes"
+msgstr ""
+
+#: ../admin/admin.php:74
+msgid "Info"
+msgstr ""
+
+#: ../admin/admin.php:75
+msgid "Size"
+msgstr ""
+
+#: ../admin/admin.php:76
+msgid "Dimensions"
+msgstr ""
+
+#: ../admin/admin.php:107
+msgid "Cropped"
+msgstr ""
+
+#: ../admin/admin.php:107
+msgid "Fit"
+msgstr ""
+
+#: ../admin/admin.php:108
+#, php-format
+msgid "Image sizing: %s"
+msgstr ""
+
+#: ../admin/admin.php:112
+msgid "Image file not generated. Will use next largest image size."
+msgstr ""
+
+#: ../admin/admin.php:116
+msgid "Image size no longer defined but file still exists."
+msgstr ""
+
+#: ../admin/admin.php:134
+msgid "full"
+msgstr ""
+
+#: ../admin/admin.php:142
+msgid "No image sizes"
+msgstr ""

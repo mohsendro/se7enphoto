@@ -1,0 +1,22 @@
+2023-02-27T17:45:37+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-admin\includes\template.php روی خط 12
+
+2023-02-27T19:07:09+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\packages\action-scheduler\classes\abstracts\ActionScheduler.php روی خط 121
+
+2023-02-27T19:07:14+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\src\Internal\Admin\RemoteFreeExtensions\Init.php روی خط 8
+
+2023-02-27T19:07:52+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\src\Admin\Features\OnboardingTasks\Tasks\ReviewShippingOptions.php روی خط 74
+
+2023-02-27T19:08:09+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\real-media-library\inc\metadata\Meta.php روی خط 18
+
+2023-02-27T19:09:22+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\BlockTypes\ProductOnSale.php روی خط 39
+
+2023-02-27T19:09:54+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\BlockTypes\CheckoutFieldsBlock.php روی خط 15
+
+2023-02-27T19:09:56+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-includes\functions.php روی خط 4541
+
+2023-02-27T19:10:11+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-admin\includes\admin-filters.php روی خط 11
+
+2023-02-27T19:10:56+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-admin\includes\template.php روی خط 12
+
+2023-02-27T19:28:30+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-admin\includes\misc.php روی خط 1629
+

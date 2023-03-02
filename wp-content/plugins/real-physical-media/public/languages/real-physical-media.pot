@@ -1,0 +1,263 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: n/a\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.4.0\n"
+
+#: admin.js:1
+msgid "<strong>Real Physical Media</strong> just moved a file physically. Do you like it? Do us a favor and rate us."
+msgstr ""
+
+#: admin.js:1
+msgid "Author"
+msgstr ""
+
+#: admin.js:1
+msgid "Activate plugin"
+msgstr ""
+
+#: admin.js:1
+msgid "Install for free"
+msgstr ""
+
+#: admin.js:1
+msgid "Deactivate as handler"
+msgstr ""
+
+#: admin.js:1
+msgid "Activate as handler"
+msgstr ""
+
+#: admin.js:1
+msgid "You have successfully activated {{strong}}Real Physical Media{{/strong}}. To use Real Physical Media you need to install a media file handler, which moves files in your media library later. We recommend Media File Renamer (free)."
+msgstr ""
+
+#: admin.js:1
+msgid "Error"
+msgstr ""
+
+#: admin.js:1
+msgid "Open file"
+msgstr ""
+
+#: admin.js:1
+msgid "Retry"
+msgstr ""
+
+#: admin.js:1
+msgid "Skip file and continue"
+msgstr ""
+
+#: admin.js:1
+msgid "Details"
+msgstr ""
+
+#: admin.js:1
+msgid "Code"
+msgstr ""
+
+#: admin.js:1
+msgid "Message"
+msgstr ""
+
+#: admin.js:1
+msgid "Are you sure?"
+msgstr ""
+
+#: admin.js:1
+msgid "Real Physical Media"
+msgstr ""
+
+#: admin.js:1
+msgid "Deactivate automatic queueing"
+msgstr ""
+
+#: admin.js:1
+msgid "Activate automatic change detection"
+msgstr ""
+
+#: admin.js:1
+msgid "SEO Redirects"
+msgstr ""
+
+#: admin.js:1
+msgid "Settings"
+msgstr ""
+
+#: admin.js:1
+msgid "Product license not yet activated."
+msgstr ""
+
+#: admin.js:1
+msgid "Activate license"
+msgstr ""
+
+#: admin.js:1
+msgid "Dismiss notice"
+msgstr ""
+
+#: admin.js:1
+msgid ""
+"Real Physical Media can automatically detect when you have moved a file to the Real Media Library and can also move it physically in your file system.\n"
+"\n"
+"Before you enable this feature, go to the \"Attachment Details\" or \"Edit Media\" dialog of the file you last moved and click the \"Move physically\" button. Then check that the file is available at the new URL as expected.\n"
+"\n"
+"We recommend that you perform this manual check before you enable automatic moving, because special WordPress configurations rarely result in errors with the Media File Renamer handler."
+msgstr ""
+
+#: admin.js:1
+msgid "Activate"
+msgstr ""
+
+#: admin.js:1
+msgid "Unfortunately, you cannot activate automatic change detection. Your current database system does not support some mandatory functions. Please update your MySQL/MariaDB database to the latest version. Technical reason: Your database system does not allow you to read from a hierarchical query created by wp_rml_create_all_children_sql()."
+msgstr ""
+
+#: admin.js:1
+msgid "Back"
+msgstr ""
+
+#: admin.js:1
+msgid "Queue"
+msgstr ""
+
+#: admin.js:1
+msgid "You have successfully installed and configured Real Phyiscal Media! In this window you can follow live, which files were physically moved recently."
+msgstr ""
+
+#: admin.js:1
+msgid "Got it!"
+msgstr ""
+
+#: admin.js:1
+msgid "One file left... (~ %s)"
+msgid_plural "%d files left... (~ %s)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: admin.js:1
+msgid "Resume processing now..."
+msgid_plural "Resume processing in %d seconds..."
+msgstr[0] ""
+msgstr[1] ""
+
+#: admin.js:1
+msgid "Loading..."
+msgstr ""
+
+#: admin.js:1
+msgid "Do not close this admin page."
+msgstr ""
+
+#: admin.js:1
+msgid "Learn more about cronjob services"
+msgstr ""
+
+#: admin.js:1
+msgid "No entries"
+msgstr ""
+
+#: admin.js:1
+msgid "Check for new entries soon..."
+msgid_plural "Check for new entries in %d seconds..."
+msgstr[0] ""
+msgstr[1] ""
+
+#: admin.js:1
+msgid "Last processed items %s"
+msgstr ""
+
+#: admin.js:1
+msgid "(%d total)"
+msgstr ""
+
+#: admin.js:1
+msgid "All"
+msgstr ""
+
+#: admin.js:1
+msgid "Deactivate all redirects"
+msgstr ""
+
+#: admin.js:1
+msgid "Activate all redirects"
+msgstr ""
+
+#: admin.js:1
+msgid "Clear redirects for size '%s'"
+msgstr ""
+
+#: admin.js:1
+msgid "Clear all redirects"
+msgstr ""
+
+#: admin.js:1
+msgid "Clear"
+msgstr ""
+
+#: admin.js:1
+msgid "SEO database size"
+msgstr ""
+
+#: admin.js:1
+msgid "Old url"
+msgstr ""
+
+#: admin.js:1
+msgid "Redirect to"
+msgstr ""
+
+#: admin.js:1
+msgid "File"
+msgstr ""
+
+#: admin.js:1
+msgid "Modified / Size name"
+msgstr ""
+
+#: admin.js:1
+msgid "Load more"
+msgstr ""
+
+#: admin.js:1
+msgid "No more redirects available"
+msgstr ""
+
+#: admin.js:1
+msgid "+ one thumbnail"
+msgid_plural "+ %d thumbnails"
+msgstr[0] ""
+msgstr[1] ""
+
+#: admin.js:1
+msgid "+ one older redirect"
+msgid_plural "+ %d older redirects"
+msgstr[0] ""
+msgstr[1] ""
+
+#: admin.js:1
+msgid "Thumbnails"
+msgstr ""
+
+#: admin.js:1
+msgid "Older redirects"
+msgstr ""
+
+#: admin.js:1
+msgid "This option is not available because you are using <strong>Real Physical Media Plugin</strong> to physically restructure your files.<br/>"
+msgstr ""
+
+#: admin.js:1
+msgid "Add file to queue..."
+msgstr ""
+
+#: admin.js:1
+msgid "Cronjob URL successfully copied to the clipboard."
+msgstr ""

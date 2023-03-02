@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'name' => 'catfolders/dennis',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '4c483f17211efc3da1b21ce147d9ae711b8aafc5',
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => true,
+    ),
+    'versions' => array(
+        '10quality/php-data-model' => array(
+            'pretty_version' => 'v1.0.2',
+            'version' => '1.0.2.0',
+            'reference' => '45083e64b7757edf0594a94ad892d5164b773464',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../10quality/php-data-model',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        '10quality/wp-query-builder' => array(
+            'pretty_version' => 'v1.0.12',
+            'version' => '1.0.12.0',
+            'reference' => '9b814bbf478d800269feb982e4063cd6a24ebef5',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../10quality/wp-query-builder',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'catfolders/dennis' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '4c483f17211efc3da1b21ce147d9ae711b8aafc5',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+    ),
+);

@@ -1,0 +1,276 @@
+{
+    "packages": [
+        {
+            "name": "devowl-wp\/real-utils",
+            "version": "dev-feat\/real-utils",
+            "version_normalized": "dev-feat\/real-utils",
+            "dist": {
+                "type": "path",
+                "url": "..\/..\/..\/..\/packages\/real-utils",
+                "reference": "cbb1dc60ff12db3200f68d8817434bd587157863"
+            },
+            "archive": {
+                "exclude": [
+                    "lib",
+                    "tests"
+                ]
+            },
+            "require-dev": {
+                "10up\/wp_mock": "^0.4.2",
+                "antecedent\/patchwork": "^2.1.12",
+                "comcast\/php-legal-licenses": "^1.1.2",
+                "dealerdirect\/phpcodesniffer-composer-installer": "^0.5.0",
+                "metasyntactical\/composer-plugin-license-check": "^0.5.0",
+                "php-stubs\/wordpress-stubs": "^5.3.2",
+                "phpcompatibility\/php-compatibility": "^9.3",
+                "phpunit\/phpunit": "^7",
+                "rregeer\/phpunit-coverage-check": "^0.3.1",
+                "squizlabs\/php_codesniffer": "^3.5",
+                "wp-coding-standards\/wpcs": "^2.2"
+            },
+            "type": "library",
+            "extra": {
+                "clean-all-except": [
+                    "src",
+                    "dist",
+                    "dev",
+                    "languages"
+                ],
+                "metasyntactical\/composer-plugin-license-check": {
+                    "whitelist": [
+                        "MIT",
+                        "ISC",
+                        "BSD-2-Clause",
+                        "BSD-3-Clause",
+                        "BSD",
+                        "Apache-2.0",
+                        "Apache2",
+                        "Artistic-2.0",
+                        "WTFPL",
+                        "CC-0",
+                        "CC0-1.0",
+                        "MPL-2.0",
+                        "ZLib",
+                        "Unlicense",
+                        "GPL-2.0",
+                        "GPL-2.0-or-later",
+                        "GPL-3",
+                        "GPL-3.0-or-later",
+                        "LGPL-3.0-or-later",
+                        "MIT*",
+                        "BSD*"
+                    ],
+                    "blacklist": [
+                        "*"
+                    ],
+                    "packages": [
+                        "ignore-packages-here@1.0.0"
+                    ]
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "DevOwl\\RealPhysicalMedia\\Vendor\\DevOwl\\RealUtils\\": "src\/",
+                    "DevOwl\\RealPhysicalMedia\\Vendor\\DevOwl\\RealUtils\\Test\\": "test\/phpunit\/"
+                }
+            },
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "devowlio"
+                }
+            ],
+            "description": "Create cross-selling ads, about page, rating and newsletter input for WP Real plugins.",
+            "transport-options": {
+                "symlink": false
+            },
+            "install-path": "..\/devowl-wp\/real-utils"
+        },
+        {
+            "name": "devowl-wp\/utils",
+            "version": "dev-feat\/multipackage",
+            "version_normalized": "dev-feat\/multipackage",
+            "dist": {
+                "type": "path",
+                "url": "..\/..\/..\/..\/packages\/utils",
+                "reference": "bb1d92ba33ae3925685c4cc5701938b71e37627b"
+            },
+            "archive": {
+                "exclude": [
+                    "lib"
+                ]
+            },
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "DevOwl\\RealPhysicalMedia\\Vendor\\MatthiasWeb\\Utils\\": "src\/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthias G\u00fcnter",
+                    "email": "support@matthias-web.com"
+                }
+            ],
+            "description": "Utility functionality for all your WordPress plugins",
+            "transport-options": {
+                "symlink": false
+            },
+            "install-path": "..\/devowl-wp\/utils"
+        },
+        {
+            "name": "matthiasweb\/wordpress-plugin-updater",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https:\/\/github.com\/matzeeable\/wordpress-plugin-updater.git",
+                "reference": "c801fd86c4cf97f3b0c59d653c5e7bce99cebb73"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https:\/\/api.github.com\/repos\/matzeeable\/wordpress-plugin-updater\/zipball\/c801fd86c4cf97f3b0c59d653c5e7bce99cebb73",
+                "reference": "c801fd86c4cf97f3b0c59d653c5e7bce99cebb73",
+                "shasum": ""
+            },
+            "time": "2020-06-16T12:45:12+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "MatthiasWeb\\WPU\\": "src\/"
+                }
+            },
+            "notification-url": "https:\/\/packagist.org\/downloads\/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lukas Mateffy",
+                    "email": "info@smoolabs.com"
+                },
+                {
+                    "name": "Matthias G\u00fcnter",
+                    "email": "support@matthias-web.com"
+                }
+            ],
+            "description": "A library for WordPress plugins, to utilize license verification and auto-updating using WordPress License Server.",
+            "install-path": "..\/matthiasweb\/wordpress-plugin-updater"
+        },
+        {
+            "name": "matthiasweb\/wpdb-batch",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https:\/\/github.com\/matzeeable\/wpdb-batch.git",
+                "reference": "8558c8c07763cd01d2c89744f65da4880b4e38a0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https:\/\/api.github.com\/repos\/matzeeable\/wpdb-batch\/zipball\/8558c8c07763cd01d2c89744f65da4880b4e38a0",
+                "reference": "8558c8c07763cd01d2c89744f65da4880b4e38a0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "time": "2018-11-02T14:23:41+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "DevOwl\\RealPhysicalMedia\\Vendor\\MatthiasWeb\\WpdbBatch\\": "src\/"
+                }
+            },
+            "notification-url": "https:\/\/packagist.org\/downloads\/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthias G\u00fcnter",
+                    "email": "support@matthias-web.com"
+                }
+            ],
+            "description": "WordPress $wpdb batch queries",
+            "install-path": "..\/matthiasweb\/wpdb-batch"
+        },
+        {
+            "name": "symfony\/polyfill-intl-normalizer",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https:\/\/github.com\/symfony\/polyfill-intl-normalizer.git",
+                "reference": "e62715f03f90dd8d2f3eb5daa21b4d19d71aebde"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https:\/\/api.github.com\/repos\/symfony\/polyfill-intl-normalizer\/zipball\/e62715f03f90dd8d2f3eb5daa21b4d19d71aebde",
+                "reference": "e62715f03f90dd8d2f3eb5daa21b4d19d71aebde",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "ext-intl": "For best performance"
+            },
+            "time": "2020-02-27T09:26:54+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.15-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Normalizer\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ],
+                "classmap": [
+                    "Resources\/stubs"
+                ]
+            },
+            "notification-url": "https:\/\/packagist.org\/downloads\/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https:\/\/symfony.com\/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for intl's Normalizer class and related functions",
+            "homepage": "https:\/\/symfony.com",
+            "keywords": [
+                "compatibility",
+                "intl",
+                "normalizer",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "install-path": "..\/symfony\/polyfill-intl-normalizer"
+        }
+    ],
+    "dev": false,
+    "dev-package-names": []
+}

@@ -1,0 +1,595 @@
+# Copyright (C) 2020 devowl.io
+# This file is distributed under the same license as the Real Physical Media plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/src\n"
+"POT-Creation-Date: 2020-04-24T09:59:36+02:00\n"
+"PO-Revision-Date: 2020-08-03 17:13+0200\n"
+"Last-Translator: \n"
+"Language-Team: devowl.io GmbH <mail@devowl.io>>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Plugin Name of the plugin
+#: inc/configuration/Options.php:575
+msgid "Real Physical Media"
+msgstr "Real Physical Media"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://devowl.io"
+msgstr "https://devowl.io"
+
+#. Description of the plugin
+msgid ""
+"Reflect the folder structure of your Real Media Library in your file system."
+msgstr ""
+"Spiegeln die Ordnerstruktur von Real Media Library in deinem Dateisystem "
+"wider."
+
+#. Author of the plugin
+msgid "devowl.io"
+msgstr "devowl.io"
+
+#: inc/AdInitiator.php:54
+msgid "Reliable moving of files"
+msgstr "Zuverlässiges Verschieben von Dateien"
+
+#: inc/AdInitiator.php:55
+msgid ""
+"Moves new uploads directly to the correct physical folder, but existing "
+"files can also be moved physically."
+msgstr ""
+"Verschiebt neue Uploads direkt in den richtigen physischen Ordner, aber auch "
+"bestehende Dateien können physisch verschoben werden."
+
+#: inc/AdInitiator.php:62
+msgid "Redirect old media URLs"
+msgstr "Umleitung alter Medien-URLs"
+
+#: inc/AdInitiator.php:63
+msgid ""
+"SEO URL redirects protect you from errors: If your or any other website "
+"refers to a file whose URL changes when the file is moved, the user's "
+"browser will be automatically redirected with a 301 and 302 redirect for "
+"best SEO results."
+msgstr ""
+"URL-Umleitungen schützen dich vor Fehlern: Wenn du oder eine andere Website "
+"auf eine Datei verweist, deren URL sich ändert, da du sie verschoben hast, "
+"wird der Browser des Benutzers automatisch mit einer 301- und 302-Umleitung "
+"für beste SEO-Ergebnisse umgeleitet."
+
+#: inc/AdInitiator.php:70
+msgid "Where is your file located?"
+msgstr "Wo sind die Dateien gespeichert?"
+
+#: inc/AdInitiator.php:71
+msgid ""
+"Opening a single media file allows you to view physical location and "
+"manually move the file physically."
+msgstr ""
+"Wenn du eine einzelne Mediendatei öffnest, kannst du den physischen "
+"Speicherort sehen und die Datei manuell physisch verschieben."
+
+#: inc/configuration/ExcludeFolder.php:51
+msgid "Exclude folder name from file path "
+msgstr "Ordnernamen vom Dateipfad ausschließen "
+
+#: inc/configuration/ExcludeFolder.php:56
+msgid ""
+"The name of the folder will not be visible in the URLs of the files it "
+"contains."
+msgstr ""
+"Der Name des Ordners ist in den URLs der darin enthaltenen Dateien nicht "
+"sichtbar."
+
+#: inc/configuration/Lockfile.php:47
+msgid "Lockfile "
+msgstr "Lockfile aktiviert "
+
+#: inc/configuration/Lockfile.php:54
+msgid "Learn more about lockfiles"
+msgstr "Erfahre mehr über Lockfiles"
+
+#: inc/configuration/MetaSupText.php:42
+msgid ""
+"Only applies if automatic change detection from Real Physical Media is "
+"enabled."
+msgstr ""
+"Gilt nur, wenn die automatische Änderungserkennung von Real Physical Media "
+"aktiviert ist."
+
+#: inc/configuration/Options.php:101
+msgid "File moving handler"
+msgstr "Handler zum Verschieben von Dateien"
+
+#: inc/configuration/Options.php:113
+msgid "Uploads prefix"
+msgstr "Uploads-Präfix"
+
+#: inc/configuration/Options.php:123
+msgid "Lowercase"
+msgstr "Nur Kleinbuchstaben"
+
+#: inc/configuration/Options.php:133
+msgid "Special characters"
+msgstr "Keine Sonderzeichen"
+
+#: inc/configuration/Options.php:145
+msgid "Folders"
+msgstr "Ordner"
+
+#: inc/configuration/Options.php:154
+msgid "Cronjob service"
+msgstr "Cronjob-Dienst"
+
+#: inc/configuration/Options.php:164
+msgid "301 redirect delay (SEO)"
+msgstr "301 Umleitungsverzögerung (SEO)"
+
+#: inc/configuration/Options.php:176
+msgid "Queue maximum execution time"
+msgstr "Maximale Ausführungszeit der Warteschlange"
+
+#: inc/configuration/Options.php:188
+msgid "Queue interval"
+msgstr "Warteschlangen-Intervall"
+
+#: inc/configuration/Options.php:198
+msgid "Queue pause interval"
+msgstr "Warteschlangen-Pausenintervall"
+
+#: inc/configuration/Options.php:206
+msgid "Post Name/URL max. length"
+msgstr "Beitragsname/URL max. Länge"
+
+#: inc/configuration/Options.php:217 inc/view/CustomField.php:57
+msgid ""
+"You have not currently activated a file handler. Please activate a file "
+"handler in the settings below."
+msgstr ""
+"Du hast derzeit keinen Datei-Handler aktiviert. Bitte aktiviere einen Datei-"
+"Handler in den untenstehenden Einstellungen."
+
+#: inc/configuration/Options.php:225
+msgid ""
+"You can automatically sort all files you have already sorted with Real Media "
+"Library in a physical way."
+msgstr ""
+"Du kannst alle Dateien, die du bereits mit Real Media Library sortiert hast, "
+"nachträglich automatisch physisch sortieren lassen."
+
+#: inc/configuration/Options.php:230
+msgid ""
+"<br /><br />Before you reorder all files, move one file in your media "
+"library and go to the \"Attachment Details\" or \"Edit Media\" dialog of the "
+"file you last moved and click the \"Move physically\" button. Then check "
+"that the file is available at the new URL as expected.<br /><br />We "
+"recommend that you perform this manual check before you reorder all files, "
+"because special WordPress configurations rarely result in errors with the "
+"Media File Renamer handler."
+msgstr ""
+"Bevor du alle Dateien neu sortieren lässt, verschiebe eine Datei in deiner "
+"Medienbibliothek und gehen Sie zum Dialog \"Details zum Anhang\" oder "
+"\"Medien bearbeiten\" der Datei, die du zuletzt verschoben hast. Klicke dort "
+"auf den Button \"Physikalisch verschieben\". Prüfe dann, ob die Datei wie "
+"erwartet unter der neuen URL verfügbar ist.<br /><br />Wir empfehlen dir "
+"diese manuelle Überprüfung durchzuführen, bevor du alle Dateien neu ordnen "
+"lässt, da spezielle WordPress-Konfigurationen in selten Fällen zu Fehlern "
+"des Media File Renamer Handler führen."
+
+#. translators:
+#: inc/configuration/Options.php:240
+msgid "Add %d files to queue for moving"
+msgstr "Hinzufügen von %d Dateien zur Warteschlange zum Verschieben"
+
+#. translators:
+#: inc/configuration/Options.php:271
+msgid "Your new uploads will be stored in: <code>%s</code>"
+msgstr "Deine neuen Uploads werden gespeichert in: <code>%s</code>"
+
+#: inc/configuration/Options.php:276
+msgid "If you set an upload prefix, this prefix is appended to the above path."
+msgstr ""
+"Wenn du ein Upload-Präfix setzt, wird dieses Präfix an den obigen Pfad "
+"angehängt."
+
+#: inc/configuration/Options.php:281
+msgid ""
+"Note: You have activated automatic change detection. If you change the "
+"prefix, all files will be moved, which may take a few minutes.."
+msgstr ""
+"Hinweis: Du hast die automatische Änderungserkennung aktiviert. Wenn du den "
+"Präfix änderst, werden alle Dateien verschoben, was einige Minuten dauern "
+"kann."
+
+#: inc/configuration/Options.php:298
+msgid "Automatically transform the complete file and folder path to lowercase"
+msgstr ""
+"Automatisches Umwandeln des gesamten Datei- und Ordnerpfades in "
+"Kleinbuchstaben"
+
+#: inc/configuration/Options.php:303 inc/configuration/Options.php:513
+msgid ""
+"Note: You have activated automatic change detection. If you change this "
+"option, all files will be moved, which may take a few minutes."
+msgstr ""
+"Hinweis: Du hast die automatische Änderungserkennung aktiviert. Wenn du "
+"diese Option änderst, werden alle Dateien verschoben, was einige Minuten "
+"dauern kann."
+
+#: inc/configuration/Options.php:326
+msgid ""
+"Moving files is processed in a queue and in several requests to the server. "
+"The individual requests must be limited in time based on the configuration "
+"of PHP on your server."
+msgstr ""
+"Das Verschieben von Dateien wird in einer Warteschlange und in mehreren "
+"Anfragen an den Server verarbeitet. Die einzelnen Anfragen müssen aufgrund "
+"der Konfiguration  deines PHP Servers zeitlich begrenzt sein."
+
+#. translators:
+#: inc/configuration/Options.php:334
+msgid ""
+"The minimum allowed value is 1 second. Your server configuration allows you "
+"to run the request for max. %s seconds."
+msgstr ""
+"Der minimal zulässige Wert beträgt 1 Sekunde. Deine Serverkonfiguration "
+"erlaubt es dir die Anfrage für max. %s Sekunden laufen zu lassen."
+
+#: inc/configuration/Options.php:357
+msgid ""
+"When processing the queue, not all requests are sent immediately, but one "
+"after the other. This value defines how long to wait between two requests."
+msgstr ""
+"Bei der Abarbeitung der Warteschlange werden nicht alle Anfragen sofort, "
+"sondern eine nach der anderen gesendet. Dieser Wert definiert, wie lange "
+"zwischen zwei Anfragen gewartet werden soll."
+
+#: inc/configuration/Options.php:363
+msgid ""
+"Set up a delay so as not to overload your server and wait a certain time of "
+"seconds. The minimum allowed value is 1 second."
+msgstr ""
+"Richten eine Verzögerung ein, um deinen Server nicht zu überlasten. Der "
+"minimal zulässige Wert beträgt 1 Sekunde."
+
+#: inc/configuration/Options.php:384
+msgid ""
+"If the queue is empty, the Browser must regularly check if there is a new "
+"task in the queue. This value defines after how much seconds the browser "
+"will check again if a new task exists. The minimum allowed value is 1 second."
+msgstr ""
+"Wenn die Warteschlange leer ist, muss der Browser regelmäßig überprüfen, ob "
+"sich eine neue Aufgabe in der Warteschlange befindet. Dieser Wert legt fest, "
+"nach wie viel Sekunden der Browser erneut prüft, ob ein eine neue Aufgabe "
+"vorhanden ist. Der minimal zulässige Wert beträgt 1 Sekunde."
+
+#: inc/configuration/Options.php:390
+msgid ""
+"Manual changes are automatically detected and a request to move the file "
+"physically will be sent immediately. For example, if you move a file by drag "
+"& drop, the file will be moved immediately."
+msgstr ""
+"Manuelle Änderungen werden automatisch erkannt, und es wird sofort eine "
+"Anfrage zur physischen Verschiebung der Datei gesendet. Wenn du zum Beispiel "
+"eine Datei per Drag & Drop verschiebst, wird die Datei sofort verschoben."
+
+#. translators:
+#: inc/configuration/Options.php:410
+msgid ""
+"Create a physical folder after you create a virtual folder, even if the "
+"folder is still empty (creates a lock file %s to keep the physical folder)."
+msgstr ""
+"Erstelle einen physischen Ordner, nachdem ein virtuellen Ordner erstellt "
+"wurde, auch wenn der Ordner noch leer ist (erstellt eine Sperrdatei %s, um "
+"den physischen Ordner zu behalten)."
+
+#. translators:
+#: inc/configuration/Options.php:428
+msgid ""
+"Delete physical folders after deleting a virtual folder, but only if the "
+"physical folder and subfolders were empty."
+msgstr ""
+"Lösche physische Ordner nach dem Löschen eines virtuellen Ordners, aber nur, "
+"wenn der physische Ordner und die Unterordner leer waren."
+
+#: inc/configuration/Options.php:443
+msgid ""
+"After moving the last file from a virtual folder, the physical folder should "
+"be deleted, but only if the subfolders are also empty and there is no lock "
+"file."
+msgstr ""
+"Nach dem Verschieben der letzten Datei aus einem virtuellen Ordner sollte "
+"der physische Ordner gelöscht werden, aber nur, wenn auch die Unterordner "
+"leer sind und keine Sperrdatei vorhanden ist."
+
+#: inc/configuration/Options.php:457
+msgid ""
+"After the last file or folder is moved from a virtual folder, both the "
+"virtual folder and the physical folder should get deleted."
+msgstr ""
+"Nachdem die letzte Datei oder der letzte Ordner aus einem virtuellen Ordner "
+"verschoben wurde, sollten sowohl der virtuelle Ordner als auch der physische "
+"Ordner gelöscht werden."
+
+#. translators:
+#: inc/configuration/Options.php:468
+msgid ""
+"Reflect the already virtually created folder structure (not the file "
+"locations) to your physical folders in %s:"
+msgstr ""
+"Spiegele die bereits virtuell erstellte Ordnerstruktur (nicht die Struktur "
+"der Dateien) in physischen Ordner in %s wider:"
+
+#: inc/configuration/Options.php:476
+msgid "Physical folders with lockfile (all folders)"
+msgstr "Physische Ordner mit Lockfile (alle Ordner)"
+
+#: inc/configuration/Options.php:479
+msgid "Physical folders without lockfile (only folders with uploads)"
+msgstr "Physische Ordner ohne Lockfile (nur Ordner mit Uploads)"
+
+#: inc/configuration/Options.php:482
+msgid "Delete all lockfiles"
+msgstr "Alle Sperrdateien löschen"
+
+#: inc/configuration/Options.php:485
+msgid ""
+"If you have changed and saved the folder settings above, you must reflect "
+"the structure again, otherwise the new settings will only apply to new "
+"folder structures."
+msgstr ""
+"Wenn du die oben genannten Ordnereinstellungen geändert und gespeichert "
+"hast, musst du die Struktur erneut abbilden, sonst gelten die neuen "
+"Einstellungen nur für neue Ordnerstrukturen."
+
+#: inc/configuration/Options.php:502
+msgid "Automatically transform special characters to latin characters"
+msgstr "Automatische Umwandlung von Sonderzeichen in lateinische Zeichen"
+
+#: inc/configuration/Options.php:505
+msgid ""
+"WordPress itself cannot handle special characters in file and folder names "
+"without problems. Enable this option to convert special characters to latin "
+"characters."
+msgstr ""
+"WordPress selbst kann Sonderzeichen in Datei- und Ordnernamen nicht ohne "
+"Probleme verarbeiten. Aktivieren diese Option, um Sonderzeichen in "
+"lateinische Zeichen umzuwandeln."
+
+#: inc/configuration/Options.php:524
+msgid ""
+"The queue to physically move files can only be processed as long as a logged "
+"in user has the WordPress backend open in his browser."
+msgstr ""
+"Die Warteschlange zum physischen Verschieben von Dateien kann nur so lange "
+"bearbeitet werden, wie ein eingeloggter Benutzer das WordPress-Backend in "
+"seinem Browser geöffnet hat."
+
+#: inc/configuration/Options.php:529
+msgid ""
+"This limitation exists because WordPress is developed in PHP and PHP scripts "
+"must be called to be run, but cannot run as a background process. You can "
+"solve this problem by setting up a cronjob that calls the given cronjob URL "
+"regularly (e.g. every 30 seconds)."
+msgstr ""
+"Diese Einschränkung besteht, weil WordPress in PHP entwickelt wurde und PHP-"
+"Skripte zur Ausführung aufgerufen werden müssen, aber nicht als "
+"Hintergrundprozess laufen können. Du kannst dieses Problem lösen, indem du "
+"einen Cronjob einrichtest, der die angegebene Cronjob-URL regelmäßig (z.B. "
+"alle 30 Sekunden) aufruft."
+
+#: inc/configuration/Options.php:534
+msgid ""
+"You have to ask your hoster if they offer such functionality or use an "
+"external service like easycron.com."
+msgstr ""
+"Du musst deinen Webhoster fragen, ob er eine solche Funktionalität anbietet "
+"oder einen externen Dienst wie easycron.com nutzt."
+
+#: inc/configuration/Options.php:540
+msgid "Learn more about Cronjobs"
+msgstr "Erfahre mehr über Cronjobs"
+
+#: inc/configuration/Options.php:543
+msgid "All cronjob URLs for all websites hosted in this WordPress instance:"
+msgstr ""
+"Alle Cronjob-URLs für alle Websites, die in dieser WordPress-Instanz "
+"gehostet werden:"
+
+#: inc/configuration/Options.php:613
+msgid ""
+"After you physically move a file, a 302 redirect (temporary forwarding) is "
+"set up. After a specified time (in hours) after the last update of the file "
+"location, a 301 redirect (permanent forwarding) is set up. This two-step "
+"process is necessary to avoid malfunctioning of caching plugins or CDN "
+"services."
+msgstr ""
+"Nachdem du eine Datei physisch verschoben hast, wird eine 302-Umleitung "
+"(temporäre Umleitung) eingerichtet. Nach einer bestimmten Zeit (in Stunden) "
+"nach der letzten Aktualisierung des Speicherorts der Datei wird eine 301-"
+"Umleitung (permanente Weiterleitung) eingerichtet. Dieser zweistufige "
+"Prozess ist notwendig, um Fehlfunktionen von Caching-Plugins oder CDN-"
+"Diensten zu vermeiden."
+
+#: inc/configuration/Options.php:619
+msgid ""
+"We recommend a time between the two redirects of at least 48 hours to avoid "
+"conflicts."
+msgstr ""
+"Wir empfehlen eine Zeitspanne von mindestens 48 Stunden zwischen den beiden "
+"Umleitungen, um Konflikte zu vermeiden."
+
+#: inc/configuration/Options.php:632 inc/configuration/Options.php:639
+msgid "WordPress default"
+msgstr "WordPress Standard"
+
+#: inc/configuration/Options.php:644
+msgid "Apply new length"
+msgstr "Neue Länge anwenden"
+
+#: inc/configuration/Options.php:647
+msgid ""
+"This method allows you to modify the standard WordPress database table "
+"wp_posts to allow more than 255 characters as the full URL path (guid) and "
+"the length of the file name (post_name). This is an advanced option and you "
+"should create a backup before you apply the change. These changes are "
+"WordPress core update safe. Please only use them if you are aware of the "
+"technical implications of such a change and possible side effects for other "
+"WordPress plugins and themes."
+msgstr ""
+"Diese Option erlaubt es dir die Standard WordPress Datenbanktabelle wp_posts "
+"so zu modifizieren, dass mehr als 255 Zeichen als vollständiger URL-Pfad "
+"(guid) und die Länge des Dateinamens (post_name) erlaubt sind. Dies ist eine "
+"Option für fortgeschrittene Administratoren und solltest ein Backup "
+"erstellen, bevor du die Änderung anwendest. Diese Änderungen bleiben auch "
+"bei einem Update von WordPress bestehen. Bitte verwende diese Option nur, "
+"wenn dir die technischen Implikationen einer solchen Änderung und möglicher "
+"Nebenwirkungen für andere WordPress-Plugins und -Themes bewusst sind."
+
+#: inc/configuration/Options.php:653
+msgid ""
+"When do I need this? This is necessary, for example, if you receive the "
+"error message <strong>Could not add post to database.</strong> when "
+"uploading a new file."
+msgstr ""
+"Wann brauche ich das? Dies ist z.B. notwendig, wenn du beim Hochladen einer "
+"neuen Datei die Fehlermeldung “<strong>Datei konnte der Datenbank nicht "
+"hinzugefügt werden.</strong>” erhältst."
+
+#: inc/configuration/Options.php:660
+msgid "This option is only allowed for administrators.."
+msgstr "Diese Option ist nur für Administratoren veränderbar."
+
+#: inc/configuration/Options.php:796
+msgid "This option cannot be changed in the test drive."
+msgstr "Diese Option kann in der Test Drive nicht geändert werden."
+
+#: inc/configuration/SkipToFirstShortcut.php:75
+msgid "First shortcut path as file path"
+msgstr "Erster Verknüpfungspfad als Dateipfad"
+
+#: inc/configuration/SkipToFirstShortcut.php:80
+msgid ""
+"Moves the file physically to the location where the first shortcut is "
+"created. This is useful, for example, if you have a \"All Images\" folder "
+"and use the same images in several galleries, but do not want to have the "
+"\"All Images\" folder in the pathname. The WP/LR plugin works this way and "
+"you have to enable this option for the synchronized folder."
+msgstr ""
+"Verschiebt die Datei physisch an den Ort, an dem die erste Verknüpfung "
+"erstellt wurde. Dies ist z.B. nützlich, wenn du einen Ordner \"Alle Bilder\" "
+"hast und die gleichen Bilder in mehreren Galerien verwendest, aber den "
+"Ordner \"Alle Bilder\" nicht im Pfadnamen haben möchtest. Das WP/LR-Plugin "
+"funktioniert auf diese Weise und du musst diese Option für den "
+"synchronisierten Ordner aktivieren."
+
+#: inc/Core.php:197
+msgid ""
+"<strong>You have not yet entered the license key</strong>. To receive "
+"automatic updates, please enter the key in \"Enter license\"."
+msgstr ""
+"<strong>Der Lizenzschlüssel wurde noch nicht eingegeben</strong>. Um "
+"automatische Updates zu erhalten klicke auf “Lizenz eingeben”."
+
+#. translators:
+#: inc/handler/AbstractHandler.php:98
+msgid "You need to install at least version %s. Please update the software!"
+msgstr ""
+"Du musst mindestens Version %s installieren. Bitte aktualisiere die Software!"
+
+#: inc/handler/MediaFileRenamer.php:57
+msgid "Pro version"
+msgstr "Pro-Version"
+
+#: inc/handler/MediaFileRenamer.php:70
+msgid "Free"
+msgstr "Kostenlos"
+
+#: inc/queue/Queue.php:74
+msgid "Process failed due to an unexpected error."
+msgstr "Prozess aufgrund eines unerwarteten Fehlers fehlgeschlagen."
+
+#. translators:
+#: inc/queue/Queue.php:146
+msgid ""
+"Something went wrong with the handler foe the file %s. The automatic change "
+"detection is now paused."
+msgstr ""
+"Etwas ist mit dem Handler der Datei %s schief gelaufen. Die automatische "
+"Änderungserkennung wird nun ausgesetzt."
+
+#: inc/queue/Queue.php:324 inc/queue/Queue.php:375 inc/queue/Queue.php:459
+msgid "You have not activated a handler."
+msgstr "Sie haben keinen Handler aktiviert."
+
+#: inc/queue/Queue.php:332
+msgid "The attachment was not found or has no physical file."
+msgstr "Der Anhang wurde nicht gefunden oder hat keine physische Datei."
+
+#: inc/rest/Handler.php:62
+msgid "The handler could not be activated."
+msgstr "Der Handler konnte nicht aktiviert werden."
+
+#: inc/rest/Handler.php:84
+msgid "The handler could not be deactivated."
+msgstr "Der Handler konnte nicht deaktiviert werden."
+
+#: inc/rest/Queue.php:157
+msgid ""
+"You are not allowed to do this. You can find your cronjob service URLs in "
+"the media settings."
+msgstr ""
+"Du darfst dies nicht tun. Deine Cronjob-Service-URLs findest du in den "
+"Medieneinstellungen."
+
+#: inc/rest/Service.php:124
+msgid "This service is not allowed in the test drive."
+msgstr "Diese Service ist in der Test Drive nicht erlaubt."
+
+#. translators:
+#: inc/view/CustomField.php:74
+msgid ""
+"This file was already added to the queue %1$s ago and will be moved to %2$s."
+msgstr ""
+"Diese Datei wurde bereits vor %1$s zur Warteschlange hinzugefügt und wird "
+"nach %2$s verschoben."
+
+#. translators:
+#: inc/view/CustomField.php:86
+msgid ""
+"This file is synchronized with your physical file system (<code>%s</code>)."
+msgstr ""
+"Diese Datei ist mit deinem physischen Dateisystem synchronisiert (<code>%s</"
+"code>)."
+
+#. translators:
+#: inc/view/CustomField.php:95
+msgid ""
+"<strong>The physical file is not synchronized with the folder mentioned "
+"above.</strong> You can now synchronize and move the file from<br/>%1$s<br/"
+">to<br/>%2$s"
+msgstr ""
+"<strong>Die physische Datei ist nicht mit dem oben genannten Ordner "
+"synchronisiert.</strong> Du kannst die Datei jetzt synchronisieren und "
+"von<br/>%1$s<br/>nach<br/>%2$s verschieben"
+
+#: inc/view/CustomField.php:108
+msgid "Move physically"
+msgstr "Physikalisch verschieben"
+
+#: inc/view/CustomField.php:116
+msgid ""
+"This file has no physical file - it is a virtual copy (shortcut). When the "
+"original physical file gets synchronized with the file system, this copy is "
+"automatically synchronized, too."
+msgstr ""
+"Diese Datei hat keine physische Datei - sie ist eine virtuelle Kopie "
+"(Verknüpfung). Wenn die ursprüngliche physische Datei mit dem Dateisystem "
+"synchronisiert wird, wird auch diese Kopie automatisch synchronisiert."

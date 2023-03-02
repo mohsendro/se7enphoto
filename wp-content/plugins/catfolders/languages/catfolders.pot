@@ -1,0 +1,522 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: CatFolders Lite - WP Media Folders\n"
+"POT-Creation-Date: 2022-12-06 11:59+0700\n"
+"PO-Revision-Date: 2022-12-05 10:18+0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: Poedit 3.2.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: catfolders.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+"X-Poedit-SearchPathExcluded-2: build\n"
+"X-Poedit-SearchPathExcluded-3: apps\n"
+"X-Poedit-SearchPathExcluded-4: assets\n"
+"X-Poedit-SearchPathExcluded-5: composer.lock\n"
+"X-Poedit-SearchPathExcluded-6: release.sh\n"
+"X-Poedit-SearchPathExcluded-7: log.xml\n"
+"X-Poedit-SearchPathExcluded-8: phpcs.xml\n"
+"X-Poedit-SearchPathExcluded-9: composer.json\n"
+
+#. Author of the plugin/theme
+#: includes/Backend/SettingsPage.php:25 includes/Backend/SettingsPage.php:26
+msgid "CatFolders"
+msgstr ""
+
+#: includes/Backend/SettingsPage.php:61
+msgid "Docs"
+msgstr ""
+
+#: includes/Backend/SettingsPage.php:62
+msgid "Support"
+msgstr ""
+
+#: includes/Backend/SettingsPage.php:80 includes/I18n.php:43
+#: includes/I18n.php:50
+msgid "Settings"
+msgstr ""
+
+#: includes/I18n.php:24
+msgid "Loading..."
+msgstr ""
+
+#: includes/I18n.php:25
+msgid "Moved successfully!"
+msgstr ""
+
+#: includes/I18n.php:26
+msgid "Something went wrong! Please try again!"
+msgstr ""
+
+#: includes/I18n.php:27
+msgid "All Files"
+msgstr ""
+
+#: includes/I18n.php:28 includes/Integrations/MediaLibraryAssistant.php:49
+#: includes/Internals/WPMedia.php:104
+msgid "Uncategorized"
+msgstr ""
+
+#: includes/I18n.php:29
+msgid "Default"
+msgstr ""
+
+#: includes/I18n.php:30
+msgid "Name Ascending"
+msgstr ""
+
+#: includes/I18n.php:31
+msgid "Name Descending"
+msgstr ""
+
+#: includes/I18n.php:32
+msgid "Enter folder name"
+msgstr ""
+
+#: includes/I18n.php:33
+msgid "Date Ascending"
+msgstr ""
+
+#: includes/I18n.php:34
+msgid "Date Descending"
+msgstr ""
+
+#: includes/I18n.php:35
+msgid "Modified Ascending"
+msgstr ""
+
+#: includes/I18n.php:36
+msgid "Modified Descending"
+msgstr ""
+
+#: includes/I18n.php:37
+msgid "Author Ascending"
+msgstr ""
+
+#: includes/I18n.php:38
+msgid "Author Descending"
+msgstr ""
+
+#: includes/I18n.php:39
+msgid "Title Ascending"
+msgstr ""
+
+#: includes/I18n.php:40
+msgid "Title Descending"
+msgstr ""
+
+#: includes/I18n.php:41
+msgid "Saving progress..."
+msgstr ""
+
+#: includes/I18n.php:42
+msgid "Setting Saved!"
+msgstr ""
+
+#: includes/I18n.php:44
+msgid "Previous folder selected"
+msgstr ""
+
+#: includes/I18n.php:45
+msgid "Ascending"
+msgstr ""
+
+#: includes/I18n.php:46
+msgid "Descending"
+msgstr ""
+
+#: includes/I18n.php:47
+msgid "Saved successfully!"
+msgstr ""
+
+#: includes/I18n.php:48
+msgid "Something went wrong!"
+msgstr ""
+
+#: includes/I18n.php:49
+msgid "User Restriction"
+msgstr ""
+
+#: includes/I18n.php:51
+msgid "License"
+msgstr ""
+
+#: includes/I18n.php:52
+msgid "Import"
+msgstr ""
+
+#: includes/I18n.php:53
+msgid "Successfully!"
+msgstr ""
+
+#: includes/I18n.php:54
+msgid "Backup and Restore"
+msgstr ""
+
+#: includes/I18n.php:55
+msgid "Export"
+msgstr ""
+
+#: includes/I18n.php:56
+msgid "Export Now"
+msgstr ""
+
+#: includes/I18n.php:57
+msgid "Download CSV"
+msgstr ""
+
+#: includes/I18n.php:58
+msgid "Clear all data"
+msgstr ""
+
+#: includes/I18n.php:59
+msgid "Clear now"
+msgstr ""
+
+#: includes/I18n.php:60
+msgid "Import From Other Plugins"
+msgstr ""
+
+#: includes/I18n.php:61
+msgid "Already Imported"
+msgstr ""
+
+#: includes/I18n.php:62
+msgid "by"
+msgstr ""
+
+#: includes/I18n.php:63
+msgid "folders found to import"
+msgstr ""
+
+#: includes/I18n.php:64
+msgid "Import now"
+msgstr ""
+
+#: includes/I18n.php:65
+msgid "Enter your license"
+msgstr ""
+
+#: includes/I18n.php:66
+msgid "Are you sure to delete?"
+msgstr ""
+
+#: includes/I18n.php:67
+msgid ""
+"This action will delete all CatFolders data, CatFolders settings and bring "
+"you back to WordPress default media library."
+msgstr ""
+
+#: includes/I18n.php:68
+msgid "Yes"
+msgstr ""
+
+#: includes/I18n.php:69
+msgid "No"
+msgstr ""
+
+#: includes/I18n.php:70
+msgid "Startup Folder: "
+msgstr ""
+
+#: includes/I18n.php:71
+msgid "Auto sort folder by (PRO): "
+msgstr ""
+
+#: includes/I18n.php:72
+msgid "Auto sort files by (PRO): "
+msgstr ""
+
+#: includes/I18n.php:73
+msgid "Sort Folders"
+msgstr ""
+
+#: includes/I18n.php:74
+msgid "By Author"
+msgstr ""
+
+#: includes/I18n.php:75
+msgid "By Modified"
+msgstr ""
+
+#: includes/I18n.php:76
+msgid "By Date"
+msgstr ""
+
+#: includes/I18n.php:77
+msgid "Sort Files"
+msgstr ""
+
+#: includes/I18n.php:78
+msgid "By Name"
+msgstr ""
+
+#: includes/I18n.php:79
+msgid "Bulk Select"
+msgstr ""
+
+#: includes/I18n.php:80
+msgid "Uploaded"
+msgstr ""
+
+#: includes/I18n.php:81 includes/Integrations/MediaLibraryAssistant.php:45
+#: includes/Internals/WPMedia.php:100
+msgid "All Folders"
+msgstr ""
+
+#: includes/I18n.php:82
+#, php-format
+msgid "View our document <a href=\"%s\" target=\"_blank\">here</a>"
+msgstr ""
+
+#: includes/I18n.php:83
+msgid "Users will only be able to access their folders and media."
+msgstr ""
+
+#: includes/I18n.php:84
+#, php-format
+msgid "Welcome To <a href=\"%s\" target=\"_blank\">CatFolders</a>"
+msgstr ""
+
+#: includes/I18n.php:85
+msgid "The current folder structure will be exported."
+msgstr ""
+
+#: includes/I18n.php:86
+#, php-format
+msgid "More Plugins To Import? <a href=\"%s\" target=\"_blank\">Send Us!</a>"
+msgstr ""
+
+#: includes/I18n.php:87
+msgid "Your license key provides access to updates and support."
+msgstr ""
+
+#: includes/I18n.php:88
+msgid "Deactivate Key"
+msgstr ""
+
+#: includes/I18n.php:89
+msgid "Your license is activated."
+msgstr ""
+
+#: includes/I18n.php:90
+msgid "Choose CSV file to import."
+msgstr ""
+
+#: includes/I18n.php:91
+msgid "No media"
+msgstr ""
+
+#: includes/I18n.php:92
+msgid "Move"
+msgstr ""
+
+#: includes/I18n.php:93
+msgid "item"
+msgstr ""
+
+#: includes/I18n.php:94
+msgid "items"
+msgstr ""
+
+#: includes/I18n.php:95
+msgid "New Folder"
+msgstr ""
+
+#: includes/I18n.php:96
+msgid "Rename"
+msgstr ""
+
+#: includes/I18n.php:97
+msgid "Delete"
+msgstr ""
+
+#: includes/I18n.php:98
+msgid "Unlock new features"
+msgstr ""
+
+#: includes/I18n.php:99
+msgid ""
+"Browse media files of your full folder structure in the CatFolders drag-and-"
+"drop interface."
+msgstr ""
+
+#: includes/I18n.php:100
+msgid "Get CatFolders"
+msgstr ""
+
+#: includes/I18n.php:101
+msgid "Go Pro"
+msgstr ""
+
+#: includes/I18n.php:102
+msgid "Get CatFolders Pro"
+msgstr ""
+
+#: includes/I18n.php:103
+msgid "Unlock full features and premium support"
+msgstr ""
+
+#: includes/I18n.php:104
+msgid "Want subfolders?"
+msgstr ""
+
+#: includes/I18n.php:105
+msgid "Sort Files (PRO)"
+msgstr ""
+
+#: includes/I18n.php:106
+msgid "Sort Folders (PRO)"
+msgstr ""
+
+#: includes/I18n.php:107
+msgid "Buy Now"
+msgstr ""
+
+#: includes/I18n.php:108
+msgid "Lite"
+msgstr ""
+
+#: includes/I18n.php:109
+msgid "Properties"
+msgstr ""
+
+#: includes/I18n.php:110
+msgid "Save"
+msgstr ""
+
+#: includes/I18n.php:111
+msgid "Cancel"
+msgstr ""
+
+#: includes/I18n.php:112
+msgid "Folders"
+msgstr ""
+
+#: includes/I18n.php:113
+msgid "Verify"
+msgstr ""
+
+#: includes/I18n.php:114
+msgid "Type"
+msgstr ""
+
+#: includes/I18n.php:115
+msgid "Total Items"
+msgstr ""
+
+#: includes/I18n.php:116
+msgid "Total Children"
+msgstr ""
+
+#: includes/I18n.php:117
+msgid "Author"
+msgstr ""
+
+#: includes/I18n.php:118
+msgid "Create Subfolders"
+msgstr ""
+
+#: includes/I18n.php:119
+msgid "Advanced Sort Options"
+msgstr ""
+
+#: includes/I18n.php:120
+msgid "File Count"
+msgstr ""
+
+#: includes/I18n.php:121
+msgid "Page Builders"
+msgstr ""
+
+#: includes/I18n.php:122
+msgid "Auto Update"
+msgstr ""
+
+#: includes/I18n.php:123
+msgid "VIP Support"
+msgstr ""
+
+#: includes/Internals/WPMedia.php:36
+msgid "Choose folder: "
+msgstr ""
+
+#: includes/Rest/Controllers/FolderController.php:184
+msgid "Folder name is not empty!"
+msgstr ""
+
+#: includes/Rest/Controllers/FolderController.php:211
+msgid "Something is wrong! Please try again"
+msgstr ""
+
+#: includes/Rest/Controllers/FolderController.php:265
+msgid "All Accounts"
+msgstr ""
+
+#: includes/Rest/Controllers/FolderController.php:268
+msgid "Invalid user request!"
+msgstr ""
+
+#: includes/Rest/Controllers/FolderController.php:286
+msgid "Folder doesn't exist!"
+msgstr ""
+
+#: includes/Rest/Controllers/ImportController.php:235
+#: includes/Rest/Controllers/ImportController.php:425
+msgid "Plugin does not support!"
+msgstr ""
+
+#: includes/Views/fallback-exists.php:12
+msgid ""
+"It looks like you have another CatFolders version installed, please delete "
+"it before activating this new version. All of the settings and data are "
+"still preserved."
+msgstr ""
+
+#: includes/Views/fallback-exists.php:13
+#: includes/Views/fallback-minimum-php.php:17
+#: includes/Views/fallback-minimum-wp.php:19
+msgid "Read more details."
+msgstr ""
+
+#: includes/Views/fallback-minimum-php.php:14
+#, php-format
+msgid ""
+"CatFolders requires PHP 7.2.0 to work and does not support your current PHP "
+"version %1$s. Please contact your host and request a PHP upgrade to the "
+"latest one."
+msgstr ""
+
+#: includes/Views/fallback-minimum-wp.php:16
+#, php-format
+msgid ""
+"CatFolders requires WordPress 5.2.0 to work and does not support your "
+"current WordPress version %1$s."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "CatFolders Lite - WP Media Folders"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "https://wpmediafolders.com/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Organize and manage your files with WordPress media library folders. "
+"Unlimitedly fast, flexible, and professional."
+msgstr ""

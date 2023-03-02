@@ -1,0 +1,368 @@
+# Copyright (C) 2020 devowl.io
+# This file is distributed under the same license as the Real Physical Media plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: n/a\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/src\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: n/a\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.4.0\n"
+
+#. Plugin Name of the plugin
+#: inc/configuration/Options.php:1
+msgid "Real Physical Media"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://devowl.io"
+msgstr ""
+
+#. Description of the plugin
+msgid "Reflect the folder structure of your Real Media Library in your file system."
+msgstr ""
+
+#. Author of the plugin
+msgid "devowl.io"
+msgstr ""
+
+#: inc/AdInitiator.php:1
+msgid "Reliable moving of files"
+msgstr ""
+
+#: inc/AdInitiator.php:1
+msgid "Moves new uploads directly to the correct physical folder, but existing files can also be moved physically."
+msgstr ""
+
+#: inc/AdInitiator.php:1
+msgid "Redirect old media URLs"
+msgstr ""
+
+#: inc/AdInitiator.php:1
+msgid "SEO URL redirects protect you from errors: If your or any other website refers to a file whose URL changes when the file is moved, the user's browser will be automatically redirected with a 301 and 302 redirect for best SEO results."
+msgstr ""
+
+#: inc/AdInitiator.php:1
+msgid "Where is your file located?"
+msgstr ""
+
+#: inc/AdInitiator.php:1
+msgid "Opening a single media file allows you to view physical location and manually move the file physically."
+msgstr ""
+
+#: inc/configuration/ExcludeFolder.php:1
+msgid "Exclude folder name from file path "
+msgstr ""
+
+#: inc/configuration/ExcludeFolder.php:1
+msgid "The name of the folder will not be visible in the URLs of the files it contains."
+msgstr ""
+
+#: inc/configuration/Lockfile.php:1
+msgid "Lockfile "
+msgstr ""
+
+#: inc/configuration/Lockfile.php:1
+msgid "Learn more about lockfiles"
+msgstr ""
+
+#: inc/configuration/MetaSupText.php:1
+msgid "Only applies if automatic change detection from Real Physical Media is enabled."
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "File moving handler"
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "Uploads prefix"
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "Lowercase"
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "Special characters"
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "Folders"
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "Cronjob service"
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "301 redirect delay (SEO)"
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "Queue maximum execution time"
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "Queue interval"
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "Queue pause interval"
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "Post Name/URL max. length"
+msgstr ""
+
+#: inc/configuration/Options.php:1
+#: inc/view/CustomField.php:1
+msgid "You have not currently activated a file handler. Please activate a file handler in the settings below."
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "You can automatically sort all files you have already sorted with Real Media Library in a physical way."
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "<br /><br />Before you reorder all files, move one file in your media library and go to the \"Attachment Details\" or \"Edit Media\" dialog of the file you last moved and click the \"Move physically\" button. Then check that the file is available at the new URL as expected.<br /><br />We recommend that you perform this manual check before you reorder all files, because special WordPress configurations rarely result in errors with the Media File Renamer handler."
+msgstr ""
+
+#. translators:
+#: inc/configuration/Options.php:1
+msgid "Add %d files to queue for moving"
+msgstr ""
+
+#. translators:
+#: inc/configuration/Options.php:1
+msgid "Your new uploads will be stored in: <code>%s</code>"
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "If you set an upload prefix, this prefix is appended to the above path."
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "Note: You have activated automatic change detection. If you change the prefix, all files will be moved, which may take a few minutes.."
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "Automatically transform the complete file and folder path to lowercase"
+msgstr ""
+
+#: inc/configuration/Options.php:1
+#: inc/configuration/Options.php:1
+msgid "Note: You have activated automatic change detection. If you change this option, all files will be moved, which may take a few minutes."
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "Moving files is processed in a queue and in several requests to the server. The individual requests must be limited in time based on the configuration of PHP on your server."
+msgstr ""
+
+#. translators:
+#: inc/configuration/Options.php:1
+msgid "The minimum allowed value is 1 second. Your server configuration allows you to run the request for max. %s seconds."
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "When processing the queue, not all requests are sent immediately, but one after the other. This value defines how long to wait between two requests."
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "Set up a delay so as not to overload your server and wait a certain time of seconds. The minimum allowed value is 1 second."
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "If the queue is empty, the Browser must regularly check if there is a new task in the queue. This value defines after how much seconds the browser will check again if a new task exists. The minimum allowed value is 1 second."
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "Manual changes are automatically detected and a request to move the file physically will be sent immediately. For example, if you move a file by drag & drop, the file will be moved immediately."
+msgstr ""
+
+#. translators:
+#: inc/configuration/Options.php:1
+msgid "Create a physical folder after you create a virtual folder, even if the folder is still empty (creates a lock file %s to keep the physical folder)."
+msgstr ""
+
+#. translators:
+#: inc/configuration/Options.php:1
+msgid "Delete physical folders after deleting a virtual folder, but only if the physical folder and subfolders were empty."
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "After moving the last file from a virtual folder, the physical folder should be deleted, but only if the subfolders are also empty and there is no lock file."
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "After the last file or folder is moved from a virtual folder, both the virtual folder and the physical folder should get deleted."
+msgstr ""
+
+#. translators:
+#: inc/configuration/Options.php:1
+msgid "Reflect the already virtually created folder structure (not the file locations) to your physical folders in %s:"
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "Physical folders with lockfile (all folders)"
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "Physical folders without lockfile (only folders with uploads)"
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "Delete all lockfiles"
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "If you have changed and saved the folder settings above, you must reflect the structure again, otherwise the new settings will only apply to new folder structures."
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "Automatically transform special characters to latin characters"
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "WordPress itself cannot handle special characters in file and folder names without problems. Enable this option to convert special characters to latin characters."
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "The queue to physically move files can only be processed as long as a logged in user has the WordPress backend open in his browser."
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "This limitation exists because WordPress is developed in PHP and PHP scripts must be called to be run, but cannot run as a background process. You can solve this problem by setting up a cronjob that calls the given cronjob URL regularly (e.g. every 30 seconds)."
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "You have to ask your hoster if they offer such functionality or use an external service like easycron.com."
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "Learn more about Cronjobs"
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "All cronjob URLs for all websites hosted in this WordPress instance:"
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "After you physically move a file, a 302 redirect (temporary forwarding) is set up. After a specified time (in hours) after the last update of the file location, a 301 redirect (permanent forwarding) is set up. This two-step process is necessary to avoid malfunctioning of caching plugins or CDN services."
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "We recommend a time between the two redirects of at least 48 hours to avoid conflicts."
+msgstr ""
+
+#: inc/configuration/Options.php:1
+#: inc/configuration/Options.php:1
+msgid "WordPress default"
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "Apply new length"
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "This method allows you to modify the standard WordPress database table wp_posts to allow more than 255 characters as the full URL path (guid) and the length of the file name (post_name). This is an advanced option and you should create a backup before you apply the change. These changes are WordPress core update safe. Please only use them if you are aware of the technical implications of such a change and possible side effects for other WordPress plugins and themes."
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "When do I need this? This is necessary, for example, if you receive the error message <strong>Could not add post to database.</strong> when uploading a new file."
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "This option is only allowed for administrators.."
+msgstr ""
+
+#: inc/configuration/Options.php:1
+msgid "This option cannot be changed in the test drive."
+msgstr ""
+
+#: inc/configuration/SkipToFirstShortcut.php:1
+msgid "First shortcut path as file path"
+msgstr ""
+
+#: inc/configuration/SkipToFirstShortcut.php:1
+msgid "Moves the file physically to the location where the first shortcut is created. This is useful, for example, if you have a \"All Images\" folder and use the same images in several galleries, but do not want to have the \"All Images\" folder in the pathname. The WP/LR plugin works this way and you have to enable this option for the synchronized folder."
+msgstr ""
+
+#: inc/Core.php:1
+msgid "<strong>You have not yet entered the license key</strong>. To receive automatic updates, please enter the key in \"Enter license\"."
+msgstr ""
+
+#. translators:
+#: inc/handler/AbstractHandler.php:1
+msgid "You need to install at least version %s. Please update the software!"
+msgstr ""
+
+#: inc/handler/MediaFileRenamer.php:1
+msgid "Pro version"
+msgstr ""
+
+#: inc/handler/MediaFileRenamer.php:1
+msgid "Free"
+msgstr ""
+
+#: inc/queue/Queue.php:1
+msgid "Process failed due to an unexpected error."
+msgstr ""
+
+#. translators:
+#: inc/queue/Queue.php:1
+msgid "Something went wrong with the handler foe the file %s. The automatic change detection is now paused."
+msgstr ""
+
+#: inc/queue/Queue.php:1
+#: inc/queue/Queue.php:1
+#: inc/queue/Queue.php:1
+msgid "You have not activated a handler."
+msgstr ""
+
+#: inc/queue/Queue.php:1
+msgid "The attachment was not found or has no physical file."
+msgstr ""
+
+#: inc/rest/Handler.php:1
+msgid "The handler could not be activated."
+msgstr ""
+
+#: inc/rest/Handler.php:1
+msgid "The handler could not be deactivated."
+msgstr ""
+
+#: inc/rest/Queue.php:1
+msgid "You are not allowed to do this. You can find your cronjob service URLs in the media settings."
+msgstr ""
+
+#: inc/rest/Service.php:1
+msgid "This service is not allowed in the test drive."
+msgstr ""
+
+#. translators:
+#: inc/view/CustomField.php:1
+msgid "This file was already added to the queue %1$s ago and will be moved to %2$s."
+msgstr ""
+
+#. translators:
+#: inc/view/CustomField.php:1
+msgid "This file is synchronized with your physical file system (<code>%s</code>)."
+msgstr ""
+
+#. translators:
+#: inc/view/CustomField.php:1
+msgid "<strong>The physical file is not synchronized with the folder mentioned above.</strong> You can now synchronize and move the file from<br/>%1$s<br/>to<br/>%2$s"
+msgstr ""
+
+#: inc/view/CustomField.php:1
+msgid "Move physically"
+msgstr ""
+
+#: inc/view/CustomField.php:1
+msgid "This file has no physical file - it is a virtual copy (shortcut). When the original physical file gets synchronized with the file system, this copy is automatically synchronized, too."
+msgstr ""

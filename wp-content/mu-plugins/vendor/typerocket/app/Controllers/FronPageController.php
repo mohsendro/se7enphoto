@@ -1,7 +1,7 @@
 <?php
 namespace App\Controllers;
 
-use App\Models\Post;
+use App\Models\Gallery;
 use TypeRocket\Controllers\Controller;
 use TypeRocket\Http\Request;
 
@@ -12,7 +12,7 @@ class FronPageController extends Controller
      *
      * @return mixed
      */
-    public function index(Post $post)
+    public function index(Gallery $post)
     {
         $posts = $post->findAll()->where('post_status', '=', 'publish')->orderBy('id', 'DESC')->take(10)->get();
         

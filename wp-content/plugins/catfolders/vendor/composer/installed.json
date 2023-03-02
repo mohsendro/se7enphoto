@@ -1,0 +1,125 @@
+{
+    "packages": [
+        {
+            "name": "10quality/php-data-model",
+            "version": "v1.0.2",
+            "version_normalized": "1.0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/10quality/php-data-model.git",
+                "reference": "45083e64b7757edf0594a94ad892d5164b773464"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/10quality/php-data-model/zipball/45083e64b7757edf0594a94ad892d5164b773464",
+                "reference": "45083e64b7757edf0594a94ad892d5164b773464",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8"
+            },
+            "time": "2018-09-20T20:37:38+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "TenQuality\\Data\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "10 Quality",
+                    "email": "info@10quality.com"
+                },
+                {
+                    "name": "Cami M",
+                    "email": "info@10quality.com"
+                }
+            ],
+            "description": "PHP Library that provides generic and scalable Data Models (abstract model class) for any type of data handling.",
+            "homepage": "https://github.com/10quality/php-data-model",
+            "keywords": [
+                "data",
+                "models"
+            ],
+            "support": {
+                "issues": "https://github.com/10quality/php-data-model/issues",
+                "source": "https://github.com/10quality/php-data-model/tree/v1.0.2"
+            },
+            "install-path": "../10quality/php-data-model"
+        },
+        {
+            "name": "10quality/wp-query-builder",
+            "version": "v1.0.12",
+            "version_normalized": "1.0.12.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/10quality/wp-query-builder.git",
+                "reference": "9b814bbf478d800269feb982e4063cd6a24ebef5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/10quality/wp-query-builder/zipball/9b814bbf478d800269feb982e4063cd6a24ebef5",
+                "reference": "9b814bbf478d800269feb982e4063cd6a24ebef5",
+                "shasum": ""
+            },
+            "require": {
+                "10quality/php-data-model": "^1.0",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "8.0.*"
+            },
+            "time": "2020-08-25T01:17:49+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "src/Lib/functions.php"
+                ],
+                "psr-4": {
+                    "TenQuality\\WP\\Database\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alejandro Mostajo",
+                    "email": "amostajo@gmail.com"
+                },
+                {
+                    "name": "Hyper Tribal",
+                    "email": "grow@hypertribal.com"
+                },
+                {
+                    "name": "10 Quality",
+                    "email": "info@10quality.com"
+                }
+            ],
+            "description": "Wordpress Query Builder class library for custom models and data querying.",
+            "keywords": [
+                "database",
+                "models",
+                "query builder",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/10quality/wp-query-builder/issues",
+                "source": "https://github.com/10quality/wp-query-builder/tree/v1.0"
+            },
+            "install-path": "../10quality/wp-query-builder"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}

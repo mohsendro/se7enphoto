@@ -1,0 +1,320 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-24T09:57:10+02:00\n"
+"PO-Revision-Date: 2020-04-24 11:41+0200\n"
+"Last-Translator: \n"
+"Language-Team: devowl.io GmbH <mail@devowl.io>>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: admin.js:378
+msgid ""
+"<strong>Real Physical Media</strong> just moved a file physically. Do you "
+"like it? Do us a favor and rate us."
+msgstr ""
+"<strong>Real Physical Media</strong> hat gerade eine Datei physisch "
+"verschoben. Gefällt dir das? Tun uns einen Gefallen und bewerte uns."
+
+#: admin.js:445
+msgid "Author"
+msgstr "Autor"
+
+#: admin.js:456
+msgid "Activate plugin"
+msgstr "Plugin aktivieren"
+
+#: admin.js:456
+msgid "Install for free"
+msgstr "Kostenlos installieren"
+
+#: admin.js:473
+msgid "Deactivate as handler"
+msgstr "Deaktivieren als Handler"
+
+#: admin.js:473
+msgid "Activate as handler"
+msgstr "Als Handler aktivieren"
+
+#: admin.js:539
+msgid ""
+"You have successfully activated {{strong}}Real Physical Media{{/strong}}. To "
+"use Real Physical Media you need to install a media file handler, which "
+"moves files in your media library later. We recommend Media File Renamer "
+"(free)."
+msgstr ""
+"Du hast erfolgreich {{strong}}Real Physical Media{{/strong}} aktiviert. Um "
+"Real Physical Media zu verwenden, musst du einen Mediendatei-Handler "
+"installieren, der Dateien in deiner Medienbibliothek später verschiebt. Wir "
+"empfehlen Media File Renamer (kostenlos)."
+
+#: admin.js:575
+msgid "Error"
+msgstr "Fehler"
+
+#: admin.js:587
+msgid "Open file"
+msgstr "Datei öffnen"
+
+#: admin.js:593
+msgid "Retry"
+msgstr "Wiederholen"
+
+#: admin.js:599
+msgid "Skip file and continue"
+msgstr "Datei überspringen und fortfahren"
+
+#: admin.js:605
+msgid "Details"
+msgstr "Details"
+
+#: admin.js:611
+msgid "Code"
+msgstr "Code"
+
+#: admin.js:611
+msgid "Message"
+msgstr "Nachricht"
+
+#: admin.js:710 admin.js:1108
+msgid "Are you sure?"
+msgstr "Bist du sicher?"
+
+#: admin.js:815
+msgid "Real Physical Media"
+msgstr "Real Physical Media"
+
+#: admin.js:823
+msgid "Deactivate automatic queueing"
+msgstr "Automatische Änderungserkennung deaktivieren"
+
+#: admin.js:823 admin.js:844
+msgid "Activate automatic change detection"
+msgstr "Automatische Änderungserkennung aktivieren"
+
+#: admin.js:829 admin.js:1022 admin.js:1081
+msgid "SEO Redirects"
+msgstr "SEO-Weiterleitungen"
+
+#: admin.js:831
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: admin.js:832
+msgid "Product license not yet activated."
+msgstr "Produkt-Lizenz noch nicht aktiviert."
+
+#: admin.js:834
+msgid "Activate license"
+msgstr "Lizenz aktivieren"
+
+#: admin.js:837
+msgid "Dismiss notice"
+msgstr "Meldung ausblenden"
+
+#: admin.js:844
+msgid ""
+"Real Physical Media can automatically detect when you have moved a file to "
+"the Real Media Library and can also move it physically in your file system.\n"
+"\n"
+"Before you enable this feature, go to the \"Attachment Details\" or \"Edit "
+"Media\" dialog of the file you last moved and click the \"Move physically\" "
+"button. Then check that the file is available at the new URL as expected.\n"
+"\n"
+"We recommend that you perform this manual check before you enable automatic "
+"moving, because special WordPress configurations rarely result in errors "
+"with the Media File Renamer handler."
+msgstr ""
+"Real Physical Media kann automatisch erkennen, wenn du eine Datei in die "
+"Real Media Library verschoben hast, und kann sie auch physisch in Ihrem "
+"Dateisystem verschieben.\n"
+"\n"
+"Bevor du diese Funktion aktivierst, gehe zum Dialog \"Anhangsdetails\" oder "
+"\"Medien bearbeiten\" der Datei, welche du zuletzt verschoben hast. Dort "
+"klickst du auf die Schaltfläche \"Physikalisch verschieben\". Überprüfe "
+"dann, ob die Datei wie erwartet unter der neuen URL verfügbar ist.\n"
+"\n"
+"Wir empfehlen dir, diese manuelle Prüfung durchzuführen, bevor du das "
+"automatische Verschieben aktivierst, da spezielle WordPress-Konfigurationen "
+"selten zu Fehlern mit dem Media File Renamer Handler führen."
+
+#: admin.js:847
+msgid "Activate"
+msgstr "Aktivieren"
+
+#: admin.js:847
+msgid ""
+"Unfortunately, you cannot activate automatic change detection. Your current "
+"database system does not support some mandatory functions. Please update "
+"your MySQL/MariaDB database to the latest version. Technical reason: Your "
+"database system does not allow you to read from a hierarchical query created "
+"by wp_rml_create_all_children_sql()."
+msgstr ""
+"Leider kannst du die automatische Änderungserkennung nicht aktivieren. Dein "
+"aktuelles Datenbanksystem unterstützt einige notwendigen Funktionen nicht. "
+"Bitte bringe deine MySQL/MariaDB-Datenbank auf die neueste Version. "
+"Technischer Grund: Dein Datenbanksystem erlaubt es nicht aus einer "
+"hierarchischen Abfrage zu lesen, die mit wp_rml_create_all_children_sql() "
+"erstellt wurde."
+
+#: admin.js:853
+msgid "Back"
+msgstr "Zurück"
+
+#: admin.js:910
+msgid "Queue"
+msgstr "Warteschlange"
+
+#: admin.js:911
+msgid ""
+"You have successfully installed and configured Real Phyiscal Media! In this "
+"window you can follow live, which files were physically moved recently."
+msgstr ""
+"Du hast Real Phyiscal Media erfolgreich installiert und konfiguriert! In "
+"diesem Fenster kannst du live verfolgen, welche Dateien kürzlich physisch "
+"verschoben wurden."
+
+#: admin.js:914
+msgid "Got it!"
+msgstr "Verstanden!"
+
+#: admin.js:924
+msgid "One file left... (~ %s)"
+msgid_plural "%d files left... (~ %s)"
+msgstr[0] "Noch eine Datei übrig... (~ %s)"
+msgstr[1] "%d Dateien übrig... (~ %s)"
+
+#: admin.js:924
+msgid "Resume processing now..."
+msgid_plural "Resume processing in %d seconds..."
+msgstr[0] "Verarbeitung jetzt wieder aufnehmen..."
+msgstr[1] "Fortsetzen der Verarbeitung in %d Sekunden..."
+
+#: admin.js:924 admin.js:942
+msgid "Loading..."
+msgstr "Lade..."
+
+#: admin.js:924
+msgid "Do not close this admin page."
+msgstr "Schließe das WordPress Backend nicht."
+
+#: admin.js:926
+msgid "Learn more about cronjob services"
+msgstr "Erfahre mehr über Cronjob-Dienste"
+
+#: admin.js:942 admin.js:1196
+msgid "No entries"
+msgstr "Keine Einträge"
+
+#: admin.js:942
+msgid "Check for new entries soon..."
+msgid_plural "Check for new entries in %d seconds..."
+msgstr[0] "Suche nach neuen Dateien, um sie bald zu verschieben..."
+msgstr[1] "Prüfe, ob neue Dateien in %d Sekunden verschoben werden können..."
+
+#: admin.js:944
+msgid "Last processed items %s"
+msgstr "Zuletzt verschobene Dateien %s"
+
+#: admin.js:944
+msgid "(%d total)"
+msgstr "(%d insgesamt)"
+
+#: admin.js:1090
+msgid "All"
+msgstr "Alle"
+
+#: admin.js:1100
+msgid "Deactivate all redirects"
+msgstr "Alle Weiterleitungen deaktivieren"
+
+#: admin.js:1100
+msgid "Activate all redirects"
+msgstr "Alle Weiterleitungen aktivieren"
+
+#: admin.js:1113
+msgid "Clear redirects for size '%s'"
+msgstr "Weiterleitungen für Größe '%s' löschen"
+
+#: admin.js:1116
+msgid "Clear all redirects"
+msgstr "Alle Weiterleitungen löschen"
+
+#: admin.js:1120
+msgid "Clear"
+msgstr "Zurücksetzen"
+
+#: admin.js:1125
+msgid "SEO database size"
+msgstr "Größe der SEO-Datenbank"
+
+#: admin.js:1170
+msgid "Old url"
+msgstr "Alte Url"
+
+#: admin.js:1172
+msgid "Redirect to"
+msgstr "Weiterleitung zu"
+
+#: admin.js:1177
+msgid "File"
+msgstr "Datei"
+
+#: admin.js:1182
+msgid "Modified / Size name"
+msgstr "Geändert / Name der Größe"
+
+#: admin.js:1205
+msgid "Load more"
+msgstr "Mehr laden"
+
+#: admin.js:1205
+msgid "No more redirects available"
+msgstr "Keine Weiterleitungen mehr verfügbar"
+
+#: admin.js:1298
+msgid "+ one thumbnail"
+msgid_plural "+ %d thumbnails"
+msgstr[0] "+ eine Thumbnail"
+msgstr[1] "+ %d Thumbnails"
+
+#: admin.js:1305
+msgid "+ one older redirect"
+msgid_plural "+ %d older redirects"
+msgstr[0] "+ eine ältere Weiterleitung"
+msgstr[1] "+ %d ältere Weiterleitungen"
+
+#: admin.js:1326
+msgid "Thumbnails"
+msgstr "Vorschaubilder"
+
+#: admin.js:1336
+msgid "Older redirects"
+msgstr "Ältere Weiterleitungen"
+
+#: admin.js:2623
+msgid ""
+"This option is not available because you are using <strong>Real Physical "
+"Media Plugin</strong> to physically restructure your files.<br/>"
+msgstr ""
+"Diese Option ist nicht verfügbar, da Sie das <strong>Real Physical Media "
+"Plugin</strong> verwenden, um Ihre Dateien physisch umzustrukturieren.<br/>"
+
+#: admin.js:2673
+msgid "Add file to queue..."
+msgstr "Datei zur Warteschlange hinzufügen..."
+
+#: admin.js:2768
+msgid "Cronjob URL successfully copied to the clipboard."
+msgstr "Cronjob-URL erfolgreich in die Zwischenablage kopiert."
+
+#~ msgid "No files to move"
+#~ msgstr "Keine Dateien zu verschieben"
+
+#~ msgid "Activate automatic queueing"
+#~ msgstr "Automatische Änderungserkennung aktivieren"
