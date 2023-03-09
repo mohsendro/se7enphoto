@@ -116,13 +116,48 @@ add_action('after_setup_theme', 'wpplus_theme_features') ;
 // Register Enqueue Scripts
 function wpplus_enqueue_scripts() {
 
-	// wp_register_style( 'general-style', plugin_dir_url(__FILE__) . 'css/style.css', false, '1.0.0' );
-	// wp_register_script( 'general-script', plugin_dir_url(__FILE__) . 'js/script.js', false, '1.0.0' );
-	// wp_enqueue_style( 'general-style' );
-	// wp_enqueue_script( 'general-script' );
+	wp_register_style( 'bootstrap-reboot', plugin_dir_url(__FILE__) . 'resources/assets/css/vendor/bootstrap-v5/bootstrap-reboot.rtl.min.css', false, false );
+	wp_register_style( 'bootstrap.rtl', plugin_dir_url(__FILE__) . 'resources/assets/css/vendor/bootstrap-v5/bootstrap.rtl.min.css', false, false );
+	wp_register_style( 'font-awesome', plugin_dir_url(__FILE__) . 'resources/assets/font/font-awesome/css/font-awesome.min.css', false, false );
+	wp_register_style( 'line-awesome', plugin_dir_url(__FILE__) . 'resources/assets/font/line-awesome/css/line-awesome.min.css', false, false );
+	wp_register_style( 'webslidemenu', plugin_dir_url(__FILE__) . 'resources/assets/css/vendor/webslide/webslidemenu.css', false, false );
+	wp_register_style( 'header-footer', plugin_dir_url(__FILE__) . 'resources/assets/css/header-footer.css', false, false );
+	wp_register_style( 'aos', plugin_dir_url(__FILE__) . 'resources/assets/css/vendor/aos/aos.css', false, false );
+	wp_register_style( 'swiper', plugin_dir_url(__FILE__) . 'resources/assets/css/vendor/swiper/swiper-bundle.min.css', false, false );
+	wp_register_style( 'filter-multi-select', plugin_dir_url(__FILE__) . 'resources/assets/css/vendor/filter-multi-select/filter_multi_select.css', false, false );
+	wp_register_style( 'style', plugin_dir_url(__FILE__) . 'resources/assets/css/style.css', false, false );
+	wp_register_style( 'responsive', plugin_dir_url(__FILE__) . 'resources/assets/css/responsive.css', false, false );
+
+	wp_register_script( 'bootstrap-bundle', plugin_dir_url(__FILE__) . 'resources/assets/js/vendor/bootstrap-v5/bootstrap.bundle.min.js', false, false );
+	wp_register_script( 'jquery', plugin_dir_url(__FILE__) . 'resources/assets/js/vendor/jquery/jquery.min.js', false, false );
+	wp_register_script( 'aos', plugin_dir_url(__FILE__) . 'resources/"assets/js/vendor/aos/aos.js', false, false );
+	wp_register_script( 'swiper', plugin_dir_url(__FILE__) . 'resources/assets/js/vendor/swiper/swiper-bundle.min.js', false, false );
+	wp_register_script( 'webslidemenu', plugin_dir_url(__FILE__) . 'resources/assets/js/vendor/webslide/webslidemenu.js', ['jquery'], false );
+	wp_register_script( 'filter-multi-select', plugin_dir_url(__FILE__) . 'resources/assets/js/vendor/filter-multi-select/filter-multi-select-bundle.min.js', false, false );
+	wp_register_script( 'public', plugin_dir_url(__FILE__) . 'resources/assets/js/public.js', false, false );
+
+	wp_enqueue_style( 'bootstrap-reboot' );
+	wp_enqueue_style( 'bootstrap.rtl' );
+	wp_enqueue_style( 'font-awesome' );
+	wp_enqueue_style( 'line-awesome' );
+	wp_enqueue_style( 'webslidemenu' );
+	wp_enqueue_style( 'header-footer' );
+	// wp_enqueue_style( 'aos' );
+	// wp_enqueue_style( 'swiper' );
+	// wp_enqueue_style( 'filter-multi-select' );
+	wp_enqueue_style( 'style' );
+	wp_enqueue_style( 'responsive' );
+
+	wp_enqueue_script( 'bootstrap-bundle' );
+	// wp_enqueue_script( 'jquery' );
+	// wp_enqueue_script( 'aos' );
+	// wp_enqueue_script( 'swiper' );
+	wp_enqueue_script( 'webslidemenu' );
+	// wp_enqueue_script( 'filter-multi-select' );
+	wp_enqueue_script( 'public' );
 
 }
-// add_action('wp_enqueue_scripts', 'wpplus_enqueue_scripts');
+add_action('wp_enqueue_scripts', 'wpplus_enqueue_scripts');
 
 
 // Snippets
@@ -159,14 +194,3 @@ require_once plugin_dir_path(__FILE__) . 'functions/column/line-item.php';
 // Roles
 require_once plugin_dir_path(__FILE__) . 'functions/role/graphicer.php';
 require_once plugin_dir_path(__FILE__) . 'functions/role/photographer.php';
-
-
-
-// we will show template hierarchy for the main query
-// global $wp_query; 
-// $hierarchy = new Brain\Hierarchy\Hierarchy();
-// var_export($hierarchy->hierarchy($wp_query));
-
-
-
-

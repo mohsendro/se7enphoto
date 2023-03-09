@@ -93,6 +93,7 @@
     font-size: inherit;
     line-height: inherit;
     text-align: inherit;
+    border: none!important;
 }
 
 .wsmenu-submenu li {

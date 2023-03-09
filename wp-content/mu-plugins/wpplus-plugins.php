@@ -81,7 +81,7 @@ if( ! class_exists( 'WPPlus' ) ) {
                 'name'        => 'Bootstrap',
                 'description' => 'کتابخانه طراحی صفحات واکنشگرا',
                 'direction'   => 'public/bootstrap/bootstrap.php',
-                'status'      => true
+                'status'      => false
             ],   
             [ 
                 'name'        => 'General',

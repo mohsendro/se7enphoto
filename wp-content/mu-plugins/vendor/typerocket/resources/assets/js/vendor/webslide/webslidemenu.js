@@ -7,7 +7,7 @@
 */
 
 document.addEventListener("touchstart", function() {},false);
-$(function() {
+jQuery(document).ready(function($) {
 
 	$('#wsnavtoggle').click(function () {
 	$('.wsmenucontainer').toggleClass('wsoffcanvasopener');

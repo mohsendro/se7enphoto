@@ -4,6 +4,8 @@ if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
 
 ?>
 
+<?php get_header(); ?>
+
 <h1>صفحه اصلی</h1>
 <hr>
 
@@ -18,10 +20,5 @@ if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
 
 ?>
 <hr>
-
-
-<?php get_header(); ?>
-
-<?php the_content(); ?>
 
 <?php get_footer(); ?>
