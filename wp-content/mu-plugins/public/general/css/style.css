@@ -40,23 +40,13 @@
         /* Safari, Android, iOS */
 }
 
-body.rtl,
-body.rtl .press-this a.wp-switch-editor,
-#danafy-list-plugins,
-#danafy-list-demo,
-#danafy-document,
+
 #wpadminbar .quicklinks>ul>li>a,
 #wpadminbar ul li:last-child,
 #wpadminbar ul li:last-child .ab-item,
 #wpadminbar .ab-label,
 span.display-name,
-a.ab-item,
-.rtl h1,
-.rtl h2,
-.rtl h3,
-.rtl h4,
-.rtl h5,
-.rtl h6 {
+a.ab-item {
     font-family: 'iransans' !important;
     text-align: right;
 }

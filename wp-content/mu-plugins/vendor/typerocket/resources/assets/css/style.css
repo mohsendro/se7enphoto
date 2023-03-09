@@ -1,0 +1,336 @@
+/* Reset Styles */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+:focus-visible,
+button:focus:not(:focus-visible) {
+    outline: none;
+    box-shadow: none !important;
+}
+
+/* Register Font Family */
+@font-face {
+    font-family: 'IranSans';
+    src: url('../font/iransans/eot/IRANSansWeb_UltraLight.eot');
+    /* IE9 Compat Modes */
+    src: url('../font/iransans/eot/IRANSansWeb_UltraLight.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../font/iransans/woff2/IRANSansWeb_UltraLight.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../font/iransans/woff/IRANSansWeb_UltraLight.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../font/iransans/ttf/IRANSansWeb_UltraLight.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../font/iransans/svg/IRANSansWeb_UltraLight.svg#svgFontName') format('svg');
+    /* Legacy iOS */
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'IranSans';
+    src: url('../font/iransans/eot/IRANSansWeb_Light.eot');
+    /* IE9 Compat Modes */
+    src: url('../font/iransans/eot/IRANSansWeb_Light.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../font/iransans/woff2/IRANSansWeb_Light.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../font/iransans/woff/IRANSansWeb_Light.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../font/iransans/ttf/IRANSansWeb_Light.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../font/iransans/svg/IRANSansWeb_Light.svg#svgFontName') format('svg');
+    /*Legacy iOS */
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'IranSans';
+    src: url('../font/iransans/eot/IRANSansWeb.eot');
+    /* IE9 Compat Modes */
+    src: url('../font/iransans/eot/IRANSansWeb.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../font/iransans/woff2/IRANSansWeb.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../font/iransans/woff/IRANSansWeb.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../font/iransans/ttf/IRANSansWeb.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../font/iransans/svg/IRANSansWeb.svg#svgFontName') format('svg');
+    /* Legacy iOS */
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'IranSans';
+    src: url('../font/iransans/eot/IRANSansWeb_Medium.eot');
+    /* IE9 Compat Modes */
+    src: url('../font/iransans/eot/IRANSansWeb_Medium.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../font/iransans/woff2/IRANSansWeb_Medium.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../font/iransans/woff/IRANSansWeb_Medium.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../font/iransans/ttf/IRANSansWeb_Medium.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../font/iransans/svg/IRANSansWeb_Medium.svg#svgFontName') format('svg');
+    /*Legacy iOS */
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'IranSans';
+    src: url('../font/iransans/eot/IRANSansWeb_Bold.eot');
+    /* IE9 Compat Modes */
+    src: url('../font/iransans/eot/IRANSansWeb_Bold.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../font/iransans/woff2/IRANSansWeb_Bold.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../font/iransans/woff/IRANSansWeb_Bold.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../font/iransans/ttf/IRANSansWeb_Bold.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../font/iransans/svg/IRANSansWeb_Bold.svg#svgFontName') format('svg');
+    /* Legacy iOS */
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'IranSans';
+    src: url('../font/iransans/eot/IRANSansWeb_Black.eot');
+    /* IE9 Compat Modes */
+    src: url('../font/iransans/eot/IRANSansWeb_Black.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../font/iransans/woff2/IRANSansWeb_Black.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../font/iransans/woff/IRANSansWeb_Black.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../font/iransans/ttf/IRANSansWeb_Black.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../font/iransans/svg/IRANSansWeb_Black.svg#svgFontName') format('svg');
+    /* Legacy iOS */
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'Kalameh';
+    src: url('../font/Kalameh/eot/KalamehWeb_thin.eot');
+    /* IE9 Compat Modes */
+    src: url('../font/Kalameh/eot/KalamehWeb_thin.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../font/Kalameh/woff2/KalamehWeb_thin.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../font/Kalameh/woff/KalamehWeb_thin.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../font/Kalameh/ttf/KalamehWeb_thin.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../font/Kalameh/svg/KalamehWeb_thin.svg#svgFontName') format('svg');
+    /* Legacy iOS */
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Kalameh';
+    src: url('../font/Kalameh/eot/KalamehWeb_Regular.eot');
+    /* IE9 Compat Modes */
+    src: url('../font/Kalameh/eot/KalamehWeb_Regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../font/Kalameh/woff2/KalamehWeb_Regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../font/Kalameh/woff/KalamehWeb_Regular.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../font/Kalameh/ttf/KalamehWeb_Regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../font/Kalameh/svg/KalamehWeb_Regular.svg#svgFontName') format('svg');
+    /* Legacy iOS */
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Kalameh';
+    src: url('../font/Kalameh/eot/KalamehWeb_Bold.eot');
+    /* IE9 Compat Modes */
+    src: url('../font/Kalameh/eot/KalamehWeb_Bold.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../font/Kalameh/woff2/KalamehWeb_Bold.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../font/Kalameh/woff/KalamehWeb_Bold.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../font/Kalameh/ttf/KalamehWeb_Bold.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../font/Kalameh/svg/KalamehWeb_Bold.svg#svgFontName') format('svg');
+    /* Legacy iOS */
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Kalameh';
+    src: url('../font/Kalameh/eot/KalamehWeb_Black.eot');
+    /* IE9 Compat Modes */
+    src: url('../font/Kalameh/eot/KalamehWeb_Black.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../font/Kalameh/woff2/KalamehWeb_Black.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../font/Kalameh/woff/KalamehWeb_Black.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../font/Kalameh/ttf/KalamehWeb_Black.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../font/Kalameh/svg/KalamehWeb_Black.svg#svgFontName') format('svg');
+    /* Legacy iOS */
+    font-weight: 900;
+}
+
+/* icons font */
+@font-face {
+    font-family: 'icomoon';
+    src: url("../font/line-awesome/fonts/icomoon.eot?ee9xs1");
+    src: url("../font/line-awesome/fonts/icomoon.eot?ee9xs1#iefix") format("embedded-opentype"),
+        url("../font/line-awesome/fonts/icomoon.ttf?ee9xs1") format("truetype"),
+        url("../font/line-awesome/fonts/icomoon.woff?ee9xs1") format("woff"),
+        url("../font/line-awesome/fonts/icomoon.svg?ee9xs1#icomoon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+/* Kit Styles */
+:root {
+    --main-color-default: #1D2125;
+    --main-color-second: #CD9300;
+    --hover-color-default: #1D2125;
+    --hover-color-second: #CD9300;
+    --title-color: #292C44;
+    --description-color: #030305;
+}
+
+/* Global Styles */
+* {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+html {
+    font-family: 'IranSans';
+    font-size: 16px;
+    font-weight: 400;
+}
+
+body {
+    background-color: #FFFFFF;
+    font-family: 'IranSans';
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--title-color, #000000);
+    overflow-x: hidden;
+}
+
+.none-overflow {
+    overflow-y: hidden!important;
+}
+
+.overflow {
+    overflow-y: scroll!important;
+    overflow-x: hidden!important;
+}
+
+/* Main && Header && Footer */
+.main .row,
+.header .row,
+.footer .row,
+section .row {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main .row-fluid,
+.header .row-fluid,
+.footer .row-fluid,
+section .row-fluid {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container-fluid,
+.row,
+.row>* {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+a,
+a:hover {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.position-relative {
+    position: relative;
+}
+
+/************* Inedx *************/
+.slider {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    padding: 0;
+    margin: 0;
+    z-index: 0;
+}
+
+.slider .video {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    object-position: top right;
+}
