@@ -35,7 +35,15 @@ if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
         <div class="offheader">  
           <a id="wsnavtoggle" class="animated-arrow"><span></span></a>
           <div class="logo"><a href="#"><img src="<?php echo TYPEROCKET_DIR_URL; ?>resources/assets/img/global/logo.jpeg" alt="" ></a></div>
-          <a id="wsnavtoggle02" class="opener-arrow"><i class="fa fa-info-circle" aria-hidden="true"></i> </a>
+          <div class="menues">
+            <a href="<?php echo get_home_url().'/cart'; ?>" class="cart">
+              <i class="las la-shopping-cart"></i>
+            </a>
+            <a href="<?php echo get_home_url().'/account'; ?>" class="account">
+              <i class="las la-user-circle"></i>
+            </a>
+          </div>
+          <!-- <a id="wsnavtoggle02" class="opener-arrow"><i class="fa fa-info-circle" aria-hidden="true"></i> </a> -->
         </div>
         <!--Mobile Menu HTML Code End-->
 
@@ -75,7 +83,7 @@ if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
         </div>
         <!--Desktop Menu HTML Code End-->
 
-        <div class="wsmenu02 clearfix">
+        <!-- <div class="wsmenu02 clearfix">
           <div class="wsmenutwohead clearfix">
             <a href="#" class="wsmenutwo-close"><span></span><span></span></a>
             <div class="wsmenu02-title">About Web Slide Menu</div>
@@ -94,7 +102,7 @@ if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, reve centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
           </div>
         
-        </div>
+        </div> -->
       </div>
     </div>
   </header>

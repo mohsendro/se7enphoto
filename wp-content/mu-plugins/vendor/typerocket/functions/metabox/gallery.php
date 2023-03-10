@@ -16,7 +16,7 @@ if( class_exists( 'CSF' ) ) {
     CSF::createMetabox( $prefix, array(
         'title'              => 'اطلاعات گالری',
         'post_type'          => 'gallery',
-        'data_type'          => 'serialize',
+        'data_type'          => 'unserialize',
         'context'            => 'advanced',
     ) );
   

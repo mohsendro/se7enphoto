@@ -12,8 +12,8 @@ if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
             <ul class="links">
                 <li><a href="#">تماس با ما</a></li>
                 <li><a href="#">درباره ما</a></li>
-                <li><a href="#">قوانین و مقررات</a></li>
                 <li><a href="#">سوالات متداول</a></li>
+                <li><a href="<?php echo get_home_url().'/refund-returns'; ?>">قوانین و مقررات</a></li>
             </ul>
             <div class="copyright">Copyright © تمامی حقوق برای وب سایت سون فوتو محفوظ می باشد </div>
             </div>
