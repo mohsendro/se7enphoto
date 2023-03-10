@@ -34,6 +34,10 @@ tr_route()->get()->match('/gallery/page/([^\/]+)', ['number'])->do('archive@Gall
 // tr_route()->get()->match('/gallery-cat')->do('page@GalleryCatController');
 tr_route()->get()->match('/gallery-cat/([^\/]+)', ['cat_name'])->do('category@GalleryCatController');
 tr_route()->get()->match('/gallery-cat/([^\/]+)/page/([^\/]+)', ['cat_name', 'number'])->do('archive@GalleryCatController');
+tr_route()->get()->match('/gallery/gallery-last')->do('last@GalleryController');
+tr_route()->get()->match('/gallery/gallery-last/page/([^\/]+)', ['number'])->do('archiveLast@GalleryController');
+tr_route()->get()->match('/gallery/gallery-featured')->do('featured@GalleryController');
+tr_route()->get()->match('/gallery/gallery-featured/page/([^\/]+)', ['number'])->do('archiveFeatured@GalleryController');
 tr_route()->get()->match('/gallery/([^\/]+)', ['slug'])->do('single@GalleryController'); // single
 
 // Author

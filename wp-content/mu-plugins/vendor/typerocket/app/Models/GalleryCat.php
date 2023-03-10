@@ -23,7 +23,7 @@ class GalleryCat extends WPTerm
                     'value'    => 'publish'
                 ]
             ];
-            $posts->where($where)->orderBy('id', 'DESC');
+            $posts->with('meta')->whereMeta('gallery_in_site', '=', 1)->where($where)->orderBy('id', 'DESC');
         });
     }
 }

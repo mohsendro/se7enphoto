@@ -34,7 +34,7 @@ if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
         <!--Mobile Menu HTML Code Start-->
         <div class="offheader">  
           <a id="wsnavtoggle" class="animated-arrow"><span></span></a>
-          <div class="logo"><a href="#"><img src="<?php echo TYPEROCKET_DIR_URL; ?>resources/assets/img/global/logo.jpeg" alt="" ></a></div>
+          <div class="logo"><a href="<?php echo get_home_url(); ?>"><img src="<?php echo TYPEROCKET_DIR_URL; ?>resources/assets/img/global/logo.jpeg" alt="" ></a></div>
           <div class="menues">
             <a href="<?php echo get_home_url().'/cart'; ?>" class="cart">
               <i class="las la-shopping-cart"></i>
@@ -52,9 +52,10 @@ if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
           <!--Main Menu HTML Code-->
           <nav class="wsmenu clearfix">
             <ul class="mobile-sub wsmenu-list clearfix">
-              <li><a href="#" class="active"><span class="hometext">صفحه نخست</span></a></li>
-              <li><a href="#">آخرین گالری‌ها<span class="arrow"></span></a></li>
-              <li><a href="#">گالری‌های منتخب<span class="arrow"></span></a></li>
+              <li><a href="<?php echo get_home_url(); ?>" class="active"><span class="hometext">صفحه نخست</span></a></li>
+              <li><a href="<?php echo get_home_url().'/gallery'; ?>">همه گالری‌ها<span class="arrow"></span></a></li>
+              <li><a href="<?php echo get_home_url().'/gallery/gallery-last/'; ?>">آخرین گالری‌ها<span class="arrow"></span></a></li>
+              <li><a href="<?php echo get_home_url().'/gallery/gallery-featured/'; ?>">گالری‌های منتخب<span class="arrow"></span></a></li>
               <li><a href="#">دسته بندی‌ها<span class="arrow"></span></a>
                 <ul class="wsmenu-submenu">
                   <li><a href="#">لیگ برتر و جام حذفی فوتبال ایران</a></li>
