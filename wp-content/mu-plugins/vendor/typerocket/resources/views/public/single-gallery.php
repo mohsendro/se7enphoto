@@ -4,50 +4,51 @@ if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
 
 ?>
 
-<h1>صفحه سینگل گالری <span>: <?php echo $post->post_title; ?></span></h1> 
-<hr>
-
-<?php
-    echo get_the_post_thumbnail( $post->ID, 'thumbnail', array( 'class' => 'alignleft' ) );
-    echo "<br>";
-    echo $post->post_content; 
-?>
-
-
 <?php get_header(); ?>
 
-<!-- Gallery Start -->
-<section id="gallery" class="container gallery">
+<!-- Gallery Single Start -->
+<section id="gallery-single" class="container gallery-single">
     <div class="row">
-        <div class="col-12 count-post">
-            تعداد نتایج: <strong><?php echo $count; ?></strong>
+        <div class="col-12 info-single">
+            <div class="title">
+                گالری: <strong><?php echo $post->post_title; ?></strong>
+            </div>
+            <div class="ctegory">
+                <?php 
+                    $gallery_cat = get_the_terms($post->ID, 'gallery_cat'); 
+                    echo $gallery_cat[0]->name;
+                ?>
+            </div>           
+            <div class="date">
+                <?php if ( $post->meta->gallery_play_date ): ?>
+                    در تاریخ: <?php echo parsidate("Y-m-d h:i:s", $post->meta->gallery_play_date, "per"); ?>
+                <?php else: ?>
+                    تاریخ نامعلوم
+                <?php endif; ?>
+            </div>
+            <div class="count-img">
+                <i class="las la-image"></i>
+                <?php if ( $count ): ?>
+                    <?php echo $count; ?> عکس
+                <?php else: ?>
+                    بدون عکس
+                <?php endif; ?>
+            </div>
         </div>
-        <?php if( $posts ): ?>
-            <?php foreach ($posts as $post): ?>
-                <?php $meta = get_post_meta( $post->ID, 'gallery', true ); ?>
-                <div class="col-12 col-md-6 col-lg-4 col-xxl-3 item-post">
-                    <div class="content-post">
-                        <div class="count-img">
-                            <?php if ($meta['gallery_products'] ): ?>
-                                <?php echo count($meta['gallery_products']); ?> عکس
-                            <?php else: ?>
-                                بدون عکس
-                            <?php endif; ?>
-                        </div>
-                        <div class="thumbnail">
-                            <?php echo get_the_post_thumbnail( $post->ID, 'gallery_cover_size', array( 'class' => 'alignleft' ) ); ?>
-                        </div>
-                        <div class="date">
-                            <?php if ($meta['gallery_products'] ): ?>
-                                در تاریخ: <?php echo parsidate("Y-m-d h:i:s", $meta['gallery_play_date'], "per"); ?>
-                            <?php else: ?>
-                                تاریخ نامعلوم
-                            <?php endif; ?>
-                        </div>
-                        <a href="<?php echo get_permalink($post->ID); ?>" class="title">
-                            <?php echo $post->post_title; ?>
-                        </a>
-                    </div>
+        <!-- <div class="col-12 thumbnail">
+            <?php //echo get_the_post_thumbnail( $post->ID, 'gallery_cover_size', array( 'class' => 'alignleft' ) ); ?>
+        </div> -->
+        <!-- <div class="col-12 content">
+            <?php //echo $post->post_content; ?>
+        </div> -->
+
+        <?php if( $products ): ?>
+            <?php foreach( $products as $product ): ?>
+                <div class="col-12 col-md-6 col-lg-4 col-xxl-3 item-product">
+                    <?php echo get_the_post_thumbnail( $product->ID, 'woocommerce_thumbnail', array( 'class' => 'alignleft' ) ); ?>
+                    <a href="<?php echo get_permalink($product->ID); ?>" target="_blank" class="title">
+                        <?php echo $product->post_title; ?>
+                    </a>
                 </div>
             <?php endforeach; ?>
         <?php else: ?>
@@ -57,6 +58,6 @@ if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
         <?php endif; ?>
     </div>
 </section>
-<!-- Gallery End -->
+<!-- Gallery Single End -->
 
 <?php get_footer(); ?>

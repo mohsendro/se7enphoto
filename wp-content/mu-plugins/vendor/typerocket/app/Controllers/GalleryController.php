@@ -2,6 +2,7 @@
 namespace App\Controllers;
 
 use App\Models\Gallery;
+use App\Models\Product;
 use App\Models\Option;
 use TypeRocket\Controllers\WPPostController;
 use TypeRocket\Http\Request;
@@ -351,7 +352,7 @@ class GalleryController extends WPPostController
      *
      * @return mixed
      */
-    public function single(Gallery $post, $slug)
+    public function single(Gallery $post, Product $product, $slug)
     {
         $where = [
             [
@@ -366,12 +367,18 @@ class GalleryController extends WPPostController
                 'value'    => $slug
             ]
         ];
-        $post = $post->first()->where($where)->get();
+        $post  = $post->first()->with('meta')->where($where)->get();
 
-        if( $post ){
-            return tr_view('public.single-gallery', compact('post', 'slug') );
+        if( $post ) {
+
+            $products = $product->findAll($post->meta->gallery_products)->get();
+            $count = $products->count();
+            return tr_view('public.single-gallery', compact('post', 'products', 'count', 'slug') );
+
         } else {
+
             return include( get_query_template( '404' ) );
+
         }
     } 
 }
