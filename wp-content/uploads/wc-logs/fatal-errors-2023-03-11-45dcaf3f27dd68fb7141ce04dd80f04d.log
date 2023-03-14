@@ -4,3 +4,5 @@
 
 2023-03-11T18:08:38+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\src\Admin\Features\OnboardingTasks\Tasks\WooCommercePayments.php روی خط 160
 
+2023-03-11T20:20:58+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-admin\includes\template.php روی خط 12
+

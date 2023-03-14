@@ -1,21 +1,21 @@
 <?php
 namespace App\Controllers;
 
-use App\Models\Post;
+use App\Models\Gallery;
 use App\Models\Option;
 use TypeRocket\Controllers\WPPostController;
 use TypeRocket\Http\Request;
 
 class SearchController extends WPPostController
 {
-    protected $modelClass = Post::class;
+    protected $modelClass = Gallery::class;
 
     /**
      * The index page for public
      *
      * @return mixed
      */
-    public function page(Post $post, Option $option)
+    public function page(Gallery $post, Option $option)
     {
         // tr_redirect()->toURL(home_url('/search/'))->now();
         return include( get_query_template( '404' ) );
@@ -26,7 +26,7 @@ class SearchController extends WPPostController
      *
      * @return mixed
      */
-    public function archive(Post $post, Option $option, $param)
+    public function archive(Gallery $post, Option $option, $param)
     {
         $where = [
             [
@@ -41,6 +41,12 @@ class SearchController extends WPPostController
         $param = urldecode($param);
         $where_search = [
             [
+                'column'   => 'post_type',
+                'operator' => '=',
+                'value'    => 'gallery' 
+            ],
+            'AND',
+            [
                 'column'   => 'post_status',
                 'operator' => '=',
                 'value'    => 'publish'
@@ -52,7 +58,14 @@ class SearchController extends WPPostController
                 'value'    =>  '%'.$param.'%'
             ]
         ];
-        $posts = $post->findAll()->where($where_search)->orderBy('id', 'DESC');
+        $where_meta = [
+            [
+                'column'   => 'gallery_in_site',
+                'operator' => '=',
+                'value'    => 1
+            ],
+        ];
+        $posts = $post->findAll()->with('meta')->whereMeta($where_meta)->where($where_search)->orderBy('id', 'DESC');
         $posts_data = $posts; 
         $posts = $posts->get(); 
         
