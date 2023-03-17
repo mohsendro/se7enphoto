@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
 
 <?php get_header(); ?>
 
-<!-- Gallery Single Start -->
+<!-- Product Single Start -->
 <section id="gallery-single" class="container gallery-single">
     <div class="row">
         <div class="col-12 info-single">
@@ -43,12 +43,12 @@ if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
 				 *
 				 * @hooked woocommerce_get_sidebar - 10
 				 */
-				do_action( 'woocommerce_sidebar' );
+				// do_action( 'woocommerce_sidebar' );
 			?>
 			
 		</div>
     </div>
 </section>
-<!-- Gallery Single End -->
+<!-- Product Single End -->
 
 <?php get_footer(); ?>

@@ -1,0 +1,15 @@
+2023-03-16T10:56:57+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\BlockTypes\ProductTopRated.php روی خط 25
+
+
+2023-03-16T10:57:53+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\rest-api\Controllers\Version3\class-wc-rest-report-coupons-totals-controller.php روی خط 144
+
+2023-03-16T10:57:53+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\rest-api\Controllers\Version3\class-wc-rest-report-coupons-totals-controller.php روی خط 144
+
+2023-03-16T10:57:56+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\rest-api\Controllers\Version3\class-wc-rest-webhooks-controller.php روی خط 38
+
+2023-03-16T10:58:02+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-includes\Requests\Transport\cURL.php روی خط 165
+
+2023-03-16T11:30:39+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-admin\includes\post.php روی خط 2518
+
+2023-03-16T11:31:39+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\rest-api\Controllers\Version1\class-wc-rest-webhooks-v1-controller.php روی خط 11
+

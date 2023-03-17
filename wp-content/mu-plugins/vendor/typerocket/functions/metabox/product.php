@@ -174,6 +174,7 @@ if( class_exists( 'CSF' ) ) {
         'post_type'          => 'product',
         'data_type'          => 'serialize',
         'context'            => 'side',
+        'class'              => 'min-height-metabox',
     ) );
   
     //
