@@ -1,2 +1,13 @@
 2023-03-17T12:55:04+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\real-media-library\inc\rest\Folder.php روی خط 20
 
+2023-03-17T15:30:03+00:00 CRITICAL Uncaught Error: Object of class WP_Error could not be converted to string in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\resources\themes\woocommerce\single-product\meta.php:34
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1659): wc_get_template('single-product/...')
+#2 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(308): woocommerce_template_single_meta('')
+#3 C:\xampp\htdocs\se7enphoto\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#4 C:\xampp\htdocs\se7enphoto\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\resources\themes\woocommerce\content-single-product.php(60): do_action('woocommerce_sin...')
+#6 C:\xampp\htdocs\se7enphoto\wp-includes\template.php(785): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdo در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\resources\themes\woocommerce\single-product\meta.php روی خط 34
+

@@ -164,6 +164,7 @@ add_action('wp_enqueue_scripts', 'wpplus_enqueue_scripts');
 require_once plugin_dir_path(__FILE__) . 'functions/snippets/wp-rewrite-rules.php';
 require_once plugin_dir_path(__FILE__) . 'functions/snippets/optimize.php';
 require_once plugin_dir_path(__FILE__) . 'functions/snippets/image-size.php';
+require_once plugin_dir_path(__FILE__) . 'functions/snippets/woocommerce-hooks.php';
 
 // Post Types
 require_once plugin_dir_path(__FILE__) . 'functions/posttype/post.php';
@@ -171,6 +172,8 @@ require_once plugin_dir_path(__FILE__) . 'functions/posttype/gallery.php';
 
 // Taxonomies
 require_once plugin_dir_path(__FILE__) . 'functions/taxonomy/gallery_cat.php';
+// require_once plugin_dir_path(__FILE__) . 'functions/taxonomy/product_cat.php';
+// require_once plugin_dir_path(__FILE__) . 'functions/taxonomy/product_tag.php';
 
 // Meta Boxes
 include plugin_dir_path(__FILE__) . 'functions/metabox/user.php';

@@ -600,3 +600,45 @@ a:hover {
 }
 
 /************* Woocommerce *************/
+.woocommerce #content div.product div.summary,
+.woocommerce div.product div.summary,
+.woocommerce-page #content div.product div.summary,
+.woocommerce-page div.product div.summary {
+    padding: 10px;
+    background: #f7f7f7;
+    border-radius: 5px;
+}
+
+.woocommerce div.product .product_title {
+    clear: none;
+    margin-top: 0;
+    padding: 0;
+    color: #000;
+    font-weight: 600;
+    border-bottom: 1px solid #c7c7c7;
+    line-height: 2em;
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.category-gallery {
+    display: block;
+    width: 100%;
+    line-height: 2em;
+    font-size: 1rem;
+    color: #292C44;
+    margin-bottom: 15px;
+}
+
+.category-gallery a {
+    color: #292C44;
+}
+
+.product_meta {
+    display: none;
+}
+
+.woocommerce div.product form.cart .button {
+    margin-top: 15px;
+}

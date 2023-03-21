@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
         </div>
         <div class="col-12">
             <div class="content">
-                <?php //the_content(); ?>
+                <?php the_content(); ?>
             </div>
         </div>
     </div>

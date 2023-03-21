@@ -1,0 +1,20 @@
+2023-03-20T20:03:27+00:00 CRITICAL Cannot redeclare woocommerce_template_single_gallery() (previously declared in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\snippets\woocommerce-hooks.php:11) در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\resources\themes\functions.php روی خط 5
+
+2023-03-20T20:03:51+00:00 CRITICAL Cannot redeclare woocommerce_template_single_gallery() (previously declared in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\functions\snippets\woocommerce-hooks.php:11) در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\resources\themes\functions.php روی خط 5
+
+2023-03-20T20:15:41+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\BlockTypes\ProductSaleBadge.php روی خط 66
+
+2023-03-20T20:15:50+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-admin\includes\file.php روی خط 16
+
+2023-03-20T20:15:58+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-admin\includes\misc.php روی خط 1629
+
+2023-03-20T20:17:26+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\rest-api\Controllers\Version1\class-wc-rest-orders-v1-controller.php روی خط 13
+
+2023-03-20T20:27:30+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\real-physical-media\inc\rest\Handler.php روی خط 18
+
+2023-03-20T20:27:46+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\BlockTypes\AllReviews.php روی خط 44
+
+2023-03-20T20:30:29+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-includes\functions.php روی خط 4527
+
+2023-03-20T20:42:19+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\BlockTypes\ClassicTemplate.php روی خط 309
+
