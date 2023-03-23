@@ -69,7 +69,7 @@ if( ! class_exists( 'LoginStyle' ) ) {
 	
 		public function LogoImage() { 
 
-			$this->url = plugin_dir_url(__FILE__) . '../img/logo.png'; // for LogoImage Method
+			$this->url = plugin_dir_url(__FILE__) . '../img/logo.jpeg'; // for LogoImage Method
 			?> <style type="text/css">
 				#login h1 a { background-image: url( <?php echo $this->url; ?>); }
 			</style> <?php 

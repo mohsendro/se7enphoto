@@ -642,3 +642,16 @@ a:hover {
 .woocommerce div.product form.cart .button {
     margin-top: 15px;
 }
+
+.woocommerce-account .woocommerce-MyAccount-navigation {
+    line-height: 2em;
+    font-size: 1rem;
+    color: #292C44;
+    padding: 10px;
+    background: #f7f7f7;
+    border-radius: 5px;
+}
+
+.woocommerce-Address {
+    width: 100%;
+}

@@ -4,27 +4,27 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "eb2af432f7be1032bc092741601d99ea",
+    "content-hash": "118de27da72370a50d91fb2da5ae4564",
     "packages": [
         {
             "name": "aws/aws-crt-php",
-            "version": "v1.0.2",
+            "version": "v1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/awslabs/aws-crt-php.git",
-                "reference": "3942776a8c99209908ee0b287746263725685732"
+                "reference": "f5c64ee7c5fce196e2519b3d9b7138649efe032d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/awslabs/aws-crt-php/zipball/3942776a8c99209908ee0b287746263725685732",
-                "reference": "3942776a8c99209908ee0b287746263725685732",
+                "url": "https://api.github.com/repos/awslabs/aws-crt-php/zipball/f5c64ee7c5fce196e2519b3d9b7138649efe032d",
+                "reference": "f5c64ee7c5fce196e2519b3d9b7138649efe032d",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.5"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8.35|^5.4.3"
+                "phpunit/phpunit": "^4.8.35|^5.6.3"
             },
             "type": "library",
             "autoload": {
@@ -52,26 +52,26 @@
             ],
             "support": {
                 "issues": "https://github.com/awslabs/aws-crt-php/issues",
-                "source": "https://github.com/awslabs/aws-crt-php/tree/v1.0.2"
+                "source": "https://github.com/awslabs/aws-crt-php/tree/v1.0.4"
             },
-            "time": "2021-09-03T22:57:30+00:00"
+            "time": "2023-01-31T23:08:25+00:00"
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.257.5",
+            "version": "3.261.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "c600a07da531d6c29af791b9d2e8b6df796aa14b"
+                "reference": "a8d2d89d79e912aa87bd2d381d34f47fbd08be65"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/c600a07da531d6c29af791b9d2e8b6df796aa14b",
-                "reference": "c600a07da531d6c29af791b9d2e8b6df796aa14b",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/a8d2d89d79e912aa87bd2d381d34f47fbd08be65",
+                "reference": "a8d2d89d79e912aa87bd2d381d34f47fbd08be65",
                 "shasum": ""
             },
             "require": {
-                "aws/aws-crt-php": "^1.0.2",
+                "aws/aws-crt-php": "^1.0.4",
                 "ext-json": "*",
                 "ext-pcre": "*",
                 "ext-simplexml": "*",
@@ -146,9 +146,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.257.5"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.261.17"
             },
-            "time": "2023-01-20T19:34:14+00:00"
+            "time": "2023-03-22T18:22:29+00:00"
         },
         {
             "name": "composer/installers",
@@ -509,16 +509,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "2.4.3",
+            "version": "2.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "67c26b443f348a51926030c83481b85718457d3d"
+                "reference": "3cf1b6d4f0c820a2cf8bcaec39fc698f3443b5cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/67c26b443f348a51926030c83481b85718457d3d",
-                "reference": "67c26b443f348a51926030c83481b85718457d3d",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/3cf1b6d4f0c820a2cf8bcaec39fc698f3443b5cf",
+                "reference": "3cf1b6d4f0c820a2cf8bcaec39fc698f3443b5cf",
                 "shasum": ""
             },
             "require": {
@@ -608,7 +608,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/2.4.3"
+                "source": "https://github.com/guzzle/psr7/tree/2.4.4"
             },
             "funding": [
                 {
@@ -624,7 +624,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-10-26T14:07:24+00:00"
+            "time": "2023-03-09T13:19:02+00:00"
         },
         {
             "name": "mtdowling/jmespath.php",
@@ -1060,6 +1060,24 @@
             "homepage": "https://wordpress.org/plugins/another-show-hooks/"
         },
         {
+            "name": "wpackagist-plugin/image-sizes-panel",
+            "version": "0.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/image-sizes-panel/",
+                "reference": "tags/0.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/image-sizes-panel.0.4.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/image-sizes-panel/"
+        },
+        {
             "name": "wpackagist-plugin/multiple-roles",
             "version": "1.3.7",
             "source": {
@@ -1078,22 +1096,58 @@
             "homepage": "https://wordpress.org/plugins/multiple-roles/"
         },
         {
-            "name": "wpackagist-plugin/query-monitor",
-            "version": "3.11.1",
+            "name": "wpackagist-plugin/nirweb-support",
+            "version": "3.0.1",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/query-monitor/",
-                "reference": "tags/3.11.1"
+                "url": "https://plugins.svn.wordpress.org/nirweb-support/",
+                "reference": "trunk"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/query-monitor.3.11.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/nirweb-support.zip?timestamp=1673856416"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/nirweb-support/"
+        },
+        {
+            "name": "wpackagist-plugin/query-monitor",
+            "version": "3.12.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/query-monitor/",
+                "reference": "tags/3.12.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/query-monitor.3.12.0.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/query-monitor/"
+        },
+        {
+            "name": "wpackagist-plugin/ultimate-watermark",
+            "version": "1.0.10",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/ultimate-watermark/",
+                "reference": "tags/1.0.10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/ultimate-watermark.1.0.10.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/ultimate-watermark/"
         }
     ],
     "packages-dev": [],

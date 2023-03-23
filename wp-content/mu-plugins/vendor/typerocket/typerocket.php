@@ -165,6 +165,7 @@ require_once plugin_dir_path(__FILE__) . 'functions/snippets/wp-rewrite-rules.ph
 require_once plugin_dir_path(__FILE__) . 'functions/snippets/optimize.php';
 require_once plugin_dir_path(__FILE__) . 'functions/snippets/image-size.php';
 require_once plugin_dir_path(__FILE__) . 'functions/snippets/woocommerce-hooks.php';
+require_once plugin_dir_path(__FILE__) . 'functions/snippets/wc-digital-checkout.php';
 
 // Post Types
 require_once plugin_dir_path(__FILE__) . 'functions/posttype/post.php';

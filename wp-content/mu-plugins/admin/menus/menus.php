@@ -30,6 +30,7 @@ if( ! class_exists( 'Menus' ) ) {
              'woocommerce',
              'wc-admin&path=/analytics/overview',
              'woocommerce-marketing',
+             'nirweb_ticket_manage_tickets',
              'separator2',
              'users.php',
              'themes.php',

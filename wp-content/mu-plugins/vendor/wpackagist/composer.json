@@ -16,7 +16,9 @@
         "wpackagist-plugin/nirweb-support": "*",
         "wpackagist-plugin/query-monitor": "*",
         "wpackagist-plugin/multiple-roles": "*",
-        "wpackagist-plugin/another-show-hooks":"*"
+        "wpackagist-plugin/another-show-hooks": "*",
+        "wpackagist-plugin/ultimate-watermark": "*",
+        "wpackagist-plugin/image-sizes-panel": "*"
     },
     "autoload": {
         "psr-4": {
