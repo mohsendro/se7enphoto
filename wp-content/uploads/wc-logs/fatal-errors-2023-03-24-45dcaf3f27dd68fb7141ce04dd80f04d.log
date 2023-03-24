@@ -1,2 +1,26 @@
 2023-03-24T18:26:59+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\includes\integrations\maxmind-geolocation\class-wc-integration-maxmind-geolocation.php روی خط 11
 
+2023-03-24T18:51:24+00:00 CRITICAL Uncaught Error: Class 'App\Controllers\Controller' not found in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\app\Controllers\FronPageController.php:9
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\vendor\typerocket\core\src\Core\ApplicationKernel.php(176): require()
+#1 [internal function]: TypeRocket\Core\ApplicationKernel::TypeRocket\Core\{closure}('App\\Controllers...')
+#2 [internal function]: spl_autoload_call('App\\Controllers...')
+#3 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\vendor\typerocket\core\src\Http\Handler.php(166): class_exists('\\App\\Controller...')
+#4 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\vendor\typerocket\core\src\Http\Router.php(153): TypeRocket\Http\Handler->setController('FronPageControl...')
+#5 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\vendor\typerocket\core\src\Http\Router.php(53): TypeRocket\Http\Router->runRoute()
+#6 C:\xampp\htdocs\se7enphoto\wp-inc در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\app\Controllers\FronPageController.php روی خط 9
+
+2023-03-24T18:51:57+00:00 CRITICAL Uncaught Error: Class 'App\Controllers\Controller' not found in C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\app\Controllers\FronPageController.php:9
+Stack trace:
+#0 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\vendor\typerocket\core\src\Core\ApplicationKernel.php(176): require()
+#1 [internal function]: TypeRocket\Core\ApplicationKernel::TypeRocket\Core\{closure}('App\\Controllers...')
+#2 [internal function]: spl_autoload_call('App\\Controllers...')
+#3 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\vendor\typerocket\core\src\Http\Handler.php(166): class_exists('\\App\\Controller...')
+#4 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\vendor\typerocket\core\src\Http\Router.php(153): TypeRocket\Http\Handler->setController('FronPageControl...')
+#5 C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\vendor\typerocket\core\src\Http\Router.php(53): TypeRocket\Http\Router->runRoute()
+#6 C:\xampp\htdocs\se7enphoto\wp-inc در C:\xampp\htdocs\se7enphoto\wp-content\mu-plugins\vendor\typerocket\app\Controllers\FronPageController.php روی خط 9
+
+2023-03-24T19:31:36+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\woocommerce\src\Internal\Admin\Onboarding\OnboardingSetupWizard.php روی خط 280
+
+2023-03-24T19:31:58+00:00 CRITICAL Maximum execution time of 120 seconds exceeded در C:\xampp\htdocs\se7enphoto\wp-content\plugins\real-media-library\vendor\yahnis-elsts\plugin-update-checker\Puc\v4p11\Scheduler.php روی خط 5
+

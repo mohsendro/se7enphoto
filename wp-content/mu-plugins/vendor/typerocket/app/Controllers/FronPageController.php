@@ -2,10 +2,10 @@
 namespace App\Controllers;
 
 use App\Models\Gallery;
-use TypeRocket\Controllers\Controller;
+use TypeRocket\Controllers\WPPostController;
 use TypeRocket\Http\Request;
 
-class FronPageController extends Controller
+class FronPageController extends WPPostController
 {
     /**
      * The index page for public
@@ -14,8 +14,21 @@ class FronPageController extends Controller
      */
     public function index(Gallery $post)
     {
-        $posts = $post->findAll()->where('post_status', '=', 'publish')->orderBy('id', 'DESC')->take(10)->get();
-        
-        return tr_view('public.front-page', compact('posts') );
+        $where_meta = [
+            [
+                'column'   => 'gallery_in_site',
+                'operator' => '=',
+                'value'    => 1
+            ],
+            'AND',
+            [
+                'column'   => 'gallery_last_view',
+                'operator' => '=',
+                'value'    => 1
+            ]
+        ];
+        $posts = $post->findAll()->with('meta')->whereMeta($where_meta)->where('post_status', '=', 'publish')->orderBy('id', 'DESC')->take(20, 0)->get();;
+
+        return tr_view( 'public.front-page', compact('posts') );
     }
 }
